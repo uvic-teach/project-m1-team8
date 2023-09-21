@@ -1,0 +1,13 @@
+| Use case       | UC-# ER queue                                                                                                               |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Description    | To assign the user to an appropriate ER queue position using user location and virtual triage data.                                                                    |
+| Actors         | Patient                                                                             |
+| Assumption     | The patient provides correct information about their health condition and finishes the triage.                                                                             |
+| Steps          | 1. The information from the triage is used to determine the position in ED queue that the user will take. <br> 2. When the user has reached the front of the queue, they will be notified to come to the ED. <br> 3. If the user does not arrive at the ER within a specified time frame, their spot in queue is no longer valid and they are removed from the virtual queue. <br> 4. When the user arrives at the ER, they are ID'd and matched to their online information, and then processed accordingly. <br> 5. Once processed the user is removed from the queue.      
+                                                      |
+| Variations     |   If a patient decides to cancel they are removed from the queue. If a patient fails to arrive within specified time frame, they are removed from the queue and notified.
+                                      |
+| Non-functional |                                                                           
+                                        |
+| Issues         |                                                  
+                                      |
