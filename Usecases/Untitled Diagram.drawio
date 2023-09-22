@@ -1,1 +1,88 @@
-<mxfile host="app.diagrams.net" modified="2023-09-22T19:21:50.278Z" agent="5.0 (Macintosh)" version="20.5.3" etag="P8f9GLeZ-4ea2XdCzU17" type="github"><diagram id="QsaP9KsOhT9dpLi23IyU">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-09-22T19:39:55.099Z" agent="5.0 (Macintosh)" etag="dDk2vUuEm4a9gd5H2ipj" version="20.5.3" type="github">
+  <diagram id="QsaP9KsOhT9dpLi23IyU" name="Page-1">
+    <mxGraphModel dx="1209" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-2" target="ubNZ2CPZHA93DrEuHGrG-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-5" value="Include" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ubNZ2CPZHA93DrEuHGrG-4">
+          <mxGeometry x="-0.075" y="-1" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-2" target="ubNZ2CPZHA93DrEuHGrG-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-2" value="Notify user via phone or email" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-3" value="User authentication" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-6" target="ubNZ2CPZHA93DrEuHGrG-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-31" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;elbow=vertical;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-6" target="ubNZ2CPZHA93DrEuHGrG-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-32" value="Include" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ubNZ2CPZHA93DrEuHGrG-31">
+          <mxGeometry x="-0.0278" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-6" value="Summary triage result site" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-9" target="ubNZ2CPZHA93DrEuHGrG-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-25" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ubNZ2CPZHA93DrEuHGrG-19">
+          <mxGeometry x="0.45" y="-2" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-9" target="ubNZ2CPZHA93DrEuHGrG-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-24" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ubNZ2CPZHA93DrEuHGrG-20">
+          <mxGeometry x="0.7267" y="-3" relative="1" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-9" target="ubNZ2CPZHA93DrEuHGrG-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-26" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ubNZ2CPZHA93DrEuHGrG-22">
+          <mxGeometry x="0.8093" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-9" value="Notify patient the action they should take" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-11" value="Notify patient to take counter medicine" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="340" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-14" value="Notify patient to contact nurse/clincian" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="470" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-18" value="Notify patient to visit ED" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-33" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;elbow=vertical;dashed=1;" edge="1" parent="1" source="ubNZ2CPZHA93DrEuHGrG-30" target="ubNZ2CPZHA93DrEuHGrG-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-34" value="Extend" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ubNZ2CPZHA93DrEuHGrG-33">
+          <mxGeometry x="-0.0574" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ubNZ2CPZHA93DrEuHGrG-30" value="View detail triage result" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="356" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
