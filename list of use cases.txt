@@ -1,2 +1,7 @@
 List of possible use cases
-1.) ...
+1.) Login/Register- Oliver/Dhuruvan
+2.) Triage Process (Assess patient state and update patient Data/record) -Dhuruvan
+3.) Check ED Load- Oliver
+4.) Booking ER time- Miles
+5.) notify/ display status of triage - Hang 
+6.) General (might be too general due to combining cases)-Minh
