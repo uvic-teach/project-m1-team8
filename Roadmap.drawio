@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-25T08:27:07.766Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="rvvZIy0IjLVM85Y1P2Yv" version="21.8.1" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-25T08:28:14.415Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="Vok3e5HXrg29FKCwLl0j" version="21.8.1" type="github">
   <diagram name="Page-1" id="44kL-8lOii-qEcLcEZFb">
     <mxGraphModel dx="2046" dy="1810" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -174,10 +174,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zv6PDwjK5vkNwOWGPEP8-13" value="Notify patient to take counter medicine" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="320" width="120" height="80" as="geometry" />
+          <mxGeometry x="250" y="320" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="zv6PDwjK5vkNwOWGPEP8-14" value="Notify patient to contact nurse" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="500" width="120" height="80" as="geometry" />
+          <mxGeometry x="250" y="500" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="zv6PDwjK5vkNwOWGPEP8-16" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="zv6PDwjK5vkNwOWGPEP8-14">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -194,7 +194,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zv6PDwjK5vkNwOWGPEP8-17" value="Notify patient of nearby clinic" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="690" width="120" height="80" as="geometry" />
+          <mxGeometry x="250" y="690" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="zv6PDwjK5vkNwOWGPEP8-18" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="zv6PDwjK5vkNwOWGPEP8-17">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
