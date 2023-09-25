@@ -1,9 +1,15 @@
-| Use case       | UC-3 ED Load Checking   <br> history created 25/09/2023 Oliver Ware, last modified 25/09/2023 |
+| Use case       | UC-1 System Login   <br> history created 25/09/2023 Oliver Ware, last modified 25/09/2023 |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Description    | Description           
-| Actors         | Who's involved                                                  
+| Description    | The user can login to the mister ED system by inputting their credentials and selecting login          
+| Actors         | 1.) User <br> 2.) mister ED System interface                                                
 | Assumption     | 1.) The Mister ED System is Online/Active <br> 2.) The user can access the Mister ED welcome/home page |
 | Steps          | 1.) On the welcome/ home page, the user selects the "Login/register" button <br> 2.) The screen updates the current page to the one with the input boxes for login credentials <br> 3.) The User inputs their Username and Password<br> 4.) The User selects the "login button" <br> 5.) the User should now be logged in
-| Variations     |  |
-| Non-functional |   Reliability: <br> Usability: <br> Security:  |
-| Issues         |    |
+| Variations     | 1.) the User attempts login with incorrect credentials |
+| Non-functional |   Reliability: after pressing login, the result (successful login or page refresh with error) should occur within twenty seconds <br> Usability: A message should occur indicating whether the user has successfully logged in when they press login <br> Security: The user cannot be logged in with incorrect credentials |
+| Issues         | 1.) Login may be unavailable during a system update   |
+
+| Use case extension  | UC-1.1 failed login **extends** System login|
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Change         | User is not logged in when the login button is selected  |                                                             
+| Assumption     | 1.) User has the wrong login credentials <br> 2.) User is on login page|
+| Steps          | 1.1) On the login page, the User inputs their incorrect login credentials <br> 1.2) User selects the login buttion.<br> 1.3) User is not logged in <br> 1.4) login page refreshes displaying a failed login error |
