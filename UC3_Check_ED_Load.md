@@ -1,0 +1,10 @@
+| Use case       | UC-3 ED Load Checking   <br> history created 24/09/2023 Oliver Ware, last modified 24/09/2023 |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Description    | When the user chooses to view the current load on the ED,            
+| Actors         | Patient/User (Primary), computer/device with access to the Mister ED System                                                  
+| Assumption     | 1.) The Mister ED System is Online/Active <br> 2.) The user can access the Mister ED welcome/home page |
+| Steps          | 1.) On the welcome/ home page, the user selects the "Check Current load" button <br> 2.) The screen updates the current page to the one displaying the ED load measurement <br> 3.) The User can now view the current load on the ED
+| Variations     | N/A|
+| Non-functional |   Reliability: the load data for the ED will be accurate within the most recent 5 minutes  <br> Usability: The displayed data for the ED load will update without the need for the user to reload the page <br> Security: Only the Current load data can be accessed  |
+| Issues         |   The ability to access Load data may be lost to the user for the duration of a power failure or duration taken to update the mister ED system |
+
