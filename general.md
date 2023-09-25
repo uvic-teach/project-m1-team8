@@ -1,4 +1,4 @@
-| Use Case    | UC-1 General                                              |
+| Use Case    | UC-7 General                                              |
 |-------------------|--------------------------------------------------------------------|
 | **Description**    | This use case provides an overview of how to access and use the MisterEd system. |
 | **Assumption**     |The user is seeking medical guidance or assistance through the MisterEd system. They may be experiencing a health issue or concern and are using MisterEd to assess whether their situation requires a visit to an Emergency Department (ED). Users may choose to either create a new MisterEd account if using the system for the first time or log in with their existing account for access. |
