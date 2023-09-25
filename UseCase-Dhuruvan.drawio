@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-09-25T05:26:18.958Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="Y6yNmNxiCnT-rxYy1k9m" version="21.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-25T05:39:14.451Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="TNd4ehGPkrllT7s9wqXE" version="21.8.2" type="github">
   <diagram name="Page-1" id="-OpPKvUHKcVYzTKDWnJX">
     <mxGraphModel dx="2163" dy="1808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -17,12 +17,6 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="VW2CxT5zBbMJ9biAzamG-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="VW2CxT5zBbMJ9biAzamG-2" target="VW2CxT5zBbMJ9biAzamG-11" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-500" y="210" as="sourcePoint" />
-            <mxPoint x="-340" y="485" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="VW2CxT5zBbMJ9biAzamG-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="VW2CxT5zBbMJ9biAzamG-1" target="VW2CxT5zBbMJ9biAzamG-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -31,9 +25,6 @@
         </mxCell>
         <mxCell id="VW2CxT5zBbMJ9biAzamG-10" value="Login" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-360" y="100" width="120" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="VW2CxT5zBbMJ9biAzamG-11" value="Check ED capacity" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-360" y="720" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="VW2CxT5zBbMJ9biAzamG-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="VW2CxT5zBbMJ9biAzamG-10" target="VW2CxT5zBbMJ9biAzamG-13" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -51,13 +42,13 @@
           <mxGeometry x="130" y="100" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="VW2CxT5zBbMJ9biAzamG-16" value="System inform user of nearby pharmacy" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="140" y="310" width="120" height="60" as="geometry" />
+          <mxGeometry x="345" y="310" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VW2CxT5zBbMJ9biAzamG-17" value="System provide number to contact a nurse" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="130" y="510" width="120" height="60" as="geometry" />
+          <mxGeometry x="335" y="510" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VW2CxT5zBbMJ9biAzamG-18" value="System inform user of nearby clinic" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="130" y="730" width="120" height="60" as="geometry" />
+          <mxGeometry x="335" y="640" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="VW2CxT5zBbMJ9biAzamG-19" value="System notify user when a spot is available." style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="340" y="110" width="120" height="60" as="geometry" />
@@ -144,7 +135,7 @@
             <mxPoint x="20" y="540" as="sourcePoint" />
             <mxPoint x="100" y="710" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="20" y="760" />
+              <mxPoint x="20" y="670" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -153,7 +144,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="QlsndReTy4WEL_bGeNAt-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VW2CxT5zBbMJ9biAzamG-7" target="VW2CxT5zBbMJ9biAzamG-10">
+        <mxCell id="QlsndReTy4WEL_bGeNAt-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="VW2CxT5zBbMJ9biAzamG-7" target="VW2CxT5zBbMJ9biAzamG-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="-240" y="260" as="sourcePoint" />
             <mxPoint x="-190" y="210" as="targetPoint" />
