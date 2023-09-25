@@ -14,7 +14,8 @@ The MisterEd system allows users to both check the current load of the ER as wel
     ![Use Case Diagram](https://ibb.co/Z6MJ879)
 
    Here are our groups individual use case descriptions:
-   | Use case       | UC-4 ED Queue   <br> history created 21/09/2023 Miles Rose, last modified 24/09/2023 |
+
+| Use case       | UC-4 ED Queue   <br> history created 21/09/2023 Miles Rose, last modified 24/09/2023 |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Description    | User is assigned to an appropriate ED queue position using user location and virtual triage data.              
 | Actors         | Patient/User (primary) <br> ED front desk operator                                                        
@@ -23,9 +24,6 @@ The MisterEd system allows users to both check the current load of the ER as wel
 | Variations     |   #1 User may decide to cancel and be removed from the queue. <br> #2 User fails to arrive within specified time frame, they are removed from the queue and notified.|
 | Non-functional |   Reliability: ED queue system must be very reliable to have user trust. <br> Priority: ED queue system must be able to effectivley decide urgency and priority of users. |
 | Issues         |   How does the ED staff interact with the system? How are in-person ED visitors accounted for in the system? |
-
-
-
 
 | Use case extension  | UC-4.1 ED Queue User Exit **extends** ER queue|
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
