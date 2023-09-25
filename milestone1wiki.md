@@ -2,17 +2,20 @@
 
 Welcome to the project-m1-team8 wiki!
 
-    System Description
+1. System Description:
 
 "Provides a comprehensive, insightful, and detailed overview of the application, its objectives, and goals."
 
 The MisterEd system allows users to both check the current load of the ER as well as register/log in for a virtual triage. After this virtual triage is complete, their patient data will be updated and the user will be notified of which actions they should follow. If it is deemed necessary, the user will be added to virtual ER queue with a queue number determined by urgency. The user will then be notified when the ER is ready for them (front of the queue). The system will secure a spot at the ER for the user for a certain amount of time, after which the user will be removed from the queue. If an ER visit is deemed unnecessary, the user will be notified with information relaying them to either a nurse hotline, regular primary care clinic, or over-the counter-medication.
 
-    Use Case View
+2. Use Case View
 
+    Here is our groups use case diagram:
     ![Use Case Diagram](https://ibb.co/Z6MJ879)
 
-    Contributions
+   Here are our groups individual use case descriptions:
+
+2. Contributions
 
 Everyone collaborated to setting up team communication (Discord) and team expectations.
 
