@@ -10,7 +10,7 @@ The MisterEd system allows users to both check the current load of the ER as wel
 
     Use Case View
 
-blahgblahasd;
+    ![Use Case Diagram](https://ibb.co/Z6MJ879)
 
     Contributions
 
