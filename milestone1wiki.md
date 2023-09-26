@@ -138,3 +138,12 @@ Issues         |  The main issue that may arise if the patient already has an ac
 | Variations     | N/A|
 | Non-functional |   Reliability: the load data for the ED will be accurate within the most recent 5 minutes.  <br> Usability: The displayed data for the ED load will update without the need for the user to reload the page. <br> Security: Only the Current load data can be accessed  |
 | Issues         |   The ability to access Load data may be lost to the user for the duration of a power failure or duration taken to update the mister ED system. |
+
+## Team Contribution
+| Team members        | Tasks                                                                                                                                                                                                          |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Krishnan Anavaratha | - Created use case for Registration.<br> - Created use case for Virtual Triage.                                                                                                                                |
+| Hang Duong          | - Created use case for Notify Triage Results and its extension use case. <br> - Reviewed and gave feedback other team members' PRs.<br> - Worked on system overview part. <br>  - Worked on the wiki page. <br> |
+| Minh Nguyen         | - Created overview use case table and its diagram.                                                                                                                                                              |
+| Miles Rose          | - Designed Assign User to ER Queue and its extension use cases. <br>  - Designed milestonewiki draft <br> - Reviewed other PR's.                                                                                |
+| Variations          | - Designed Login use case and its extension use cases. <br> - Designed Check ED Load use case.                                                                                                                                              |
