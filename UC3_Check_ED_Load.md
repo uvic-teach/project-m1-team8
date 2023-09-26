@@ -1,5 +1,12 @@
-| Use case       | UC-3 ED Load Checking   <br> history created 24/09/2023 Oliver Ware, last modified 24/09/2023 |
+|        | Virtual Triage |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+| Description    | The goal of this use case is to enable users to log in, and successfully complete the triage process. Requirements for this include user's login credentials, and a seamless triage workflow.            
+| Actors         | Patient/User (Primary).                                                  
+| Assumption     | 1) The Mister ED System is Online/Active <br> 2) The user has already registered with their health information on the system. |
+| Steps          | 1) On the welcome/ home page, the user logs-in. <br> 2) The user starts the virtual triage to determine if going to the ER is the only option. <br> 5) After completing the virtual triage, the user would be given the result of whether to go to the ER, visit a nearby clinic, visit a nearby pharmacy and get medicine over the counter, or provides contact information to the nurse hotline.
+| Issues         |  The main issue that may arise when going through the virtual triage is if the patient's condition becomes dangerous, for example if the patient were to lose consciousness while using the system and no one was with them, then the patient might not be able to get the right treatment in time. |
+
 | Description    | When the user chooses to view the current load on the ED, they can do so by pressing a check status button            
 | Actors         | Patient/User (Primary), computer/device with access to the Mister ED System                                                  
 | Assumption     | 1.) The Mister ED System is Online/Active <br> 2.) The user can access the Mister ED welcome/home page |
@@ -7,4 +14,3 @@
 | Variations     | N/A|
 | Non-functional |   Reliability: the load data for the ED will be accurate within the most recent 5 minutes  <br> Usability: The displayed data for the ED load will update without the need for the user to reload the page <br> Security: Only the Current load data can be accessed  |
 | Issues         |   The ability to access Load data may be lost to the user for the duration of a power failure or duration taken to update the mister ED system |
-
