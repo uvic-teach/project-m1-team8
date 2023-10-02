@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-01T23:34:53.878Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47" etag="9mf-w8f7i5YXeYL62eUG" version="21.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-02T00:04:21.665Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47" etag="wxFZcymnwC9cliNIq6cn" version="21.8.2" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
     <mxGraphModel dx="986" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -33,32 +33,58 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="o_E8DVOu_nUsCckGMLQ8-1" value="ED Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="375" y="40" width="100" height="300" as="geometry" />
+          <mxGeometry x="420" y="40" width="100" height="300" as="geometry" />
         </mxCell>
         <mxCell id="o_E8DVOu_nUsCckGMLQ8-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="o_E8DVOu_nUsCckGMLQ8-1">
           <mxGeometry x="45" y="80" width="10" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="o_E8DVOu_nUsCckGMLQ8-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-5" target="o_E8DVOu_nUsCckGMLQ8-1">
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="o_E8DVOu_nUsCckGMLQ8-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="400" y="270" as="sourcePoint" />
-            <mxPoint x="450" y="220" as="targetPoint" />
+            <mxPoint x="280" y="210" as="sourcePoint" />
+            <mxPoint x="425" y="210" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="350" y="150" />
+              <mxPoint x="350.5" y="210" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="o_E8DVOu_nUsCckGMLQ8-5" value="Request ED Load data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="o_E8DVOu_nUsCckGMLQ8-4">
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-5" value="Request_EDLoad_data(Location)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="o_E8DVOu_nUsCckGMLQ8-4">
           <mxGeometry x="-0.2452" y="-1" relative="1" as="geometry">
             <mxPoint x="23" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="o_E8DVOu_nUsCckGMLQ8-6" value="Return ED load" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-6" value="Return ED load" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" source="o_E8DVOu_nUsCckGMLQ8-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="280" y="230" as="targetPoint" />
+            <mxPoint x="280" y="270" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="345" y="230" />
+              <mxPoint x="345" y="270" />
             </Array>
-            <mxPoint x="410" y="230" as="sourcePoint" />
+            <mxPoint x="410" y="270" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-7" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="150" width="10" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-8" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="269.5" y="160" as="sourcePoint" />
+            <mxPoint x="100" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-9" value="Request Location" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="o_E8DVOu_nUsCckGMLQ8-8">
+          <mxGeometry x="0.0678" y="1" relative="1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="200" as="sourcePoint" />
+            <mxPoint x="270" y="200" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="o_E8DVOu_nUsCckGMLQ8-11" value="User Inputs Their Location" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="o_E8DVOu_nUsCckGMLQ8-10">
+          <mxGeometry x="0.25" relative="1" as="geometry">
+            <mxPoint x="-23" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
