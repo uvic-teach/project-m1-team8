@@ -1,75 +1,68 @@
-<mxfile host="app.diagrams.net" modified="2023-10-02T06:25:35.649Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="MWXYoblflYwYRwXjQciL" version="22.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-03T04:52:05.739Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="MNMwMF9fMrqjCHeRawk8" version="22.0.0" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1290" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2140" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="aM9ryv3xv72pqoxQDRHE-1" value="User" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="40" y="390" width="100" height="320" as="geometry" />
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="aM9ryv3xv72pqoxQDRHE-1" vertex="1">
-          <mxGeometry x="45" y="70" width="10" height="230" as="geometry" />
+          <mxGeometry x="-60" y="390" width="100" height="210" as="geometry" />
         </mxCell>
         <mxCell id="aM9ryv3xv72pqoxQDRHE-5" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="710" y="390" width="100" height="320" as="geometry" />
+          <mxGeometry x="770" y="390" width="100" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="aM9ryv3xv72pqoxQDRHE-5" vertex="1">
-          <mxGeometry x="45" y="80" width="10" height="230" as="geometry" />
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-7" value="User clicks the &quot;Register&quot; button to create an account" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;entryX=0.015;entryY=0.126;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="aM9ryv3xv72pqoxQDRHE-2" target="oVaFnZES87FRVV9Rim1x-6" edge="1">
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-7" value="User clicks the &quot;Register&quot; button to create an account" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;entryX=0.512;entryY=0.218;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="285" y="496.25" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="370" y="486.25" />
-            </Array>
-            <mxPoint x="370" y="486.25" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-8" value="Logged into the registered account successfully" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="aM9ryv3xv72pqoxQDRHE-5" target="aM9ryv3xv72pqoxQDRHE-1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="170" y="676.25" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="285" y="676.25" />
-            </Array>
-            <mxPoint x="650" y="676.25" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-9" value="Registration completion" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.042;exitY=0.42;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="oVaFnZES87FRVV9Rim1x-6" target="aM9ryv3xv72pqoxQDRHE-1" edge="1">
-          <mxGeometry x="-0.0012" relative="1" as="geometry">
-            <mxPoint x="360" y="536.25" as="sourcePoint" />
+            <mxPoint x="-10.5" y="470" as="sourcePoint" />
             <Array as="points" />
-            <mxPoint x="170" y="536.24" as="targetPoint" />
-            <mxPoint as="offset" />
+            <mxPoint x="276.8000000000002" y="470.41999999999996" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oVaFnZES87FRVV9Rim1x-6" value="User&#39;s Device" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="395" y="463.75" width="120" height="182.5" as="geometry" />
+        <mxCell id="R3fOsro8TMt8DzRH_CVn-1" value="Log-in/Registration Page" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="200" y="390" width="150" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="oVaFnZES87FRVV9Rim1x-7" value="Tries to log-in to the registered account" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;entryX=-0.025;entryY=0.798;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="aM9ryv3xv72pqoxQDRHE-2" target="oVaFnZES87FRVV9Rim1x-6">
+        <mxCell id="R3fOsro8TMt8DzRH_CVn-5" value="Registration Complete" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="170" y="607.25" as="sourcePoint" />
+            <mxPoint x="274.5" y="590" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="170" y="590" />
+              <mxPoint x="290" y="580" />
+            </Array>
+            <mxPoint x="-10.5" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R3fOsro8TMt8DzRH_CVn-6" value="Mister ED System Server" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="510" y="390" width="100" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="R3fOsro8TMt8DzRH_CVn-7" value="User enters their info to create account" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="274.5" y="494.5" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="280" y="494.5" />
+            </Array>
+            <mxPoint x="559.5" y="494.91999999999996" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R3fOsro8TMt8DzRH_CVn-8" value="Info entered by user is then saved" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="514" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="864.6" y="514.01" />
+            </Array>
+            <mxPoint x="820" y="513.76" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R3fOsro8TMt8DzRH_CVn-9" value="Account creation successful" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="559.5" y="549" as="targetPoint" />
             <Array as="points" />
-            <mxPoint x="370" y="610.25" as="targetPoint" />
+            <mxPoint x="820" y="549" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oVaFnZES87FRVV9Rim1x-9" value="Saves user log-in credentials into database" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
-          <mxGeometry x="0.0021" relative="1" as="geometry">
-            <mxPoint x="759.5" y="506.25" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="650" y="506.25" />
-            </Array>
-            <mxPoint x="520" y="506.25" as="sourcePoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="oVaFnZES87FRVV9Rim1x-13" value="Checks log-in credentials" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
-          <mxGeometry x="0.0021" relative="1" as="geometry">
-            <mxPoint x="754.5" y="626.25" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="645" y="626.25" />
-            </Array>
-            <mxPoint x="515" y="626.25" as="sourcePoint" />
-            <mxPoint as="offset" />
+        <mxCell id="R3fOsro8TMt8DzRH_CVn-10" value="Account creation successful" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="274.5" y="570" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint x="559.5" y="570" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
       </root>
