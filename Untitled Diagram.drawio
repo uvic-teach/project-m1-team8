@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-10-03T22:09:45.458Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="sIkycKFjp-p9Z-Lgsn6z" version="22.0.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-04T19:40:20.000Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="bQ2DViHPaoR0Q3CYzJbZ" version="22.0.2" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
     <mxGraphModel dx="1290" dy="566" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-10" value="Triage Results to record on user&#39;s file" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-10" value="Triage Results to record on user&#39;s file" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1" target="e6sOTlOrPYM_l85QJ9jS-6">
           <mxGeometry x="-0.0476" relative="1" as="geometry">
             <mxPoint x="1129.5" y="720" as="targetPoint" />
             <Array as="points">
@@ -25,16 +25,16 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e6sOTlOrPYM_l85QJ9jS-4" value="Mister ED System Server" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+        <mxCell id="e6sOTlOrPYM_l85QJ9jS-4" value="Triage Module" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="780" y="430" width="130" height="320" as="geometry" />
         </mxCell>
         <mxCell id="e6sOTlOrPYM_l85QJ9jS-5" value="User" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="240" y="430" width="100" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="e6sOTlOrPYM_l85QJ9jS-6" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="1080" y="430" width="100" height="320" as="geometry" />
+        <mxCell id="e6sOTlOrPYM_l85QJ9jS-6" value="Patient Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="1080" y="430" width="110" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="e6sOTlOrPYM_l85QJ9jS-10" value="Gathers user specific questions" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+        <mxCell id="e6sOTlOrPYM_l85QJ9jS-10" value="Gathers questions for user to answer" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry x="0.1882" relative="1" as="geometry">
             <mxPoint x="631.5" y="520" as="sourcePoint" />
             <Array as="points">
@@ -46,18 +46,18 @@
         </mxCell>
         <mxCell id="e6sOTlOrPYM_l85QJ9jS-11" value="Triage Results" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry x="-0.0476" relative="1" as="geometry">
-            <mxPoint x="560" y="680" as="targetPoint" />
+            <mxPoint x="560" y="700" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="740.5" y="680" />
+              <mxPoint x="740.5" y="700" />
             </Array>
             <mxPoint as="offset" />
-            <mxPoint x="845.5" y="680" as="sourcePoint" />
+            <mxPoint x="845.5" y="700" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="DsRtqfWDJ8J8XdPlfuQk-1" value="Mister ED System Main Page" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="490" y="430" width="140" height="320" as="geometry" />
         </mxCell>
-        <mxCell id="997l_LpZVslPzTPIESlQ-2" value="Triage Result" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="997l_LpZVslPzTPIESlQ-2" value="Triage Result" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry x="-0.0476" relative="1" as="geometry">
             <mxPoint x="290" y="720" as="targetPoint" />
             <Array as="points">
@@ -67,27 +67,17 @@
             <mxPoint x="560" y="720" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="997l_LpZVslPzTPIESlQ-3" value="User specific questions" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
-          <mxGeometry x="-0.0476" relative="1" as="geometry">
-            <mxPoint x="844.5" y="540" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1020.5" y="540" />
-            </Array>
-            <mxPoint as="offset" />
-            <mxPoint x="1129.5" y="540" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="997l_LpZVslPzTPIESlQ-4" value="End of Virtual Triage" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="997l_LpZVslPzTPIESlQ-4" value="End of Virtual Triage" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry x="0.1882" relative="1" as="geometry">
-            <mxPoint x="631.5" y="640" as="sourcePoint" />
+            <mxPoint x="631.5" y="670" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="560" y="640" />
+              <mxPoint x="560" y="670" />
             </Array>
-            <mxPoint x="844.5" y="640" as="targetPoint" />
+            <mxPoint x="844.5" y="670" as="targetPoint" />
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="997l_LpZVslPzTPIESlQ-6" value="User specific questions" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="997l_LpZVslPzTPIESlQ-6" value="Retrieved questions for user" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry x="-0.0476" relative="1" as="geometry">
             <mxPoint x="560" y="560" as="targetPoint" />
             <Array as="points">
@@ -97,7 +87,7 @@
             <mxPoint x="845" y="560" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="997l_LpZVslPzTPIESlQ-8" value="User answers each question" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="997l_LpZVslPzTPIESlQ-8" value="User answers each question" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry x="-0.0526" relative="1" as="geometry">
             <mxPoint x="290" y="589.5" as="sourcePoint" />
             <Array as="points">
@@ -105,6 +95,26 @@
             </Array>
             <mxPoint x="560" y="589.5" as="targetPoint" />
             <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9sKRm5Z02t5Vqb4AFpR-1" value="Sends user answers" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="e6sOTlOrPYM_l85QJ9jS-4">
+          <mxGeometry x="-0.0526" relative="1" as="geometry">
+            <mxPoint x="560" y="610" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="660.5" y="610" />
+            </Array>
+            <mxPoint x="830" y="610" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_9sKRm5Z02t5Vqb4AFpR-2" value="Sends &quot;Triage Completed&quot; message" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0476" relative="1" as="geometry">
+            <mxPoint x="559.5" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="741" y="640" />
+            </Array>
+            <mxPoint as="offset" />
+            <mxPoint x="846" y="640" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
       </root>
