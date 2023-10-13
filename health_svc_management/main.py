@@ -5,10 +5,6 @@ app = FastAPI()
 # triageManager = TriageManament()
 # eRService = ERService()
 
-@app.get("/")
-async def root():
-    return app.openapi()
-
 @app.get("/triage/{triage_id}")
 async def get_triage(triage_id):
     return {
