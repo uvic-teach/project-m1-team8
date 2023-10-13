@@ -14,8 +14,8 @@ async def get_triage(triage_id):
             "status": "PROCESSING",
             }
 
-@app.get("/triage/results/{triage_id}")
-async def read_item(triage_id):
+@app.get("/triage/result/{triage_id}")
+async def get_triage_result(triage_id):
     return {
             "triage_id": triage_id,
             "perform_date": "2021-01-01",
@@ -30,7 +30,7 @@ async def read_item(triage_id):
             }
 
 @app.post("/triage/submit")
-async def perform_triage(patient_id: int, patient_name: str):
+async def submit_triage(patient_id: int, patient_name: str):
     # triageManager.create_triage_result(patient_id, patient_name)
     return {
         "message": "Triage answer submitted successfully",
@@ -48,7 +48,7 @@ async def get_triage_suggestion(triage_id: int):
     return {"message": "Triage suggestion retrieved successfully", "triage_id": triage_id, "suggestion": suggestion}
 
 @app.get("/er/booking/{booking_id}")
-async def get_booking(booking_id: int):
+async def get_er_booking(booking_id: int):
     # booking = eRService.get_booking(booking_id)
     return {
         "booking_id": booking_id,
@@ -62,7 +62,7 @@ async def get_booking(booking_id: int):
     }
 
 @app.get("/er/booking/status/{booking_id}")
-async def get_booking_status(booking_id: int):
+async def get_er_booking_status(booking_id: int):
     # erService.get_booking_status(booking_id)
     return {
         "message": "Booking status retrieved successfully",
@@ -71,7 +71,7 @@ async def get_booking_status(booking_id: int):
         }
 
 @app.post("/er/booking/create")
-async def create_booking(priority: int, patient_id: int):
+async def create_er_booking(priority: int, patient_id: int):
     # erService.create_booking(priority, patient_id)
     return {
         "message": "Booking created successfully",
@@ -90,12 +90,12 @@ async def create_booking(priority: int, patient_id: int):
         }
 
 @app.post("/er/booking/{booking_id}/cancel")
-async def cancel_booking(booking_id: int):
+async def cancel_er_booking(booking_id: int):
     return {
         "message": "Booking cancelled successfully",
         "booking_id": booking_id
         }
     
 @app.get("/er/load/{hospital_id}")
-async def check_load(hospital_id: int):
+async def check_er_load_in_area(hospital_id: int):
     return {"message": "Current ER Queue at Jubilee Hospital is 10. The estimated wait time is 3 days."}
