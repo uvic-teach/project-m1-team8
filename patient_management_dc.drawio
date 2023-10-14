@@ -1,9 +1,21 @@
-<mxfile host="app.diagrams.net" modified="2023-10-14T03:31:13.571Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" version="22.0.4" etag="OVYz10mDk8T18L9yDUKy" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-14T04:04:13.962Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="1K3FxvnjRaUQjC8cEzyp" version="22.0.4" type="github">
   <diagram name="Page-1" id="N1XHB9eJ3Ktm11am80fy">
-    <mxGraphModel>
+    <mxGraphModel dx="1332" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ZZaK3AFCLJGnbKY80Tlh-1" value="&amp;lt;&amp;lt;subsystem&amp;gt;&amp;gt; &lt;br&gt;Patient Management" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" width="810" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZaK3AFCLJGnbKY80Tlh-2" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;TriageRecord" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="70" y="90" width="210" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZaK3AFCLJGnbKY80Tlh-3" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;UserInformation" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="560" y="90" width="220" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ZZaK3AFCLJGnbKY80Tlh-4" value="&amp;lt;&amp;lt;component&amp;gt;&amp;gt;&lt;br&gt;AccountInformation" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="320" y="90" width="210" height="160" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
