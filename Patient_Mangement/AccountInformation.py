@@ -1,5 +1,7 @@
 class AccountInfo:
-    def _init_(self, username, password, first, last, phone, email, str_num, str_name, city, province, postal_code):
+    def _init_(self, patient_id, username, password, first, last, phone, email, str_num, str_name, city, province, postal_code):
+
+        self.patient_id = patient_id
         self.username = username
         self.password = password
         self.name = [first, last]
@@ -7,6 +9,15 @@ class AccountInfo:
         self.email = email
         self.address = [str_num, str_name, city, province, postal_code]
 
+
+
+    @property
+    def patient_id(self):
+        return self.patient_id
+    
+    @username.setter
+    def patient_id(self, value):
+        self.patient_id = value
 
     @property
     def username(self):
@@ -55,8 +66,3 @@ class AccountInfo:
     @address.setter
     def address(self, str_num, str_name, city, province, postal_code):
         self.address = [str_num, str_name, city, province, postal_code]
-
-
-    
-
-        
