@@ -125,7 +125,7 @@ async def get_specific_triage(patient_id, triage_id):
      #mangeTriage.getTriageRecord(patient_id, triage_id)
     return {
     "patient_id": patient_id,
-    "triage_id": "45382",
-    "available_date": triage_id,
+    "triage_id": triage_id,
+    "available_date": "1944-06-06",
     "summary": "44-year-old male with acute chest pain, shortness of breath, and sweating presented. Vital signs: BP 160/95 mmHg, HR 110 bpm, RR 22 breaths/min, Temp 98.6°F, O2 Sat 92%. Pain described as sharp, radiating to left arm, rated 8/10. ECG showed ST-segment elevation in leads II, III, aVF, categorized as Triage Level 2. Administered chewable aspirin, nitroglycerin, prepared for further emergency procedures. Family updated."
   }
