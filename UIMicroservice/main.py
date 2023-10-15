@@ -5,7 +5,7 @@ from components import notification, booking
 app = FastAPI()
 #notificationService = NotificationService()
 
-#erService = erSerivde()
+#erService = erService()
 
 #functions definition
 
