@@ -1,4 +1,5 @@
 ### CheckLoad:<br>
+Involved in checking the ED load are a patient/user, a database labelled edb, and a status page to display the requests from the database based on location data provided by the user.
 
 1.) Load the status page<br>
 2.) the page requests a Location and the patient inputs one then hits enter<br>
@@ -6,6 +7,9 @@
 4.) the ED load is displayed on the status page for the patient to see
 
 ### Login:<br>
+For login we have a patient/user, a login page that takes a username and password, a authenticator module that takes the inputted user/pass and verifies it with the database, and the patient database labeled PatDB.
+Alternative sequences in the diagram include the case where the patient has the wrong login details, and the case where the patient has forgotten their password<br>
+
 1.)Start with Patient and move to login page as it loads<br>
 2.)Login page requires Login credentials and the user inputs the credentials into a box<br>
 3.)the login button is pressed on the page moving to the Authenticator<br>
