@@ -92,8 +92,7 @@ The microservice uses Relational database to store the information for nurses, c
 The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
     
 #### Demo
-- TBD
-
+![Demo on GCP](assets/videos/Health-svc-management-api-gcp-demo.webm)
 ### Patient Mangement Microservice
 ![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
 
@@ -113,4 +112,4 @@ Team responsibility table showing which team members work on which microservice 
 [Link to API Documentation](https://app.swaggerhub.com/apis-docs/HangD/myster-ed_health_svc_management/0.1.0#/default/)
 
 ### Patient Mangement Microservice
-
+[Link to API Documentation](https://app.swaggerhub.com/apis-docs/minhn201/patient_management_m2/1.0.0#/)
