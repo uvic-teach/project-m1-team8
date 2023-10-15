@@ -4,12 +4,10 @@ class ERBooking:
       self.medical_id = medical_id   
       self.booking_id = booking_id
       self.booking_time = booking_time
-      self.booking_location = booking_location #String of Hospital name/address
+      self.hospital_id = hospital_id
+      self.hospital_location = booking_location #String of Hospital name/address
       booking_info = str(booking_time) + "at" + booking_location
       NotificationService.create_notification(user_id, "Your ER Booking time is" + booking_info)
-
-    def cancel_booking(self, user_id, booking_id):
-        #implementation to cancel a users ERBooking instance 
 
     def get_user_id(self):
         return self.user_id
