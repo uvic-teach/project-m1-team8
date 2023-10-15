@@ -27,6 +27,28 @@ __External__
 
 #### Patient Management Subsystem
 One of the components in the Patient Management Component Diagram is the `TriageRecord`, which is responsible for maintaining a comprehensive log of all triages conducted by the user. This component plays a vital role in tracking and organizing user interactions within the triage system, ensuring a detailed record of all triage-related activities. Another essential component is the `Account Management`, which is further divided into two distinct branches: `HealthInformation` and `AccountInformation`. The HealthInformation branch stores crucial details about the user's health, forming a repository for pertinent health-related data. On the other hand, the `AccountInformation` branch encompasses essential user account details, including username, password, and other relevant information. These components collectively form a robust structure, facilitating efficient management of both user interactions and sensitive account data within the system.
+*Components:**
+
+The subsystem, which represents Patient Management as a microservice, comprises 5 components:
+**Components:**
+
+- _TriageRecordManagement:_ Provides information to the UI about the patient's triage history by accessing the _TriageRecord_ database.
+- _TriageRecord database:_ Contains information about the patient's triage history.
+- _AccountInformationManagement:_ Handles requests from the patient to create an account and authenticates user credentials for logging in. It also allows patients to access personal health information.
+- _HealthInformation database:_ Contains information about the patient's personal health information.
+- _AccountInformation database:_ Contains information about the patient's user account.
+
+**Connectors:**
+__Internal__ (Within the Patient Management subsystem)
+- _`TriageRecordManagement` requires the `TriageInfo` interface from the `TriageRecord` database.
+- `AccountInformationManagement` requires `UserHealthInfo` and `AccountInfo` interfaces from the `HealthInformation` database and the `AccountInformation` database, respectively.
+
+__External__
+Between the Patient Management and UI subsystems:
+- The `LogIn` service component in the UI requires the `TriageRecord` interface from `TriageRecordManagement`, as well as the `UserInfo` and `UserValidation` interfaces from `AccountInformationManagement`.
+- The `Register`_ service component in the UI requires the `UserAccount` interface from `AccountInformationManagement`.
+Between Patient Management and Health Service Management:
+- `TriageRecord` requires `TriageResult` from the `TriageEngine` component in Health Service Management.
 
 ### Sequence Diagram
 #### Use Case UC-01 System Overview
