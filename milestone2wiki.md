@@ -40,13 +40,13 @@ The subsystem, which represents Patient Management as a microservice, comprises 
 
 **Connectors:**
 __Internal__ (Within the Patient Management subsystem)
-- _`TriageRecordManagement` requires the `TriageInfo` interface from the `TriageRecord` database.
+- `TriageRecordManagement` requires the `TriageInfo` interface from the `TriageRecord` database.
 - `AccountInformationManagement` requires `UserHealthInfo` and `AccountInfo` interfaces from the `HealthInformation` database and the `AccountInformation` database, respectively.
 
 __External__
 Between the Patient Management and UI subsystems:
 - The `LogIn` service component in the UI requires the `TriageRecord` interface from `TriageRecordManagement`, as well as the `UserInfo` and `UserValidation` interfaces from `AccountInformationManagement`.
-- The `Register`_ service component in the UI requires the `UserAccount` interface from `AccountInformationManagement`.
+- The `Register` service component in the UI requires the `UserAccount` interface from `AccountInformationManagement`.
 Between Patient Management and Health Service Management:
 - `TriageRecord` requires `TriageResult` from the `TriageEngine` component in Health Service Management.
 
@@ -204,6 +204,6 @@ The system's architecture extends further with the incorporation of an Account M
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Dhuruvan Krishnan Anavaratha | - Sequence Diagram for Login and Perform Triage Usecases<br>  - Patient Management Microservice                                                                               |
 | Hang Duong                   | - Sequence Diagram for Notify Usecase<br> - Health Service Management Microservice<br> - Reviewed and gave feedback other team members' PRs.<br> - Worked on the wiki page. <br> |
-|  Minh Nguyen                 | - Sequence Diagram for Genral System<br>  - Patient Management Microservice                                                                                                   |
+|  Minh Nguyen                 | - Sequence Diagram for General System<br>  - Patient Management Microservice                                                                                                   |
 | Miles Rose                   | - Sequence Diagram for Assign User to ER QueueUsecase<br>  - Front Page UI Microservice                                                                                       |
-| Miles Rose                   | - Sequence Diagram for Login and Check ER Load Usecase<br>  - Front Page UI Microservice                                                                                      |
+| Oliver Ware                  | - Sequence Diagram for Login and Check ER Load Usecase<br>  - Front Page UI Microservice                                                                                      |
