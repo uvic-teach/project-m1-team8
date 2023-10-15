@@ -101,19 +101,19 @@ async def get_triage_list(patient_id):
     #mangeTriage.getTriageRecordList(patient_id)
     return {"triage_history":
             [{
-    "patient_id": "13479",
+    "patient_id": patient_id,
     "triage_id": "45382",
     "available_date": "1944-06-06",
     "summary": "44-year-old male with acute chest pain, shortness of breath, and sweating presented. Vital signs: BP 160/95 mmHg, HR 110 bpm, RR 22 breaths/min, Temp 98.6°F, O2 Sat 92%. Pain described as sharp, radiating to left arm, rated 8/10. ECG showed ST-segment elevation in leads II, III, aVF, categorized as Triage Level 2. Administered chewable aspirin, nitroglycerin, prepared for further emergency procedures. Family updated."
 },
 {
-    "patient_id": "13479",
+    "patient_id": patient_id,
     "triage_id": "10439",
     "available_date": "1975-07-15",
     "summary": "75-year-old male, Triage Level 1, showed severe respiratory distress, cyanosis, altered consciousness. Immediate airway management, high-flow oxygen initiated, critical care team mobilized for advanced support."
 },
 {
-    "patient_id": "13479",
+    "patient_id": patient_id,
     "triage_id": "86241",
     "available_date": "1980-03-23",
     "summary": "80-year-old male, Triage Level 2, with persistent chest pain, mild dyspnea, history of hypertension. Administered nitroglycerin, continuous ECG monitoring, cardiology alerted for comprehensive cardiac assessment."
@@ -124,8 +124,8 @@ async def get_triage_list(patient_id):
 async def get_specific_triage(patient_id, triage_id):
      #mangeTriage.getTriageRecord(patient_id, triage_id)
     return {
-    "patient_id": "13479",
+    "patient_id": patient_id,
     "triage_id": "45382",
-    "available_date": "1944-06-06",
+    "available_date": triage_id,
     "summary": "44-year-old male with acute chest pain, shortness of breath, and sweating presented. Vital signs: BP 160/95 mmHg, HR 110 bpm, RR 22 breaths/min, Temp 98.6°F, O2 Sat 92%. Pain described as sharp, radiating to left arm, rated 8/10. ECG showed ST-segment elevation in leads II, III, aVF, categorized as Triage Level 2. Administered chewable aspirin, nitroglycerin, prepared for further emergency procedures. Family updated."
   }
