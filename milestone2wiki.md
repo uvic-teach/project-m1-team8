@@ -19,14 +19,14 @@ __Internal (Among the components)__
 
 __External__
 - __With Front Page UI Subsystem__:
-*Between ERManagement and ERService from the Front Page Subsystem*: ERService component requires ERBookingStatus and ERBooking interface that ERManagement component provides, as well as ERQueue for Checking Current ER Queue Capacity. 
-*Between TriageEngine and TriageServive from the Front Page Subsystem*: TriageServive component requires TriageResult and TriageSuggestion interface that TriageEngine component provides. 
-*Between TriageEngine and NotificationService from the Front Page Subsystem*: NotificationService component requires  TriageResultNotifcation interface that TriageEngine component provides. 
+  - Between `ERManagement` and `ERService` from the Front Page Subsystem: `ERService` component requires `ERBookingStatus` and `ERBooking` interface that `ERManagement` component provides, as well as `ERQueue` for Checking Current ER Queue Capacity. 
+  - Between `TriageEngine` and `TriageServive` from the Front Page Subsystem: TriageServive component requires TriageResult and `TriageSuggestion` interface that `TriageEngine` component provides.
+  - Between `TriageEngine` and `NotificationService` from the Front Page Subsystem: `NotificationService` component requires  `TriageResultNotifcation` interface that `TriageEngine` component provides.
 - __With Patient Management Subsystem__:
-*Between the TriageEngine and TriageRecord component from the Patient Management Subsystem*: TriageRecord component requires  TriageResults interface that TriageEngine component provides. 
+  - Between the `TriageEngine` and `TriageRecord` component from the Patient Management Subsystem: `TriageRecord`` component requires  `TriageResults` interface that `TriageEngine` component provides.
 
 #### Patient Management Subsystem
-One of the components in the Patient Management Component Diagram is the TriageRecord, which is responsible for maintaining a comprehensive log of all triages conducted by the user. This component plays a vital role in tracking and organizing user interactions within the triage system, ensuring a detailed record of all triage-related activities. Another essential component is the Account Management, which is further divided into two distinct branches: HealthInformation and AccountInformation. The HealthInformation branch stores crucial details about the user's health, forming a repository for pertinent health-related data. On the other hand, the AccountInformation branch encompasses essential user account details, including username, password, and other relevant information. These components collectively form a robust structure, facilitating efficient management of both user interactions and sensitive account data within the system.
+One of the components in the Patient Management Component Diagram is the `TriageRecord`, which is responsible for maintaining a comprehensive log of all triages conducted by the user. This component plays a vital role in tracking and organizing user interactions within the triage system, ensuring a detailed record of all triage-related activities. Another essential component is the `Account Management`, which is further divided into two distinct branches: `HealthInformation` and `AccountInformation`. The HealthInformation branch stores crucial details about the user's health, forming a repository for pertinent health-related data. On the other hand, the `AccountInformation` branch encompasses essential user account details, including username, password, and other relevant information. These components collectively form a robust structure, facilitating efficient management of both user interactions and sensitive account data within the system.
 
 ### Sequence Diagram
 #### Use Case UC-01 System Overview
@@ -112,10 +112,12 @@ __Process__:
 - **FastAPI**: FastAPI is used to implement the API that allows interaction with the service. The API exposes endpoints for managing triage, accessing health service databases, and retrieving the state of the ER queue. FastAPI offers a modern and efficient way to build APIs with automatic interactive API documentation.
 
 #### Service Components:
+
 - **Triage Management**:
-The triage management component handles the assessment and categorization of patients based on their medical condition and urgency. It assigns a triage level to each patient, indicating the severity of their condition, then suggests whether the patient needs to visit ER or take other actions. This component also manages the databases related to the health services. It stores and retrieves information about nurses details, clinic details, medicine information, medical inventory, and other relevant data. SQLAlchemy is used to interact with these databases.    
+The triage management component handles the assessment and categorization of patients based on their medical condition and urgency. It assigns a triage level to each patient, indicating the severity of their condition, then suggests whether the patient needs to visit ER or take other actions. This component also manages the databases related to the health services. It stores and retrieves information about nurses details, clinic details, medicine information, medical inventory, and other relevant data. SQLAlchemy is used to interact with these databases.
 **ER Management Model**:
 The ER Management component keeps track of the patients in the queue, their priority levels, estimated wait times, and other relevant information. It ensures a smooth flow of patients through the ER.
+
 **Database**:
 The microservice uses Relational database to store the information for nurses, clinician, medicine, and ER.
    
@@ -148,7 +150,7 @@ The system's architecture extends further with the incorporation of an Account M
 ### Patient Mangement Microservice
 [Link to API Documentation](https://app.swaggerhub.com/apis-docs/minhn201/patient_management_m2/1.0.0#/)
 
-### Team Contribution
+## Team Contribution
 | Team Member                  | Task                                                                                                                                                                     |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Dhuruvan Krishnan Anavaratha | - Sequence Diagram for Login and Perform Triage Usecases<br>  - Patient Management Microservice                                                                               |
