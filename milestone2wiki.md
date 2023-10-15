@@ -57,9 +57,14 @@ One of the components in the Patient Management Component Diagram is the TriageR
 ![Login Sequence Diagram](assets/images/Login%20sequence.png)
 
 ![Registration Sequence Diagram](assets/images/Registration-Sequence-Diagram.png)
+For the Mister ED System, this sequence diagram outlines the streamlined process of user registration. Initiated by the patient/user, the sequence commences when they click the "Registration" button on the welcome/home page. Upon this action, the system redirects the user to a dedicated registration page where they input their desired login credentials. The system rigorously validates these credentials with the patient database, ensuring the uniqueness and compliance with system requirements. If successful, the system creates a new account for the user and sends the user a verification email to validate the user’s new account. After the verifies the email, the registration process is complete. The alternate outcome of this scenario that might occur is if the user attempts to re-register with existing credentials.
+If the user tries to re-register with existing credentials then the system would send the “Account already Exists” message to the user, so that the user could enter different credentials to create their account.
 
 #### Use Case UC-03 Perform Virtual Triage
 ![Virtual Triage](assets/images/VirtualTriage.png)
+
+In the Virtual Triage sequence, the process initiates with the user logging into the Mister ED System. Upon login, the user triggers the virtual triage. The system responds by retrieving questions from the Triage Module for the user, then evaluating the severity of their medical condition based on the answers provided by the user. Based on the user's responses, the system determines the appropriate course of action, directing the user to either visit the Emergency Room (ER), a nearby clinic, or a pharmacy for over-the-counter medicine.
+Alternatively, the user can opt for a remote consultation via the nurse hotline. Throughout this process, the system ensures a seamless flow of interactions, confirming the user's choice and providing additional instructions when necessary. At the end of the triage, the result on what action the user should follow would be displayed on the user’s screen, and the patient database to keep a log of the triages, and the results.
 
 #### Use Case UC-04 Notify Triage's Result
 ![Notify](assets/images/notify.png)
@@ -116,7 +121,7 @@ The microservice uses Relational database to store the information for nurses, c
    
 #### Integration and Communication:
 The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
-    
+
 #### Demo
 [Health-svc-management-api-gcp-demo.webm](https://github.com/uvic-teach/project-m1-team8/assets/47402970/d7fe7b40-8da2-4288-9470-613ae7e65c36)
 
@@ -126,8 +131,13 @@ The Triage management and ER Management components interact to ensure that patie
 At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the User Interface (UI).
 The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
 
-UML Deployment Diagram and textual description of chosen deployment technologies (per microservice). Describe and point out evidence that you have successfully deployment skeleton microservice stubs.
-Team responsibility table showing which team members work on which microservice component
+### Team Contribution
+
+| Sub-team                                   | Microservice                          | Task                                                                                        |
+|--------------------------------------------|---------------------------------------|---------------------------------------------------------------------------------------------|
+| Miles Rose &  Oliver Ware                  | Front Page UI Microservice            | - Component Diagram (WIP) <br> - Deployment Diagram (WIP)                                           |
+| Hang Duong                                 | Health Service Mangement Microservice | - Component Diagram <br> - Deployment Diagram <br> - Service Demo on GCP <br> - API Documentation on SwaggerHub |
+| Dhuruvan Krishnan Anavaratha & Minh Nguyen | Patient Mangement Microservice        | - Component Diagram (WIP) <br> - Deployment Diagram <br> - API Documentation on SwaggerHub                      |
 
 ## Interface specifications
 ### Front Page UI Microservice
@@ -137,3 +147,12 @@ Team responsibility table showing which team members work on which microservice 
 
 ### Patient Mangement Microservice
 [Link to API Documentation](https://app.swaggerhub.com/apis-docs/minhn201/patient_management_m2/1.0.0#/)
+
+### Team Contribution
+| Team Member                  | Task                                                                                                                                                                     |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Dhuruvan Krishnan Anavaratha | - Sequence Diagram for Login and Perform Triage Usecases<br>  - Patient Management Microservice                                                                               |
+| Hang Duong                   | - Sequence Diagram for Notify Usecase - Health Service Management Microservice - Reviewed and gave feedback other team members' PRs.<br> - Worked on the wiki page. <br> |
+|  Minh Nguyen                 | - Sequence Diagram for Genral System<br>  - Patient Management Microservice                                                                                                   |
+| Miles Rose                   | - Sequence Diagram for Assign User to ER QueueUsecase<br>  - Front Page UI Microservice                                                                                       |
+| Miles Rose                   | - Sequence Diagram for Login and Check ER Load Usecase<br>  - Front Page UI Microservice                                                                                      |
