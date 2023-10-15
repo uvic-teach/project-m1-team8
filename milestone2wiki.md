@@ -1,7 +1,33 @@
 ## Design - Component & Connector View
+### Component Diagram
 
-UML Component Diagram and textual description of design explaining each microservice
-Sequence Diagrams for each Scenario (each use case) and textual description
+
+#### Health Service Management Subsystem
+**Components**:
+The subsystem Health Service Management consists of 6 components:
+- TriageEngine: Process request related to triage and compute the triage result based on the patient info input.
+- ERManagement: Manage the state of the current ER capacity.
+- NurseDatabase: Store the information related to nurses.
+- ClinicDatabase: Store the information related to clinics.
+- MedicineDatabase: Store the information related to medicine and pharmacy.
+- ERDatabase: Store the information related to state and status of ER Queue in all hospitals in Canada.
+
+**Connectors**:
+__Internal (Among the components)__
+- The TriageEngine requires interface Nurse, Clinic from NurseDatabase, ClinicDatabase respectively, and  Medicine and Pharmacy interface from MedicineDatabase. 
+- The ERManagement requires interface ERData from ERDatabase and provides interface ER to the TriageEngine.
+
+__External__
+- __With Front Page UI Subsystem__:
+*Between ERManagement and ERService from the Front Page Subsystem*: ERService component requires ERBookingStatus and ERBooking interface that ERManagement component provides, as well as ERQueue for Checking Current ER Queue Capacity. 
+*Between TriageEngine and TriageServive from the Front Page Subsystem*: TriageServive component requires TriageResult and TriageSuggestion interface that TriageEngine component provides. 
+*Between TriageEngine and NotificationService from the Front Page Subsystem*: NotificationService component requires  TriageResultNotifcation interface that TriageEngine component provides. 
+- __With Patient Management Subsystem__:
+*Between the TriageEngine and TriageRecord component from the Patient Management Subsystem*: TriageRecord component requires  TriageResults interface that TriageEngine component provides. 
+
+#### Patient Management Subsystem
+One of the components in the Patient Management Component Diagram is the TriageRecord, which is responsible for maintaining a comprehensive log of all triages conducted by the user. This component plays a vital role in tracking and organizing user interactions within the triage system, ensuring a detailed record of all triage-related activities. Another essential component is the Account Management, which is further divided into two distinct branches: HealthInformation and AccountInformation. The HealthInformation branch stores crucial details about the user's health, forming a repository for pertinent health-related data. On the other hand, the AccountInformation branch encompasses essential user account details, including username, password, and other relevant information. These components collectively form a robust structure, facilitating efficient management of both user interactions and sensitive account data within the system.
+
 ### Sequence Diagram
 #### Use Case UC-01 System Overview
 ![Sequence Diagram](assets/images/general_sequence_diagram.jpg)
@@ -92,7 +118,7 @@ The microservice uses Relational database to store the information for nurses, c
 The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
     
 #### Demo
-![Demo on GCP](assets/videos/Health-svc-management-api-gcp-demo.mp4)
+![Demo on GCP](assets/videos/Health-svc-management-api-gcp-demo.mov)
 ### Patient Mangement Microservice
 ![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
 
