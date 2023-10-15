@@ -70,11 +70,10 @@ __Process__:
 ![Check ER Status](assets/images/Check_Ed_Status.png)
 
 ## Allocation View
-### Deployment Diagram
-#### Front Page UI Microservice
+### Front Page UI Microservice
 ![UI](assets/images/Deployment_diagrams/UI_deployment.png)
 
-#### Health Service Mangement Microservice
+### Health Service Mangement Microservice
 ![Health Service Management](assets/images/Deployment_diagrams/health_service_management.png)
 #### Tech stack:
 - **Python**: The main programming language for developing the service and leveraging libraries such as SQLAlchemy and FastAPI.
@@ -92,7 +91,10 @@ The microservice uses Relational database to store the information for nurses, c
 #### Integration and Communication:
 The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
     
-#### Patient Mangement Microservice
+#### Demo
+- TBD
+
+### Patient Mangement Microservice
 ![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
 
 At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through 
@@ -105,6 +107,10 @@ UML Deployment Diagram and textual description of chosen deployment technologies
 Team responsibility table showing which team members work on which microservice component
 
 ## Interface specifications
+### Front Page UI Microservice
 
-Documentation for each interface or links to external site like Postman or Swaggerhub
+### Health Service Mangement Microservice
+[Link to API Documentation](https://app.swaggerhub.com/apis-docs/HangD/myster-ed_health_svc_management/0.1.0#/default/)
+
+### Patient Mangement Microservice
 
