@@ -70,6 +70,36 @@ __Process__:
 ![Check ER Status](assets/images/Check_Ed_Status.png)
 
 ## Allocation View
+### Deployment Diagram
+#### Front Page UI Microservice
+![UI](assets/images/Deployment_diagrams/UI_deployment.png)
+
+#### Health Service Mangement Microservice
+![Health Service Management](assets/images/Deployment_diagrams/health_service_management.png)
+#### Tech stack:
+- **Python**: The main programming language for developing the service and leveraging libraries such as SQLAlchemy and FastAPI.
+- **SQLAlchemy**: Used for interacting with databases and managing health service-related data efficiently.
+- **FastAPI**: FastAPI is used to implement the API that allows interaction with the service. The API exposes endpoints for managing triage, accessing health service databases, and retrieving the state of the ER queue. FastAPI offers a modern and efficient way to build APIs with automatic interactive API documentation.
+
+#### Service Components:
+- **Triage Management**:
+The triage management component handles the assessment and categorization of patients based on their medical condition and urgency. It assigns a triage level to each patient, indicating the severity of their condition, then suggests whether the patient needs to visit ER or take other actions. This component also manages the databases related to the health services. It stores and retrieves information about nurses details, clinic details, medicine information, medical inventory, and other relevant data. SQLAlchemy is used to interact with these databases.    
+**ER Management Model**:
+The ER Management component keeps track of the patients in the queue, their priority levels, estimated wait times, and other relevant information. It ensures a smooth flow of patients through the ER.
+**Database**:
+The microservice uses Relational database to store the information for nurses, clinician, medicine, and ER.
+   
+#### Integration and Communication:
+The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
+    
+#### Patient Mangement Microservice
+![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
+
+At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through 
+FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the 
+User Interface (UI). 
+The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication 
+between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
 
 UML Deployment Diagram and textual description of chosen deployment technologies (per microservice). Describe and point out evidence that you have successfully deployment skeleton microservice stubs.
 Team responsibility table showing which team members work on which microservice component
