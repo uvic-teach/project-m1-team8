@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-15T10:05:22.276Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="5NFhinJhopREGDw1Abon" version="22.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-15T11:29:39.610Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="mH1slL_hnoDeEe7iQLjl" version="22.0.4" type="github">
   <diagram name="Page-1" id="T9B23MiwFJrCK6j_H8M_">
-    <mxGraphModel dx="1149" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1149" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -64,7 +64,7 @@
             <mxPoint x="270" y="120" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-50" value="RegisterAccount(PatientInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-48" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-50" value="registerAccount(PatientInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-48" connectable="0" vertex="1">
           <mxGeometry x="-0.0433" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -75,7 +75,7 @@
             <mxPoint x="970" y="130" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-53" value="Update(UserInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-51" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-53" value="update(UserInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-51" connectable="0" vertex="1">
           <mxGeometry x="-0.1718" y="2" relative="1" as="geometry">
             <mxPoint x="59" y="2" as="offset" />
           </mxGeometry>
@@ -86,7 +86,7 @@
             <mxPoint x="70" y="150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-55" value="Display(AccountSummary)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-54" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-55" value="display(AccountSummary)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-54" connectable="0" vertex="1">
           <mxGeometry x="0.322" y="-3" relative="1" as="geometry">
             <mxPoint x="31" y="3" as="offset" />
           </mxGeometry>
@@ -97,7 +97,7 @@
             <mxPoint x="275" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-57" value="Login(Username,Password)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-56" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-57" value="login(Username,Password)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-56" connectable="0" vertex="1">
           <mxGeometry x="-0.2133" y="3" relative="1" as="geometry">
             <mxPoint x="22" y="1" as="offset" />
           </mxGeometry>
@@ -108,7 +108,7 @@
             <mxPoint x="970" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-61" value="ValidateCredential(Username, Password)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-58" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-61" value="validateCredential(Username, Password)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-58" connectable="0" vertex="1">
           <mxGeometry x="-0.2768" relative="1" as="geometry">
             <mxPoint x="97" as="offset" />
           </mxGeometry>
@@ -128,7 +128,7 @@
             <mxPoint x="285" y="220" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-63" value="Return(True)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-62" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-63" value="return(True)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-62" connectable="0" vertex="1">
           <mxGeometry x="0.3838" y="-1" relative="1" as="geometry">
             <mxPoint x="132" as="offset" />
           </mxGeometry>
@@ -139,7 +139,7 @@
             <mxPoint x="70" y="240" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-65" value="Display(AccountSummary)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-64" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-65" value="display(AccountSummary)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-64" connectable="0" vertex="1">
           <mxGeometry x="0.1268" y="1" relative="1" as="geometry">
             <mxPoint x="13" y="-1" as="offset" />
           </mxGeometry>
@@ -159,7 +159,7 @@
             <mxPoint x="275" y="270" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-70" value="CheckEDCapacity(EDLocation)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-68" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-70" value="checkEDCapacity(EDLocation)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-68" connectable="0" vertex="1">
           <mxGeometry x="-0.3222" y="1" relative="1" as="geometry">
             <mxPoint x="34" y="1" as="offset" />
           </mxGeometry>
@@ -193,7 +193,7 @@
             <mxPoint x="285" y="309.58" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-78" value="Return(EDCapacity)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-77" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-78" value="return(EDCapacity)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-77" connectable="0" vertex="1">
           <mxGeometry x="0.3502" y="-3" relative="1" as="geometry">
             <mxPoint x="95" y="3" as="offset" />
           </mxGeometry>
@@ -204,7 +204,7 @@
             <mxPoint x="65" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-80" value="Display(EDCapacity)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-79" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-80" value="display(EDCapacity)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-79" connectable="0" vertex="1">
           <mxGeometry x="0.1837" y="-2" relative="1" as="geometry">
             <mxPoint x="22" y="2" as="offset" />
           </mxGeometry>
@@ -224,7 +224,7 @@
             <mxPoint x="270" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-83" value="RequestVirtualTriage(PatientInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-82" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-83" value="requestVirtualTriage(PatientInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-82" connectable="0" vertex="1">
           <mxGeometry x="-0.265" y="1" relative="1" as="geometry">
             <mxPoint x="30" as="offset" />
           </mxGeometry>
@@ -235,7 +235,7 @@
             <mxPoint x="970" y="380" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-88" value="Update(UserHealthInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-84" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-88" value="update(UserHealthInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-84" connectable="0" vertex="1">
           <mxGeometry x="-0.4" relative="1" as="geometry">
             <mxPoint x="138" as="offset" />
           </mxGeometry>
@@ -255,7 +255,7 @@
             <mxPoint x="505" y="424" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-94" value="InitiateTriage(UserHealthInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-93" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-94" value="initiateTriage(UserHealthInfo)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-93" connectable="0" vertex="1">
           <mxGeometry x="-0.2667" y="1" relative="1" as="geometry">
             <mxPoint x="33" y="1" as="offset" />
           </mxGeometry>
@@ -275,7 +275,7 @@
             <mxPoint x="285" y="449.58" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-100" value="Return(TriageResult)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-99" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-100" value="return(TriageResult)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-99" connectable="0" vertex="1">
           <mxGeometry x="0.0348" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -286,7 +286,7 @@
             <mxPoint x="70" y="470" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HbIsc1eeLQmC7S-vZHrp-102" value="Display(TriageResult)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-101" connectable="0" vertex="1">
+        <mxCell id="HbIsc1eeLQmC7S-vZHrp-102" value="display(TriageResult)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="HbIsc1eeLQmC7S-vZHrp-101" connectable="0" vertex="1">
           <mxGeometry x="0.1756" relative="1" as="geometry">
             <mxPoint x="16" as="offset" />
           </mxGeometry>
@@ -300,7 +300,7 @@
         <mxCell id="HbIsc1eeLQmC7S-vZHrp-132" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="975" y="590" width="10" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="sh2h3mMdBESm6vbJgLIi-39" value="Notify(NurseService)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+        <mxCell id="sh2h3mMdBESm6vbJgLIi-39" value="notify(NurseService)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="275" y="910" as="sourcePoint" />
             <mxPoint x="65" y="910" as="targetPoint" />
@@ -313,7 +313,7 @@
             <mxPoint x="275" y="940" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sh2h3mMdBESm6vbJgLIi-41" value="RegisterNurseService()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-40" connectable="0" vertex="1">
+        <mxCell id="sh2h3mMdBESm6vbJgLIi-41" value="registerNurseService()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-40" connectable="0" vertex="1">
           <mxGeometry x="-0.1635" y="1" relative="1" as="geometry">
             <mxPoint x="17" as="offset" />
           </mxGeometry>
@@ -357,7 +357,7 @@
             <mxPoint x="285" y="1040" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sh2h3mMdBESm6vbJgLIi-49" value="Return(NurseHotlineList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-48" vertex="1" connectable="0">
+        <mxCell id="sh2h3mMdBESm6vbJgLIi-49" value="return(NurseHotlineList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-48" vertex="1" connectable="0">
           <mxGeometry x="0.1964" y="-4" relative="1" as="geometry">
             <mxPoint x="62" y="4" as="offset" />
           </mxGeometry>
@@ -368,7 +368,7 @@
             <mxPoint x="65" y="1070" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sh2h3mMdBESm6vbJgLIi-51" value="Notify(NurseHotlineList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-50" vertex="1" connectable="0">
+        <mxCell id="sh2h3mMdBESm6vbJgLIi-51" value="notify(NurseHotlineList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-50" vertex="1" connectable="0">
           <mxGeometry x="-0.3818" y="-1" relative="1" as="geometry">
             <mxPoint x="-40" as="offset" />
           </mxGeometry>
@@ -385,7 +385,7 @@
             <mxPoint x="270" y="1250" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="sh2h3mMdBESm6vbJgLIi-63" value="RegisterVisitClinic()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-62" connectable="0" vertex="1">
+        <mxCell id="sh2h3mMdBESm6vbJgLIi-63" value="registerVisitClinic()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-62" connectable="0" vertex="1">
           <mxGeometry x="-0.1635" y="1" relative="1" as="geometry">
             <mxPoint x="22" as="offset" />
           </mxGeometry>
@@ -410,7 +410,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="sh2h3mMdBESm6vbJgLIi-71" value="Return(NearestClinicList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-70" vertex="1" connectable="0">
+        <mxCell id="sh2h3mMdBESm6vbJgLIi-71" value="return(NearestClinicList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="sh2h3mMdBESm6vbJgLIi-70" vertex="1" connectable="0">
           <mxGeometry x="0.1964" y="-4" relative="1" as="geometry">
             <mxPoint x="62" y="4" as="offset" />
           </mxGeometry>
@@ -430,7 +430,7 @@
         <mxCell id="sh2h3mMdBESm6vbJgLIi-80" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
           <mxGeometry x="275" y="1210" width="10" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-1" value="Notify(ERService)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-1" value="notify(ERService)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="275" y="550" as="sourcePoint" />
             <mxPoint x="65" y="550" as="targetPoint" />
@@ -443,7 +443,7 @@
             <mxPoint x="275" y="580" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-3" value="RegisterERService()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-2" connectable="0" vertex="1">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-3" value="registerERService()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-2" connectable="0" vertex="1">
           <mxGeometry x="-0.1635" y="1" relative="1" as="geometry">
             <mxPoint x="17" y="1" as="offset" />
           </mxGeometry>
@@ -465,7 +465,7 @@
             <mxPoint x="285" y="690" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-7" value="Return(EDLocation)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-6" connectable="0" vertex="1">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-7" value="return(EDLocation)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-6" connectable="0" vertex="1">
           <mxGeometry x="0.3502" y="-3" relative="1" as="geometry">
             <mxPoint x="95" y="3" as="offset" />
           </mxGeometry>
@@ -490,7 +490,7 @@
             <mxPoint x="285" y="750" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-13" value="Return(EDCapacity)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-12" connectable="0" vertex="1">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-13" value="return(EDCapacity)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-12" connectable="0" vertex="1">
           <mxGeometry x="0.3502" y="-3" relative="1" as="geometry">
             <mxPoint x="95" y="3" as="offset" />
           </mxGeometry>
@@ -520,7 +520,7 @@
             <mxPoint x="285" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-21" value="Return(UserHealthLocation)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-20" vertex="1" connectable="0">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-21" value="return(UserHealthLocation)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-20" vertex="1" connectable="0">
           <mxGeometry x="-0.0783" relative="1" as="geometry">
             <mxPoint x="-27" as="offset" />
           </mxGeometry>
@@ -534,7 +534,7 @@
             <mxPoint x="65" y="780" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-24" value="Notify(EDAvailability)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-23" vertex="1" connectable="0">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-24" value="notify(EDAvailability)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-23" vertex="1" connectable="0">
           <mxGeometry x="0.219" y="2" relative="1" as="geometry">
             <mxPoint x="23" as="offset" />
           </mxGeometry>
@@ -585,12 +585,12 @@
             <mxPoint x="64.99692307692305" y="1390" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-36" value="Notify(NearestClinicList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-35" vertex="1" connectable="0">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-36" value="notify(NearestClinicList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="djAkX7jZcfrSpX7Slma0-35" vertex="1" connectable="0">
           <mxGeometry x="0.1428" relative="1" as="geometry">
             <mxPoint x="25" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="djAkX7jZcfrSpX7Slma0-37" value="Notify(VisitClinic)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+        <mxCell id="djAkX7jZcfrSpX7Slma0-37" value="notify(VisitClinic)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="275" y="1220" as="sourcePoint" />
             <mxPoint x="65" y="1220" as="targetPoint" />
@@ -603,7 +603,7 @@
             <mxPoint x="270" y="1540" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FM24dK66t6A0Ly4cPe0R-2" value="RegisterMedication()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="FM24dK66t6A0Ly4cPe0R-1" connectable="0" vertex="1">
+        <mxCell id="FM24dK66t6A0Ly4cPe0R-2" value="registerMedication()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="FM24dK66t6A0Ly4cPe0R-1" connectable="0" vertex="1">
           <mxGeometry x="-0.1635" y="1" relative="1" as="geometry">
             <mxPoint x="22" as="offset" />
           </mxGeometry>
@@ -628,7 +628,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="FM24dK66t6A0Ly4cPe0R-6" value="Return(NearestPharmacyList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="FM24dK66t6A0Ly4cPe0R-5" vertex="1" connectable="0">
+        <mxCell id="FM24dK66t6A0Ly4cPe0R-6" value="return(NearestPharmacyList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="FM24dK66t6A0Ly4cPe0R-5" vertex="1" connectable="0">
           <mxGeometry x="0.1964" y="-4" relative="1" as="geometry">
             <mxPoint x="62" y="4" as="offset" />
           </mxGeometry>
@@ -676,12 +676,12 @@
             <mxPoint x="64.99692307692305" y="1680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FM24dK66t6A0Ly4cPe0R-17" value="Notify(NearestPharmacyList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="FM24dK66t6A0Ly4cPe0R-16" vertex="1" connectable="0">
+        <mxCell id="FM24dK66t6A0Ly4cPe0R-17" value="notify(NearestPharmacyList)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="FM24dK66t6A0Ly4cPe0R-16" vertex="1" connectable="0">
           <mxGeometry x="0.1428" relative="1" as="geometry">
             <mxPoint x="25" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="FM24dK66t6A0Ly4cPe0R-18" value="Notify(Medication)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+        <mxCell id="FM24dK66t6A0Ly4cPe0R-18" value="notify(Medication)" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="275" y="1510" as="sourcePoint" />
             <mxPoint x="65" y="1510" as="targetPoint" />
