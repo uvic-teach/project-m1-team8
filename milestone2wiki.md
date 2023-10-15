@@ -115,10 +115,11 @@ __Process__:
 
 - **Triage Management**:
 The triage management component handles the assessment and categorization of patients based on their medical condition and urgency. It assigns a triage level to each patient, indicating the severity of their condition, then suggests whether the patient needs to visit ER or take other actions. This component also manages the databases related to the health services. It stores and retrieves information about nurses details, clinic details, medicine information, medical inventory, and other relevant data. SQLAlchemy is used to interact with these databases.
-**ER Management Model**:
+
+- **ER Management Model**:
 The ER Management component keeps track of the patients in the queue, their priority levels, estimated wait times, and other relevant information. It ensures a smooth flow of patients through the ER.
 
-**Database**:
+- **Database**:
 The microservice uses Relational database to store the information for nurses, clinician, medicine, and ER.
    
 #### Integration and Communication:
