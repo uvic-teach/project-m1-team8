@@ -202,7 +202,7 @@ The system's architecture extends further with the incorporation of an Account M
 ## Team Contribution
 | Team Member                  | Task                                                                                                                                                                     |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dhuruvan Krishnan Anavaratha | - Sequence Diagram for Login and Perform Triage Usecases<br>  - Patient Management Microservice                                                                               |
+| Dhuruvan Krishnan Anavaratha | - Sequence Diagram for Registration and Perform Triage Usecases<br>  - Patient Management Microservice                                                                               |
 | Hang Duong                   | - Sequence Diagram for Notify Usecase<br> - Health Service Management Microservice<br> - Reviewed and gave feedback other team members' PRs.<br> - Worked on the wiki page. <br> |
 |  Minh Nguyen                 | - Sequence Diagram for General System<br>  - Patient Management Microservice                                                                                                   |
 | Miles Rose                   | - Sequence Diagram for Assign User to ER QueueUsecase<br>  - Front Page UI Microservice                                                                                       |
