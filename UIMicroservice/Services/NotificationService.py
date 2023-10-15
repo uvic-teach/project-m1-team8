@@ -1,17 +1,23 @@
+
+from components import Notification
+
 class NotificationService:
   def __init__(self):
-    NotificationList = [];
-    IncomingNotification = [];
+    self.notification_list = []
 
-  def get_notifications(self, IncomingNotifications) -> NotificationList:
-        #implementation to scan through incoming notifications from internal services to see if new notifications have been requested.
-      return []
 
-  def  read_notification_list(self, user_id: int) -> NotificationList:
-      #takes users patient_id and returns their Notification list
-      return self.get_notifications.get(user_id)
+  def  get_notification_list(self, user_id: int) -> List
+    return self.notification_list
+    
 
-  def create_notification(self, message: string) -> Notification
+  def add_notificaiton(self, user_id: int, notification: Notification) -> void
+    NotificationList.append(notification)
+    return void
+
+  def 
+    
+
+  
       
       
     
