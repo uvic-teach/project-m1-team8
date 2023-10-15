@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from Services import ERService, Authentication, NotificationService, TriageDataGetter
 from components import notification, booking
+from fastapi.openapi.utils import get_openapi
 
 app = FastAPI()
 #notificationService = NotificationService()
@@ -64,6 +65,25 @@ async def cancel_er_booking(booking_id: int):
         "booking_id": booking_id
         "user_id": user_id
   }
+
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+    openapi_schema = get_openapi(
+        title="mister_ed_user_interface",
+        version="1.0",
+        summary="UI API",
+        description="This is the API for the misterED user interface",
+        routes=app.routes,
+    )
+    openapi_schema["info"]["x-logo"] = {
+        "url": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"
+    }
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+
+app.openapi = custom_openapi
     
 
 
