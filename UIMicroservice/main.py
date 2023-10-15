@@ -5,4 +5,8 @@ app = FastAPI()
 
 #functions definition
 
-@app.get("")
+@app.get("/")
+  async def homepage():
+    return "MisterED UI"
+
+
