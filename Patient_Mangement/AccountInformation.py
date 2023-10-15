@@ -15,7 +15,7 @@ class AccountInfo:
     def patient_id(self):
         return self.patient_id
     
-    @username.setter
+    @patient_id.setter
     def patient_id(self, value):
         self.patient_id = value
 
