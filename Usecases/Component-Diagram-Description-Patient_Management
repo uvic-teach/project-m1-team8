@@ -1,0 +1,10 @@
+One of the components in the Patient Management Component Diagram is the TriageRecord, which is 
+responsible for maintaining a comprehensive log of all triages conducted by the user. This component 
+plays a vital role in tracking and organizing user interactions within the triage system, ensuring a 
+detailed record of all triage-related activities. Another essential component is the Account Management, 
+which is further divided into two distinct branches: HealthInformation and AccountInformation. The 
+HealthInformation branch stores crucial details about the user's health, forming a repository for 
+pertinent health-related data. On the other hand, the AccountInformation branch encompasses essential 
+user account details, including username, password, and other relevant information. These components 
+collectively form a robust structure, facilitating efficient management of both user interactions and 
+sensitive account data within the system.
