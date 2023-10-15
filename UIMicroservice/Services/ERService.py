@@ -2,7 +2,6 @@ from components import booking
 
 class ERService:
   def __init__(self):
-    self.notification_list = []
     
   def create_booking(self, user_id: int) -> Booking
     #creates new Booking with unique booking id
