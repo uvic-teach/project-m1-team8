@@ -10,11 +10,11 @@ class NotificationService:
     return self.notification_list
     
 
-  def add_notificaiton(self, user_id: int, notification: Notification) -> void
-    NotificationList.append(notification)
-    return void
+  def add_notification(self, user_id: int, notification: Notification) -> void
+      # adds Notification notification to notification_list
+    pass
 
-  def 
+  
     
 
   
