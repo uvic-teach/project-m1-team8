@@ -92,15 +92,12 @@ The microservice uses Relational database to store the information for nurses, c
 The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
     
 #### Demo
-![Demo on GCP](assets/videos/Health-svc-management-api-gcp-demo.webm)
+![Demo on GCP](assets/videos/Health-svc-management-api-gcp-demo.mp4)
 ### Patient Mangement Microservice
 ![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
 
-At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through 
-FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the 
-User Interface (UI). 
-The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication 
-between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
+At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the User Interface (UI).
+The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
 
 UML Deployment Diagram and textual description of chosen deployment technologies (per microservice). Describe and point out evidence that you have successfully deployment skeleton microservice stubs.
 Team responsibility table showing which team members work on which microservice component
