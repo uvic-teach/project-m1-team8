@@ -64,8 +64,7 @@ async def cancel_er_booking(booking_id: int):
         "booking_id": booking_id
         "user_id": user_id
   }
-         
-
+    
 
 
 
