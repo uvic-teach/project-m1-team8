@@ -1,1 +1,5 @@
-
+The first thing a client will see when accessing our service 
+will be the UI and how it is portrayed. This web server contains
+a HTML website,a .css file for display styles, and a javascript file
+to request tasks using fast API. Fast API is an efficient web framework for connecting the web server and the application server.
+On the application server are three types of services: Authentication, Notification, and a Triage data gatherer. The Authentication service takes a username and password from the website, then communicates with the patient management microservice to determine the validity of the credentials. After Validity/Denial, the website will update accordingly. The notification service will generate a text message according to the current ask (such as a login success message) and display it on the webpage for a set period. The triage data gatherer communicates with the patient management microservice to obtain the data from the user's most recent triage and display it on the webpage.  
