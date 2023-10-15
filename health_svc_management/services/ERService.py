@@ -1,4 +1,5 @@
 from components import ERBooking, ERQueue, ERBookingStatus
+from datetime import datetime, timedelta
 class ERService:
     def __init__(self):
         # Initialize any necessary variables or data structures
@@ -38,7 +39,7 @@ class ERService:
             Returns:
                 ERBooking: An object containing the details of the booking, including priority, patient ID, and status.
             """
-            pass
+            return ERBooking(booking_id, datetime.strptime("31-12-2012", "%d-%m-%Y"), ERBookingStatus.WAITING, datetime.strptime("31-12-2012", "%d-%m-%Y"), timedelta(days=2), 0, 0)
     
     def update_booking(self, booking_id: int, priority: int, patient_id: int, status: str) -> bool:
         """

@@ -5,6 +5,10 @@ app = FastAPI()
 # triageManager = TriageManament()
 # eRService = ERService()
 
+@app.get("/")
+async def homepage():
+    return "Health Service Management"
+    
 @app.get("/triage/{triage_id}")
 async def get_triage(triage_id):
     return {
@@ -57,7 +61,7 @@ async def get_er_booking(booking_id: int):
         "last_updated": "2021-01-01",
         "estimated_time": "3 days",
         "area": "Victoria",
-        "hospital_name": "Jubilee Hospital",  
+        "hospital_name": "Royal Jubilee Hospital",  
         "slot_number": 23
     }
 

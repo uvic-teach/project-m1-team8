@@ -1,4 +1,10 @@
-class TriageResult:
+from pydantic import BaseModel
+
+class NotificationSvc:
+    def __init__(self):
+        pass
+    
+class TriageResult(BaseModel):
     """
     Represents the result of a triage assessment for a patient.
 
@@ -110,4 +116,5 @@ class TriageResult:
         Args:
             notificationSvc (NotificationSvc): The notification service to use to send the notification.
         """
-        notificationSvc.sendNotification(self._triage_id, self._patient_name, self._available_date)
+        # notificationSvc.sendNotification(self._triage_id, self._patient_name, self._available_date)
+        pass
