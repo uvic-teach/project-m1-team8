@@ -55,6 +55,26 @@ One of the components in the Patient Management Component Diagram is the `Triage
 ### Sequence Diagram Specification
 #### Use Case UC-02 User Authentication
 ![Login Sequence Diagram](assets/images/Login%20sequence.png)
+For login we have a patient/user, a login page that takes a username and password, a authenticator module that takes the inputted user/pass and verifies it with the database, and the patient database labeled PatDB.
+Alternative sequences in the diagram include the case where the patient has the wrong login details, and the case where the patient has forgotten their password
+
+1) Start with Patient and move to login page as it loads.
+2) Login page requires Login credentials and the user inputs the credentials into a box.
+3) The login button is pressed on the page moving to the Authenticator.
+4) Authenticator checks in with the patient database and validates/invalidates a patient.
+5) Update login status (logged out for invalid, logged in for valid).
+6a) If valid - load patient dashboard
+6b) If invalid - reload loginpage with error message
+
+**Alt task for login: forgot password:**
+1) Load the login page
+2) Page requests Login credentials but patient selects "forgot password" button.
+3) Page requests username then patient inputs username.
+4) The button "Send email" is selected and a confirmation email is sent.
+5) Authenticator validates the username from the database and sends a verify email.
+6) User inputs data from email and their new password to the page and the page sends the data to the authenticator.
+7) The authenticator verifys the email data and the page sends an update message to the database.
+8) The password is updated and a notification for successful password change is sent.
 
 ![Registration Sequence Diagram](assets/images/Registration-Sequence-Diagram.png)
 For the Mister ED System, this sequence diagram outlines the streamlined process of user registration. Initiated by the patient/user, the sequence commences when they click the "Registration" button on the welcome/home page. Upon this action, the system redirects the user to a dedicated registration page where they input their desired login credentials. The system rigorously validates these credentials with the patient database, ensuring the uniqueness and compliance with system requirements. If successful, the system creates a new account for the user and sends the user a verification email to validate the user’s new account. After the verifies the email, the registration process is complete. The alternate outcome of this scenario that might occur is if the user attempts to re-register with existing credentials.
@@ -99,6 +119,12 @@ __Process__:
 
 #### Use Case UC-06 Check ER Queue Load
 ![Check ER Status](assets/images/Check_Ed_Status.png)
+Involved in checking the ED load are a patient/user, a database labelled edb, and a status page to display the requests from the database based on location data provided by the user.
+
+1) Load the status page.
+2) the page requests a Location and the patient inputs one then hits enter.
+3) the page requests the load data from the database for that location.
+4) the ED load is displayed on the status page for the patient to see.
 
 ## Allocation View
 ### Front Page UI Microservice
