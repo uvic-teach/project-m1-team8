@@ -68,7 +68,7 @@ async def cancel_er_booking(booking_id: int):
 
 
 
-app.openapi()
+app.openapi = custom_openapi
 
     
 
