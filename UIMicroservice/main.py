@@ -5,6 +5,8 @@ from components import notification, booking
 app = FastAPI()
 #notificationService = NotificationService()
 
+#erService = erSerivde()
+
 #functions definition
 
 @app.get("/")
@@ -56,7 +58,7 @@ async def create_er_request(patient_id: int, ):
 
 @app.post("/er/booking/{booking_id}/cancelbooking")
 async def cancel_er_booking(booking_id: int):
-  #clear booking from erqueue
+  #clear booking from erqueue in erService
   return {
         "message": "Booking cancellation request successfull.",
         "booking_id": booking_id
