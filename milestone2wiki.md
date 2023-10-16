@@ -1,7 +1,26 @@
 ## Design - Component & Connector View
 ### Component Diagram
+![Component Diagram](assets/images/component-connector-diagram.png)
 
+#### Front Page UI Subsystem
+The UI microservices is split into 4 components
+**Authentication**
+- this service contains two actions: a login and register action
+- login: communicate with account information to validate credentials
+- register: communicate with account information to add new dredentials to account information
+  
+**Notification**
+- This service generates and displays notifications when various tasks occur
+- Some tasks include account info updates, updates to the triage record
+  
+**TriageHandler**
+- This service allows for triages to occur and triage records to be accessed.
+- Communicates with the triage engine to perform triage
+- Communicates with the triage record to get history
 
+**ER Service**
+- This service allows for checking the current ED load from the ERDataSource
+  
 #### Health Service Management Subsystem
 **Components**:
 The subsystem Health Service Management consists of 6 components:
