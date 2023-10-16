@@ -291,9 +291,9 @@ The system's architecture extends further with the incorporation of an Account M
 
 | Sub-team                                   | Microservice                          | Task                                                                                        |
 |--------------------------------------------|---------------------------------------|---------------------------------------------------------------------------------------------|
-| Miles Rose &  Oliver Ware                  | Front Page UI Microservice            | - Component Diagram <br> - Deployment Diagram <br> - API Documentation on SwaggerHub                                         |
-| Hang Duong                                 | Health Service Mangement Microservice | - Component Diagram <br> - Deployment Diagram <br> - Service Demo on GCP <br> - API Documentation on SwaggerHub |
-| Dhuruvan Krishnan Anavaratha & Minh Nguyen | Patient Mangement Microservice        | - Component Diagram <br> - Deployment Diagram <br> - Service Demo Local <br> - API Documentation on SwaggerHub                      |
+| Miles Rose &  Oliver Ware                  | Front Page UI Microservice            | - Subsystem in Component&Connector Diagram <br> - Deployment Diagram <br> - Service Demo Local <br> - API Documentation on SwaggerHub                                         |
+| Hang Duong                                 | Health Service Mangement Microservice | - Subsystem in Component&Connector Diagram <br> - Deployment Diagram <br> - Service Demo on GCP <br> - API Documentation on SwaggerHub |
+| Dhuruvan Krishnan Anavaratha & Minh Nguyen | Patient Mangement Microservice        | - Subsystem in Component&Connector Diagram <br> - Deployment Diagram <br> - Service Demo Local <br> - API Documentation on SwaggerHub                      |
 
 # Interface specifications
 ## Front Page UI Microservice
