@@ -2,7 +2,7 @@ class Authentication():
   def _init_(self):
     pass
     
-  def request_validation(self,username:str,password: str)-> void:
+  def request_validation(self,username:str,password: str)-> None:
     """
     Request a user validation from AccountInfoManagement then updates the page based on validity
     Args:
@@ -15,7 +15,7 @@ class Authentication():
     none
     """
     pass
-  def request_account_creation(self, account_info: AccountInformation, health_info: UserHealthInfo) -> void:
+  def request_account_creation(self, account_info: AccountInformation, health_info: UserHealthInfo) -> None:
      """
     Request account creation from AccountInfoManagement, then load the login page 
     and send notification of account creation success failure
