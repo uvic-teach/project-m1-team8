@@ -175,9 +175,11 @@ The Triage management and ER Management components interact to ensure that patie
 
 #### Demo
 **Health Service Management**
+
 [Health-svc-management-api-gcp-demo.webm](https://github.com/uvic-teach/project-m1-team8/assets/47402970/d7fe7b40-8da2-4288-9470-613ae7e65c36)
 
 **Patient Management**
+
 [(Patient Management) Activate Server](https://github.com/uvic-teach/project-m1-team8/assets/99488911/3257aa0f-f8a3-47e5-8f8e-71cbb08a30d7)
 
 [(Patient Management) Get Speicfic Triage](https://github.com/uvic-teach/project-m1-team8/assets/99488911/10d8ea20-2c79-4852-828f-920ed8e893aa)
