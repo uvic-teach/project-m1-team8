@@ -3,7 +3,8 @@
 ![Component Diagram](assets/images/component-connector-diagram.png)
 
 #### Front Page UI Subsystem
-The UI microservices is split into 4 components
+The UI microservices is split into 4 components:
+
 **Authentication**
 - this service contains two actions: a login and register action
 - login: communicate with account information to validate credentials
@@ -32,6 +33,7 @@ The subsystem Health Service Management consists of 6 components:
 - ERDatabase: Store the information related to state and status of ER Queue in all hospitals in Canada.
 
 **Connectors**:
+
 __Internal (Among the components)__
 - The TriageEngine requires interface Nurse, Clinic from NurseDatabase, ClinicDatabase respectively, and  Medicine and Pharmacy interface from MedicineDatabase. 
 - The ERManagement requires interface ERData from ERDatabase and provides interface ER to the TriageEngine.
@@ -49,6 +51,7 @@ One of the components in the Patient Management Component Diagram is the `Triage
 *Components:**
 
 The subsystem, which represents Patient Management as a microservice, comprises 5 components:
+
 **Components:**
 
 - _TriageRecordManagement:_ Provides information to the UI about the patient's triage history by accessing the _TriageRecord_ database.
@@ -59,14 +62,19 @@ The subsystem, which represents Patient Management as a microservice, comprises 
 
 **Connectors:**
 __Internal__ (Within the Patient Management subsystem)
+
 - `TriageRecordManagement` requires the `TriageInfo` interface from the `TriageRecord` database.
 - `AccountInformationManagement` requires `UserHealthInfo` and `AccountInfo` interfaces from the `HealthInformation` database and the `AccountInformation` database, respectively.
 
 __External__
+
 Between the Patient Management and UI subsystems:
+
 - The `LogIn` service component in the UI requires the `TriageRecord` interface from `TriageRecordManagement`, as well as the `UserInfo` and `UserValidation` interfaces from `AccountInformationManagement`.
 - The `Register` service component in the UI requires the `UserAccount` interface from `AccountInformationManagement`.
+  
 Between Patient Management and Health Service Management:
+
 - `TriageRecord` requires `TriageResult` from the `TriageEngine` component in Health Service Management.
 
 ### Sequence Diagram
@@ -96,6 +104,7 @@ Between Patient Management and Health Service Management:
 ### Sequence Diagram Specification
 #### Use Case UC-02 User Authentication
 ![Login Sequence Diagram](assets/images/Login%20sequence.png)
+
 For login we have a patient/user, a login page that takes a username and password, a authenticator module that takes the inputted user/pass and verifies it with the database, and the patient database labeled PatDB.
 Alternative sequences in the diagram include the case where the patient has the wrong login details, and the case where the patient has forgotten their password
 
@@ -107,7 +116,7 @@ Alternative sequences in the diagram include the case where the patient has the 
 6a) If valid - load patient dashboard
 6b) If invalid - reload loginpage with error message
 
-**Alt task for login: forgot password:**
+**Alt task for login: Forgot password:**
 1) Load the login page
 2) Page requests Login credentials but patient selects "forgot password" button.
 3) Page requests username then patient inputs username.
@@ -157,7 +166,7 @@ __Process__:
 #### Use Case UC-05 Assign User To ER Queue
 ![Booking ER](assets/images/booking_er_sequence.png)
 
-Participants:
+__Participant__:
 - Patient (Actor)
 - BookingService(Actor)
 - NotificationService(Actor)
@@ -165,13 +174,13 @@ Participants:
 - PatientDB(Database)
 - ERBookingUI(UserInterface)
 
-Fragments:
+__Combined Fragments__:
 - Opt Fragment for booking time being exceeded
 - Opt Fragment for attempting to cancel booking
 - Alt Fragment for confirming/not confirming booking cancellation
 - Ref Fragment for checking ED Load
 
-Process:
+__Process__:
 
 -User can press button to book ED if their triage has deemed it nessecary for them to visit the ED
 -Booking service checks ED Load and if possible requests ED Booking from Local Health Service
@@ -193,6 +202,13 @@ Involved in checking the ED load are a patient/user, a database labelled edb, an
 ## Allocation View
 ### Front Page UI Microservice
 ![UI](assets/images/Deployment_diagrams/UI_deployment.png)
+#### Tech stack:
+- **HTML**, **CSS** and **Javascript**: Frontend UI
+- **Python**: The main programming language for developing the service and leveraging libraries such as SQLAlchemy and FastAPI.
+- **FastAPI**: FastAPI is used to implement the API that allows interaction with the service. The API exposes endpoints for managing triage, accessing health service databases, and retrieving the state of the ER queue. FastAPI offers a modern and efficient way to build APIs with automatic interactive API documentation.
+
+The first thing a client will see when accessing our service will be the UI and how it is portrayed. This web server contains a HTML website,a .css file for display styles, and a javascript file to request tasks using fast API. Fast API is an efficient web framework for connecting the web server and the application server.
+On the application server are three types of services: Authentication, Notification, and a Triage data gatherer. The Authentication service takes a username and password from the website, then communicates with the patient management microservice to determine the validity of the credentials. After Validity/Denial, the website will update accordingly. The notification service will generate a text message according to the current ask (such as a login success message) and display it on the webpage for a set period. The triage data gatherer communicates with the patient management microservice to obtain the data from the user's most recent triage and display it on the webpage.
 
 ### Health Service Mangement Microservice
 ![Health Service Management](assets/images/Deployment_diagrams/health_service_management.png)
@@ -220,25 +236,30 @@ The Triage management and ER Management components interact to ensure that patie
 
 [Health-svc-management-api-gcp-demo.webm](https://github.com/uvic-teach/project-m1-team8/assets/47402970/d7fe7b40-8da2-4288-9470-613ae7e65c36)
 
+### Patient Mangement Microservice
+![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
+
+#### Tech stack:
+- **Python**: The main programming language for developing the service and leveraging libraries such as SQLAlchemy and FastAPI.
+- **SQLAlchemy**: Used for interacting with databases and managing health service-related data efficiently.
+- **FastAPI**: FastAPI is used to implement the API that allows interaction with the service. The API exposes endpoints for managing triage, accessing health service databases, and retrieving the state of the ER queue. FastAPI offers a modern and efficient way to build APIs with automatic interactive API documentation.
+  
+At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the User Interface (UI).
+The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
+#### Demo
 **Patient Management**
 
 [(Patient Management) Activate Server](https://github.com/uvic-teach/project-m1-team8/assets/99488911/3257aa0f-f8a3-47e5-8f8e-71cbb08a30d7)
 
 [(Patient Management) Get Speicfic Triage](https://github.com/uvic-teach/project-m1-team8/assets/99488911/10d8ea20-2c79-4852-828f-920ed8e893aa)
 
-### Patient Mangement Microservice
-![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
-
-At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the User Interface (UI).
-The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
-
 ### Team Contribution
 
 | Sub-team                                   | Microservice                          | Task                                                                                        |
 |--------------------------------------------|---------------------------------------|---------------------------------------------------------------------------------------------|
-| Miles Rose &  Oliver Ware                  | Front Page UI Microservice            | - Component Diagram (WIP) <br> - Deployment Diagram (WIP)                                           |
+| Miles Rose &  Oliver Ware                  | Front Page UI Microservice            | - Component Diagram <br> - Deployment Diagram <br> - API Documentation on SwaggerHub                                         |
 | Hang Duong                                 | Health Service Mangement Microservice | - Component Diagram <br> - Deployment Diagram <br> - Service Demo on GCP <br> - API Documentation on SwaggerHub |
-| Dhuruvan Krishnan Anavaratha & Minh Nguyen | Patient Mangement Microservice        | - Component Diagram (WIP) <br> - Deployment Diagram <br> - API Documentation on SwaggerHub                      |
+| Dhuruvan Krishnan Anavaratha & Minh Nguyen | Patient Mangement Microservice        | - Component Diagram <br> - Deployment Diagram <br> - Service Demo Local <br> - API Documentation on SwaggerHub                      |
 
 ## Interface specifications
 ### Front Page UI Microservice
