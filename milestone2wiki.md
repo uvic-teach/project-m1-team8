@@ -119,6 +119,7 @@ Between Patient Management and Health Service Management:
 
 ## Sequence Diagram Specification
 ### Use Case UC-02 User Authentication
+#### Login
 ![Login Sequence Diagram](assets/images/Login%20sequence.png)
 
 #### Description:
@@ -143,6 +144,8 @@ Alternative sequences in the diagram include the case where the patient has the 
 6) User inputs data from email and their new password to the page and the page sends the data to the authenticator.
 7) The authenticator verifys the email data and the page sends an update message to the database.
 8) The password is updated and a notification for successful password change is sent.
+
+#### Registration
 
 ![Registration Sequence Diagram](assets/images/Registration-Sequence-Diagram.png)
 For the Mister ED System, this sequence diagram outlines the streamlined process of user registration. Initiated by the patient/user, the sequence commences when they click the "Registration" button on the welcome/home page. Upon this action, the system redirects the user to a dedicated registration page where they input their desired login credentials. The system rigorously validates these credentials with the patient database, ensuring the uniqueness and compliance with system requirements. If successful, the system creates a new account for the user and sends the user a verification email to validate the user’s new account. After the verifies the email, the registration process is complete. The alternate outcome of this scenario that might occur is if the user attempts to re-register with existing credentials.
@@ -204,14 +207,13 @@ __Combined Fragments__:
 - Ref Fragment for checking ED Load
 
 __Process__:
-
--User can press button to book ED if their triage has deemed it nessecary for them to visit the ED
--Booking service checks ED Load and if possible requests ED Booking from Local Health Service
--Local Health service confirms booking, and then user interface displays booking status to user
--When the users booking time comes, they are notified and given a time to show up.
--If the user does not show up in time, their booking is cancelled.
--Alternatively, a user can request to cancel their booking.
--If the user confirms their request the booking is cancelled, otherwise the booking remains in the system.
+- User can press button to book ED if their triage has deemed it nessecary for them to visit the ED
+- Booking service checks ED Load and if possible requests ED Booking from Local Health Service
+- Local Health service confirms booking, and then user interface displays booking status to user
+- When the users booking time comes, they are notified and given a time to show up.
+- If the user does not show up in time, their booking is cancelled.
+- Alternatively, a user can request to cancel their booking.
+- If the user confirms their request the booking is cancelled, otherwise the booking remains in the system.
 
 ### Use Case UC-06 Check ER Queue Load
 ![Check ER Status](assets/images/Check_Ed_Status.png)
