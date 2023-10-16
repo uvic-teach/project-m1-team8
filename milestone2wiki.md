@@ -19,7 +19,7 @@ __Internal (Among the components)__
 
 __External__
 - __With Front Page UI Subsystem__:
-  - Between `ERManagement` and `ERService` from the Front Page Subsystem: `ERService` component requires `ERBookingStatus` and `ERBooking` interface that `ERManagement` component provides, as well as `ERQueue` for Checking Current ER Queue Capacity. 
+  - Between `ERManagement` and `ERService` from the Front Page Subsystem: `ERService` component requires `ERBookingStatus` and `ERBooking` interface that `ERManagement` component provides, as well as `ERQueue` for Checking Current ER Queue Capacity.
   - Between `TriageEngine` and `TriageServive` from the Front Page Subsystem: TriageServive component requires TriageResult and `TriageSuggestion` interface that `TriageEngine` component provides.
   - Between `TriageEngine` and `NotificationService` from the Front Page Subsystem: `NotificationService` component requires  `TriageResultNotifcation` interface that `TriageEngine` component provides.
 - __With Patient Management Subsystem__:
@@ -118,7 +118,6 @@ __Participant__:
 - Notification Module (type: NotificationSvc)
 - Patient Database (type: Database)
 - HealthService Database (type: Database)
-
 
 __Combined Fragments__:
 - Alt Fragment for the suggestion process
