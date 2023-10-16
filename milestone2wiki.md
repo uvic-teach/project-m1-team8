@@ -76,6 +76,7 @@ The subsystem, which represents Patient Management as a microservice, comprises 
 - _AccountInformation database:_ Contains information about the patient's user account.
 
 **Connectors:**
+
 __Internal__ (Within the Patient Management subsystem)
 
 - `TriageRecordManagement` requires the `TriageInfo` interface from the `TriageRecord` database.
