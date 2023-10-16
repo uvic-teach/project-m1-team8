@@ -232,6 +232,8 @@ The system's architecture extends further with the incorporation of an Account M
 [(Patient Management) Get Speicfic Triage](https://github.com/uvic-teach/project-m1-team8/assets/99488911/10d8ea20-2c79-4852-828f-920ed8e893aa)
 
 
+
+
 ### Team Contribution
 
 | Sub-team                                   | Microservice                          | Task                                                                                        |
