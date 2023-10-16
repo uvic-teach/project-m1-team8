@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-from Services import ERService, Authentication, NotificationService, TriageDataGetter
-from components import notification, booking
-from fastapi.openapi.utils import get_openapi
+#from Services import ERService, Authentication, NotificationService, TriageDataGetter
+#from components import notification, Booking
 
 app = FastAPI()
 #notificationService = NotificationService()
@@ -11,27 +10,27 @@ app = FastAPI()
 #functions definition
 
 @app.get("/")
-  async def homepage():
+async def homepage():
     return "MisterED User Interface"
 
 @app.get("/notification/{user_id}")
-async def get_notifications(user_id: int)
+async def get_notifications(user_id: int):
     return {
-            "user_id": user_id
+            "user_id": user_id,
             "notification_list": []
            }
 
 @app.post("/notification/{user_id}")
-async def create_notification(user_id: int, message: string):
+async def create_notification(user_id: int, message: str):
     # NotificationService.create_notification(user_id, message) append to notification_list 
-  return {"message": Notification was successfully created"}
+  return {"message": "Notification was successfully created"}
 
 @app.post("/er/loadTime/{hospital_id}")
 async def check_er_load(hospital_id: int):
   return {"message": "Current wait time at Chilliwack General Hospital is 2 hours"}
 
-@app.get("er/booking/{booking_id}):
-async def get_er_booking(booking_id: int)
+@app.get("er/booking/{booking_id}")
+async def get_er_booking(booking_id: int):
   #get booking id from erService
   return {
       "patient_id": user_id,
@@ -62,31 +61,12 @@ async def cancel_er_booking(booking_id: int):
   #clear booking from erqueue in erService
   return {
         "message": "Booking cancellation request successfull.",
-        "booking_id": booking_id
+        "booking_id": booking_id,
         "user_id": user_id
   }
 
-def custom_openapi():
-    if app.openapi_schema:
-        return app.openapi_schema
-    openapi_schema = get_openapi(
-        title="Custom title",
-        version="2.5.0",
-        summary="This is a very custom OpenAPI schema",
-        description="Here's a longer description of the custom **OpenAPI** schema",
-        routes=app.routes,
-    )
-    openapi_schema["info"]["x-logo"] = {
-        "url": "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"
-    }
-    app.openapi_schema = openapi_schema
-    return app.openapi_schema
+@app.post("/triage/{triage_id}")
+async def GrabnDisplayElement(self, patient_id:str, triage_id:str )-> void:
 
 
-
-app.openapi = custom_openapi
-
-    
-
-
-
+app.openapi()
