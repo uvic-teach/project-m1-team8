@@ -3,6 +3,9 @@
 ![Component Diagram](assets/images/component-connector-diagram.png)
 
 ### Front Page UI Subsystem
+
+**Components**:
+
 The UI microservices is split into 4 components:
 
 **Authentication**
@@ -21,6 +24,18 @@ The UI microservices is split into 4 components:
 
 **ER Service**
 - This service allows for checking the current ED load from the ERDataSource
+
+**Connectors:**
+
+__Internal__
+- Triage services requires the user to be logged in (from authentication)
+
+__External__
+- Authentication requires patient management to create patient credentials and validate patient credentials
+- ERService requires ERDataSource from Health service management to determine load
+- Notification services require patient management to determine changes in stored data to notify the patient about
+- Triage services requires both patient management to access triage history and the triage engine from Health service management to perform a triage
+
   
 ### Health Service Management Subsystem
 **Components**:
