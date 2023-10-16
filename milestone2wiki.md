@@ -215,6 +215,10 @@ The microservice uses Relational database to store the information for nurses, c
 #### Integration and Communication:
 The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
 
+#### Demo
+
+[Health-svc-management-api-gcp-demo.webm](https://github.com/uvic-teach/project-m1-team8/assets/47402970/d7fe7b40-8da2-4288-9470-613ae7e65c36)
+
 ### Patient Mangement Microservice
 ![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
 
@@ -222,11 +226,6 @@ At the heart of the system lies a Patient Database Server, running on a Linux op
 The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
 
 #### Demo
-**Health Service Management**
-
-[Health-svc-management-api-gcp-demo.webm](https://github.com/uvic-teach/project-m1-team8/assets/47402970/d7fe7b40-8da2-4288-9470-613ae7e65c36)
-
-**Patient Management**
 
 [(Patient Management) Activate Server](https://github.com/uvic-teach/project-m1-team8/assets/99488911/3257aa0f-f8a3-47e5-8f8e-71cbb08a30d7)
 
