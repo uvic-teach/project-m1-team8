@@ -12,4 +12,16 @@ The UI microservices is split into 4 subservices<br>
 - communicates with the triage record to get history
 
 #### 4.)ER Service<br>
-- this service allows for checking the current ED load from the ERDataSource
+- this service allows for checking the current ED load from the ERDataSource<br><br>
+
+Connectors:
+#### internal:<br>
+- Triage services requires the user to be logged in (from authentication)
+
+#### External:<br>
+- Authentication requires patient management to create patient credentials and validate patient credentials
+- ERService requires ERDataSource from Health service management to determine load
+- Notification services require patient management to determine changes in stored data to notify the patient about
+- Triage services requires both patient management to access triage history and the triage engine from Health service management to perform a triage
+
+
