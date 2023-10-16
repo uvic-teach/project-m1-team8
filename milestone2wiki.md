@@ -215,6 +215,12 @@ The microservice uses Relational database to store the information for nurses, c
 #### Integration and Communication:
 The Triage management and ER Management components interact to ensure that patients are placed in the queue based on their triage results if necessary. The health service databases management component integrates with both the triage management and ER queue components to fetch and update relevant information based on patient assessments.
 
+### Patient Mangement Microservice
+![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
+
+At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the User Interface (UI).
+The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
+
 #### Demo
 **Health Service Management**
 
@@ -226,11 +232,6 @@ The Triage management and ER Management components interact to ensure that patie
 
 [(Patient Management) Get Speicfic Triage](https://github.com/uvic-teach/project-m1-team8/assets/99488911/10d8ea20-2c79-4852-828f-920ed8e893aa)
 
-### Patient Mangement Microservice
-![Patient Management](assets/images/Deployment_diagrams/patient_management.jpg)
-
-At the heart of the system lies a Patient Database Server, running on a Linux operating system, serving as the central repository for patient data. This server hosts two critical schemas: TriageRecordSchema and UserHealthInfoSchema, which define the structure and relationships within the patient records. The communication between the server and the application components is facilitated through FastApi, a modern and efficient web framework.FastApi acts as the bridge, ensuring seamless interactions between the server and the User Interface (UI).
-The system's architecture extends further with the incorporation of an Account Management execution environment. This component manages user accounts and interactions, ensuring data security and access control. Additionally, the system incorporates a Patient: Relational Database execution environment, emphasizing the utilization of relational database management systems tailored specifically for patient data. The integration of SQLAlchemy, a powerful SQL toolkit, enhances database management efficiency, ensuring smooth communication between the server and the schemas. In this configuration, the system's components are interlinked, guaranteeing a secure, efficient, and highly responsive healthcare management system that caters to diverse user needs.
 
 ### Team Contribution
 
