@@ -97,6 +97,35 @@ class TriageListResponse(BaseModel):
         }
     )
 
+class UpdateUserHealthInfoRequest(BaseModel):
+    height: float = Field(None, example=175.3)
+    weight: float = Field(None, example=68.5)
+    blood_type: str = Field(None, example="A+")
+    blood_pressure: float = Field(None, example=120.8)
+    allergies: str = Field(None, example="Peanuts, Shellfish")
+    complications: str = Field(None, example="Hypertension, Diabetes Type 2")
+
+class UpdateAccountInformationRequest(BaseModel):
+    # ... other fields as necessary ...
+    phone: str = Field(None, example="555-1234")
+    email: str = Field(None, example="johndoe@example.com")
+
+class UpdateTriageRequest(BaseModel):
+    available_date: str = Field(None, example="1944-06-06")
+    summary: str = Field(None, example=(
+        "44-year-old male with acute chest pain, shortness of breath, "
+        "and sweating presented. Vital signs: BP 160/95 mmHg, HR 110 bpm, "
+        "RR 22 breaths/min, Temp 98.6°F, O2 Sat 92%. Pain described as sharp, "
+        "radiating to left arm, rated 8/10. ECG showed ST-segment elevation in "
+        "leads II, III, aVF, categorized as Triage Level 2. Administered "
+        "chewable aspirin, nitroglycerin, prepared for further emergency procedures. "
+        "Family updated."
+    ))
+
+class ResponseMessage(BaseModel):
+    message: str = Field(example="Operation successful.")
+
+
 
 def validate_user(username: str, password: str) -> dict:
     hashed_password = bcrypt.hashpw("js1544".encode('utf-8'), bcrypt.gensalt())
@@ -141,6 +170,16 @@ async def create_new_account(request: AccountCreationRequest):
     return message
 
 
+@app.put("/{patient_id}/account-info/", response_model=ResponseMessage)
+async def update_account_information(patient_id: str, request: UpdateAccountInformationRequest):
+    return {"message": "Account information updated successfully."}
+
+
+@app.delete("/{patient_id}/account-info/", response_model=ResponseMessage)
+async def delete_account_information(patient_id: str):
+    return {"message": "Account information deleted successfully."}
+
+
 @app.get("/{patient_id}/", response_model=UserHealthInfoResponse)
 async def get_user_health_info(patient_id):
     #manageAccount.get_user_info(patient_id)
@@ -153,6 +192,16 @@ async def get_user_health_info(patient_id):
         "allergies": "Peanuts, Shellfish",
         "complications": "Hypertension, Diabetes Type 2"
     }
+
+
+@app.put("/{patient_id}/health-info/", response_model=ResponseMessage)
+async def update_user_health_info(patient_id: str, request: UpdateUserHealthInfoRequest):
+    return {"message": "User health information updated successfully."}
+
+
+@app.delete("/{patient_id}/health-info/", response_model=ResponseMessage)
+async def delete_user_health_info(patient_id: str):
+    return {"message": "User health information deleted successfully."}
     
 
 @app.get("/{patient_id}/triages/", response_model=TriageListResponse)
@@ -189,14 +238,25 @@ async def get_specific_triage(patient_id, triage_id):
     "summary": "44-year-old male with acute chest pain, shortness of breath, and sweating presented. Vital signs: BP 160/95 mmHg, HR 110 bpm, RR 22 breaths/min, Temp 98.6°F, O2 Sat 92%. Pain described as sharp, radiating to left arm, rated 8/10. ECG showed ST-segment elevation in leads II, III, aVF, categorized as Triage Level 2. Administered chewable aspirin, nitroglycerin, prepared for further emergency procedures. Family updated."
   }
 
+
+@app.put("/{patient_id}/triages/{triage_id}", response_model=ResponseMessage)
+async def update_triage(patient_id: str, triage_id: str, request: UpdateTriageRequest):
+    return {"message": "Triage updated successfully."}
+
+
+@app.delete("/{patient_id}/triages/{triage_id}", response_model=ResponseMessage)
+async def delete_triage(patient_id: str, triage_id: str):
+    return {"message": "Triage deleted successfully."}
+
+
 def custom_openapi():
     if app.openapi_schema:
         return app.openapi_schema
     openapi_schema = get_openapi(
-        title="Custom title",
+        title="Patient Management API",
         version="2.5.0",
-        summary="This is a very custom OpenAPI schema",
-        description="Here's a longer description of the custom **OpenAPI** schema",
+        summary="The API for patient management for MisterEd system.",
+        description="The API for patient management for MisterEd system.",
         routes=app.routes,
     )
     openapi_schema["info"]["x-logo"] = {
