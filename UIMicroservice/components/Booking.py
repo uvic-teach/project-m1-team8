@@ -1,4 +1,4 @@
-class ERBooking:
+class Booking:
     def __init__(self, user_id: int, medical_id: int, booking_id: int, booking_time: timedelta, booking_location: string):
       self.user_id = user_id
       self.medical_id = medical_id   
@@ -18,7 +18,7 @@ class ERBooking:
     def get_booking_id(self):
         return self.booking_id
 
-    def get_booking_location(self)
+    def get_booking_location(self):
         return self.booking_location
 
     
