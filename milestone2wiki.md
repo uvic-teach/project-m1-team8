@@ -139,6 +139,30 @@ __Process__:
 #### Use Case UC-05 Assign User To ER Queue
 ![Booking ER](assets/images/booking_er_sequence.png)
 
+Participants:
+- Patient (Actor)
+- BookingService(Actor)
+- NotificationService(Actor)
+- LocalHealthService(Actor)
+- PatientDB(Database)
+- ERBookingUI(UserInterface)
+
+Fragments:
+- Opt Fragment for booking time being exceeded
+- Opt Fragment for attempting to cancel booking
+- Alt Fragment for confirming/not confirming booking cancellation
+- Ref Fragment for checking ED Load
+
+Process:
+
+-User can press button to book ED if their triage has deemed it nessecary for them to visit the ED
+-Booking service checks ED Load and if possible requests ED Booking from Local Health Service
+-Local Health service confirms booking, and then user interface displays booking status to user
+-When the users booking time comes, they are notified and given a time to show up.
+-If the user does not show up in time, their booking is cancelled.
+-Alternatively, a user can request to cancel their booking.
+-If the user confirms their request the booking is cancelled, otherwise the booking remains in the system.
+
 #### Use Case UC-06 Check ER Queue Load
 ![Check ER Status](assets/images/Check_Ed_Status.png)
 Involved in checking the ED load are a patient/user, a database labelled edb, and a status page to display the requests from the database based on location data provided by the user.
