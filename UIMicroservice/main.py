@@ -54,7 +54,7 @@ async def create_notification(user_id: int, message: str):
 async def check_er_load(hospital_id: int):
   return {"message": "Current wait time at Chilliwack General Hospital is 2 hours"}
 
-@app.get("er/booking/{booking_id}")
+@app.get("/er/booking/{booking_id}")
 async def get_er_booking(booking_id: int):
   #get booking id from erService
   return {
@@ -81,7 +81,7 @@ async def create_er_request(patient_id: int):
           "queue_position": 6
         }
 
-@app.post("/er/booking/{booking_id}/cancelbooking")
+@app.post("/er/booking/cancelbooking")
 async def cancel_er_booking(booking_id: int):
   #clear booking from erqueue in erService
   return {

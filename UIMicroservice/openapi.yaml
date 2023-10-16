@@ -87,10 +87,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
-  er/booking/{booking_id}:
+  /er/booking/{booking_id}:
     get:
       summary: Get Er Booking
-      operationId: get_er_bookinger_booking__booking_id__get
+      operationId: get_er_booking_er_booking__booking_id__get
       parameters:
       - name: booking_id
         in: path
@@ -133,13 +133,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
-  /er/booking/{booking_id}/cancelbooking:
+  /er/booking/cancelbooking:
     post:
       summary: Cancel Er Booking
-      operationId: cancel_er_booking_er_booking__booking_id__cancelbooking_post
+      operationId: cancel_er_booking_er_booking_cancelbooking_post
       parameters:
       - name: booking_id
-        in: path
+        in: query
         required: true
         schema:
           type: integer
