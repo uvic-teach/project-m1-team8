@@ -40,12 +40,12 @@ __External__
 ### Health Service Management Subsystem
 **Components**:
 The subsystem Health Service Management consists of 6 components:
-- TriageEngine: Process request related to triage and compute the triage result based on the patient info input.
-- ERManagement: Manage the state of the current ER capacity.
-- NurseDatabase: Store the information related to nurses.
-- ClinicDatabase: Store the information related to clinics.
-- MedicineDatabase: Store the information related to medicine and pharmacy.
-- ERDatabase: Store the information related to state and status of ER Queue in all hospitals in Canada.
+- _TriageEngine:_ Process request related to triage and compute the triage result based on the patient info input.
+- _ERManagement:_ Manage the state of the current ER capacity.
+- _NurseDatabase:_ Store the information related to nurses.
+- _ClinicDatabase:_ Store the information related to clinics.
+- _MedicineDatabase:_ Store the information related to medicine and pharmacy.
+- _ERDatabase:_ Store the information related to state and status of ER Queue in all hospitals in Canada.
 
 **Connectors**:
 
