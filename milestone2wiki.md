@@ -192,6 +192,7 @@ The system's architecture extends further with the incorporation of an Account M
 
 ## Interface specifications
 ### Front Page UI Microservice
+[Link to API Documentation](https://app.swaggerhub.com/apis/MILESJROSE/MisterEd-user-interface/0.2.4)
 
 ### Health Service Mangement Microservice
 [Link to API Documentation](https://app.swaggerhub.com/apis-docs/HangD/myster-ed_health_svc_management/0.1.0#/default/)
