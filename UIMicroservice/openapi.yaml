@@ -1,0 +1,418 @@
+openapi: 3.1.0
+info:
+  title: FastAPI
+  version: 0.1.0
+paths:
+  /:
+    get:
+      summary: Homepage
+      operationId: homepage__get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /notification/{user_id}:
+    get:
+      summary: Get Notifications
+      operationId: get_notifications_notification__user_id__get
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: User Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+    post:
+      summary: Create Notification
+      operationId: create_notification_notification__user_id__post
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: User Id
+      - name: message
+        in: query
+        required: true
+        schema:
+          type: string
+          title: Message
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /er/loadTime/{hospital_id}:
+    get:
+      summary: Check Er Load
+      operationId: check_er_load_er_loadTime__hospital_id__get
+      parameters:
+      - name: hospital_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Hospital Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /er/booking/{booking_id}:
+    get:
+      summary: Get Er Booking
+      operationId: get_er_booking_er_booking__booking_id__get
+      parameters:
+      - name: booking_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Booking Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /er/booking/request:
+    post:
+      summary: Create Er Request
+      operationId: create_er_request_er_booking_request_post
+      parameters:
+      - name: patient_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          title: Patient Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /er/booking/cancelbooking:
+    post:
+      summary: Cancel Er Booking
+      operationId: cancel_er_booking_er_booking_cancelbooking_post
+      parameters:
+      - name: booking_id
+        in: query
+        required: true
+        schema:
+          type: integer
+          title: Booking Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /triage/display/element/{triage_id}:
+    get:
+      summary: Get Triage Element
+      description: "request the patients triage instances list from TriageManagement\
+        \ and \ndisplay it on the webpage\nArgs:\n  patient_id(str): ID of patient\
+        \ to check\nChanges to page:\n  load triage history page with a table containing\
+        \ the one selected\n  element from the list of triage instances\nReturns:\n\
+        \  none"
+      operationId: get_triage_element_triage_display_element__triage_id__get
+      parameters:
+      - name: triage_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Triage Id
+      - name: self
+        in: query
+        required: true
+        schema:
+          title: Self
+      - name: patient_id
+        in: query
+        required: true
+        schema:
+          type: string
+          title: Patient Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /triage/display/list/{triage_id}:
+    get:
+      summary: Get Triage List
+      description: "request the patients triage instances list from TriageManagement\
+        \ and \ndisplay it on the webpage\nArgs:\n  patient_id(str): ID of patient\
+        \ to check\nChanges to page:\n  load triage history page a table containing\
+        \ the full \n  list of triage instances\nReturns:\n  none"
+      operationId: get_triage_list_triage_display_list__triage_id__get
+      parameters:
+      - name: self
+        in: query
+        required: true
+        schema:
+          title: Self
+      - name: patient_id
+        in: query
+        required: true
+        schema:
+          type: string
+          title: Patient Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /authentication/account/create:
+    post:
+      summary: Request Account Creation
+      operationId: request_account_creation_authentication_account_create_post
+      parameters:
+      - name: self
+        in: query
+        required: true
+        schema:
+          title: Self
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Body_request_account_creation_authentication_account_create_post'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /authentication/account/update:
+    post:
+      summary: Request Account Update
+      operationId: request_account_update_authentication_account_update_post
+      parameters:
+      - name: self
+        in: query
+        required: true
+        schema:
+          title: Self
+      - name: new_username
+        in: query
+        required: true
+        schema:
+          type: string
+          title: New Username
+      - name: new_password
+        in: query
+        required: true
+        schema:
+          type: string
+          title: New Password
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /authentication/account/validate:
+    get:
+      summary: Request Account Validation
+      operationId: request_account_validation_authentication_account_validate_get
+      parameters:
+      - name: self
+        in: query
+        required: true
+        schema:
+          title: Self
+      - name: username
+        in: query
+        required: true
+        schema:
+          type: string
+          title: Username
+      - name: password
+        in: query
+        required: true
+        schema:
+          type: string
+          title: Password
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    AccountInfo:
+      properties:
+        username:
+          type: string
+          title: Username
+          example: username
+        password:
+          type: string
+          title: Password
+          example: password123
+      type: object
+      required:
+      - username
+      - password
+      title: AccountInfo
+    Body_request_account_creation_authentication_account_create_post:
+      properties:
+        account_info:
+          $ref: '#/components/schemas/AccountInfo'
+        health_info:
+          $ref: '#/components/schemas/UserHealthInfo'
+      type: object
+      required:
+      - account_info
+      - health_info
+      title: Body_request_account_creation_authentication_account_create_post
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    UserHealthInfo:
+      properties:
+        patient_id:
+          type: string
+          title: Patient Id
+          example: '12345'
+        patient_age:
+          type: integer
+          title: Patient Age
+          example: '20'
+        height:
+          type: number
+          title: Height
+          example: 175.3
+        weight:
+          type: number
+          title: Weight
+          example: 68.5
+        blood_type:
+          type: string
+          title: Blood Type
+          example: A+
+        blood_pressure:
+          type: number
+          title: Blood Pressure
+          example: 120.8
+      type: object
+      required:
+      - patient_id
+      - patient_age
+      - height
+      - weight
+      - blood_type
+      - blood_pressure
+      title: UserHealthInfo
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
