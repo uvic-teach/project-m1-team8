@@ -230,7 +230,7 @@ The system's architecture extends further with the incorporation of an Account M
 [Link to API Documentation](https://app.swaggerhub.com/apis-docs/HangD/myster-ed_health_svc_management/0.1.0#/default/)
 
 ### Patient Mangement Microservice
-[Link to API Documentation](https://app.swaggerhub.com/apis-docs/minhn201/patient_management_m2/1.0.0#/)
+[Link to API Documentation](https://app.swaggerhub.com/apis-docs/minhn201/patient_management_m2/2.5.0)
 
 ## Team Contribution
 | Team Member                  | Task                                                                                                                                                                     |
