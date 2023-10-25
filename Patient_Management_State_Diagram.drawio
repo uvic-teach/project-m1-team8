@@ -1,27 +1,28 @@
-<mxfile host="app.diagrams.net" modified="2023-10-25T19:36:22.601Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="uWumBrY9rbeCDlP7VFNc" version="22.0.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-25T19:38:31.844Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="yziO_R3KR__QpoItTfdn" version="22.0.8" type="github">
   <diagram name="Page-1" id="58cdce13-f638-feb5-8d6f-7d28b1aa9fa0">
     <mxGraphModel dx="5450" dy="1793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="2a3bc250acf0617d-8" value="State Machine: Patient Management" style="shape=umlFrame;whiteSpace=wrap;html=1;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;width=110;height=45;" parent="1" vertex="1">
-          <mxGeometry x="-1150" y="-70" width="1150" height="755" as="geometry" />
+          <mxGeometry x="-2950" y="-100" width="1530" height="830" as="geometry" />
         </mxCell>
         <mxCell id="Rg4aVWkDMe2AEWVrWmWy-7" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;rounded=1;shadow=0;comic=0;labelBackgroundColor=none;fontFamily=Verdana;fontSize=12;fontColor=#000000;align=center;direction=south;" parent="1" vertex="1">
           <mxGeometry x="-2920" y="135" width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="Rg4aVWkDMe2AEWVrWmWy-8" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.556;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="Rg4aVWkDMe2AEWVrWmWy-7" target="PSWZJVZwhUgQXQXbqCTB-3" edge="1">
+        <mxCell id="Rg4aVWkDMe2AEWVrWmWy-8" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="Rg4aVWkDMe2AEWVrWmWy-7" target="PSWZJVZwhUgQXQXbqCTB-3" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-2640" y="347.5" as="targetPoint" />
+            <mxPoint x="-2350" y="260" as="targetPoint" />
             <mxPoint x="-2890" y="292.5" as="sourcePoint" />
             <Array as="points">
               <mxPoint x="-2910" y="165" />
-              <mxPoint x="-2910" y="348" />
+              <mxPoint x="-2910" y="290" />
+              <mxPoint x="-2350" y="290" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="Rg4aVWkDMe2AEWVrWmWy-9" value="User Requests Log-in" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="-2830" y="317.5" width="140" height="30" as="geometry" />
+          <mxGeometry x="-2505" y="410" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="Rg4aVWkDMe2AEWVrWmWy-11" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="Rg4aVWkDMe2AEWVrWmWy-7" target="PSWZJVZwhUgQXQXbqCTB-4" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -38,7 +39,7 @@
           <mxGeometry x="-2365" y="-55" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-3" value="Received User Request" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2630" y="297.5" width="240" height="90" as="geometry" />
+          <mxGeometry x="-2470" y="150" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-4" value="Mister ED System takes the user to&amp;nbsp;&lt;br&gt;the registration website" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-2615" y="-60" width="240" height="90" as="geometry" />
@@ -70,7 +71,8 @@
             <mxPoint x="-2820" y="150" as="targetPoint" />
             <mxPoint x="-2530" y="270" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="-2530" y="296" />
+              <mxPoint x="-2372" y="110" />
+              <mxPoint x="-2530" y="110" />
               <mxPoint x="-2530" y="150" />
             </Array>
           </mxGeometry>
@@ -83,85 +85,85 @@
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-14" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-2139.9999999999854" y="341.73" as="targetPoint" />
-            <mxPoint x="-2390" y="341.73" as="sourcePoint" />
+            <mxPoint x="-1979.9999999999854" y="186.73000000000002" as="targetPoint" />
+            <mxPoint x="-2230" y="186.73000000000002" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="-2300" y="341.73" />
+              <mxPoint x="-2140" y="186.73000000000002" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-16" value="Log-in Successful" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2140" y="300" width="240" height="90" as="geometry" />
+          <mxGeometry x="-1980" y="145" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-17" value="User Account&lt;br&gt;Valid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-2305" y="303" width="90" height="40" as="geometry" />
+          <mxGeometry x="-2145" y="148" width="90" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-18" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;exitX=0.583;exitY=1.038;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.46;entryY=-0.024;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="PSWZJVZwhUgQXQXbqCTB-16" target="PSWZJVZwhUgQXQXbqCTB-20">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1750" y="550" as="targetPoint" />
-            <mxPoint x="-1890" y="347.5" as="sourcePoint" />
+            <mxPoint x="-1590" y="395" as="targetPoint" />
+            <mxPoint x="-1730" y="192.5" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="-2000" y="450" />
-              <mxPoint x="-1820" y="450" />
+              <mxPoint x="-1840" y="295" />
+              <mxPoint x="-1660" y="295" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-19" value="User requests to access &lt;br&gt;their triage record" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-1980" y="405" width="150" height="40" as="geometry" />
+          <mxGeometry x="-1820" y="250" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-20" value="Requests received" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1930" y="550" width="240" height="90" as="geometry" />
+          <mxGeometry x="-1770" y="395" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-21" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-1810.69" y="770" as="targetPoint" />
-            <mxPoint x="-1810.69" y="650" as="sourcePoint" />
+            <mxPoint x="-1650.69" y="615" as="targetPoint" />
+            <mxPoint x="-1650.69" y="495" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="-1810.69" y="640" />
-              <mxPoint x="-1810.69" y="640" />
+              <mxPoint x="-1650.69" y="485" />
+              <mxPoint x="-1650.69" y="485" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-22" value="Access Successful" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-1930" y="770" width="240" height="90" as="geometry" />
+          <mxGeometry x="-1770" y="615" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-23" value="Mister ED System&lt;br&gt;shows the triage&lt;br&gt;record history to the user" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-1810" y="660" width="160" height="60" as="geometry" />
+          <mxGeometry x="-1650" y="505" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-24" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;exitX=0.414;exitY=1.066;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="PSWZJVZwhUgQXQXbqCTB-16">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-2220" y="550" as="targetPoint" />
-            <mxPoint x="-2450" y="440" as="sourcePoint" />
+            <mxPoint x="-2060" y="395" as="targetPoint" />
+            <mxPoint x="-2290" y="285" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="-2041" y="450" />
-              <mxPoint x="-2220" y="450" />
+              <mxPoint x="-1881" y="295" />
+              <mxPoint x="-2060" y="295" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-25" value="Request Received" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2330" y="550" width="240" height="90" as="geometry" />
+          <mxGeometry x="-2170" y="395" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-26" value="User requests to&amp;nbsp;&lt;br&gt;access personal &lt;br&gt;health information" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-2195" y="390" width="120" height="60" as="geometry" />
+          <mxGeometry x="-2035" y="235" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-28" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=none;endArrow=open;endSize=8;strokeColor=#ff0000;fontFamily=Verdana;fontSize=12;align=left;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-2215" y="768" as="targetPoint" />
-            <mxPoint x="-2215" y="648" as="sourcePoint" />
+            <mxPoint x="-2055" y="613" as="targetPoint" />
+            <mxPoint x="-2055" y="493" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="-2215" y="638" />
-              <mxPoint x="-2215" y="638" />
+              <mxPoint x="-2055" y="483" />
+              <mxPoint x="-2055" y="483" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-29" value="Mister ED System&lt;br&gt;shows the users&#39; personal &lt;br&gt;health record stored in the system" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-2440" y="660" width="200" height="60" as="geometry" />
+          <mxGeometry x="-2280" y="505" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-30" value="Access Successful" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-2330" y="770" width="240" height="90" as="geometry" />
+          <mxGeometry x="-2170" y="615" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PSWZJVZwhUgQXQXbqCTB-32" value="User Account Invalid" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="-2690" y="160" width="130" height="30" as="geometry" />
+          <mxGeometry x="-2840" y="105" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
