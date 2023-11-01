@@ -1,0 +1,8 @@
+The Patient Management microservice is designed following the API gateway design pattern, 
+ensuring a structured and efficient architecture. It comprises various modules, each with 
+a specific role in processing API requests originating from the UI side. These modules are
+crucial in retrieving relevant information to fulfill user requests, pulling data from diverse databases.
+They access information related to user health and user account details, among other services. 
+It is worth noting that the architecture allows for flexibility and robustness, as some modules are adeptly 
+connected to more than one database. This connectivity ensures a seamless flow of information and enhances 
+the system's ability to provide comprehensive and accurate responses to user queries.
