@@ -16,7 +16,7 @@ class AccountInfo(BaseModel):
 
 class UserHealthInfo(BaseModel):
     patient_id: str = Field(example="12345")
-    patient_age: int = Field(example = "20")
+    patient_age: int = Field(example = 20)
     height: float = Field(example=175.3)
     weight: float = Field(example=68.5)
     blood_type: str = Field(example="A+")
