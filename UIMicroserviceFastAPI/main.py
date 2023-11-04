@@ -21,7 +21,12 @@ origins = [
 app.add_middleware(
    CORSMiddleware,
    allow_origins = origins,
+   allow_credentials = True,
+   allow_methods=['*']
+   allow_heards=['*']
 )
+
+
 
 class AccountInfo(BaseModel):
     username: str = Field(example="username")
@@ -36,7 +41,7 @@ class NotificationModel(NotificationBase):
    id: int
 
    class Config:
-      orm_mode=  True
+      orm_mode =  True
 
 def get_db():
   db = SessionLocal()
@@ -75,7 +80,7 @@ class Booking(BaseModel):
 async def homepage():
     return "MisterED User Interface"
 
-@app.get("/notifications/", response_model=List[NotificaitonModel])
+@app.get("/notifications/", response_model=List[NotificationModel])
 async def get_notifications(db: db_dependancy, skip: int = 0, limit: int = 100):
    notifications = db.query(models.Notifcation).offset(skip).limit(limit).all()
    return notifications
