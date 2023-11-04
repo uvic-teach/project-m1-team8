@@ -369,7 +369,7 @@ components:
         patient_age:
           type: integer
           title: Patient Age
-          example: '20'
+          example: 20
         height:
           type: number
           title: Height
