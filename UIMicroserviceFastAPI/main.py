@@ -75,7 +75,7 @@ class Booking(BaseModel):
 async def homepage():
     return "MisterED User Interface"
 
-@app.get("/notifications/", response_model=List[TransactionModel])
+@app.get("/notifications/", response_model=List[NotificaitonModel])
 async def get_notifications(db: db_dependancy, skip: int = 0, limit: int = 100):
    notifications = db.query(models.Notifcation).offset(skip).limit(limit).all()
    return notifications
