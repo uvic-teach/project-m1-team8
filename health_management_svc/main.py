@@ -14,13 +14,13 @@ from fastapi.encoders import jsonable_encoder
 import random
 
 app = FastAPI(
-    title="Sample FastAPI Application",
+    title="Health Service Management Microservice",
     description="Sample Health Service Management Microservice",
-    version="1.0.0"
+    version="0.9.9"
 )
 
 models.Base.metadata.create_all(bind=engine)
-### Helper functions
+### Helper functions for testing
 def get_patient_location(patient_id: int):
     return "Victoria"
 
@@ -36,47 +36,47 @@ def validation_exception_handler(request, err):
 async def homepage():
     return "Health Service Management"
     
-@app.get("/triage")
-async def get_triage(triage_id):
-    return {
-            "triage_id": triage_id,
-            "patient_id": 0,
-            "perform_date": "2021-01-01",
-            "status": "PROCESSING",
-            }
+# @app.get("/triage")
+# async def get_triage(triage_id):
+#     return {
+#             "triage_id": triage_id,
+#             "patient_id": 0,
+#             "perform_date": "2021-01-01",
+#             "status": "PROCESSING",
+#             }
 
-@app.get("/triage/result")
-async def get_triage_result(triage_id):
-    return {
-            "triage_id": triage_id,
-            "perform_date": "2021-01-01",
-            "available_date": "2021-01-02",
-            "patient_name": "Alice Smith",
-            "summary": "Summary 1",
-            "detail": "Detail 1",
-            "suggestion": {
-                "triage_id": triage_id,
-                "suggestion": "Take medicine"
-            }
-            }
+# @app.get("/triage/result")
+# async def get_triage_result(triage_id):
+#     return {
+#             "triage_id": triage_id,
+#             "perform_date": "2021-01-01",
+#             "available_date": "2021-01-02",
+#             "patient_name": "Alice Smith",
+#             "summary": "Summary 1",
+#             "detail": "Detail 1",
+#             "suggestion": {
+#                 "triage_id": triage_id,
+#                 "suggestion": "Take medicine"
+#             }
+#             }
 
-@app.post("/triage/submit")
-async def submit_triage(patient_id: int, patient_name: str):
-    # triageManager.create_triage_result(patient_id, patient_name)
-    return {
-        "message": "Triage answer submitted successfully",
-    }
+# @app.post("/triage/submit")
+# async def submit_triage(patient_id: int, patient_name: str):
+#     # triageManager.create_triage_result(patient_id, patient_name)
+#     return {
+#         "message": "Triage answer submitted successfully",
+#     }
 
-@app.get("/triage/status")
-async def get_triage_status(triage_id: int):
-    # status = triageManager.get_triage_status(triage_id)
-    return {"message": "Triage status retrieved successfully", "triage_id": triage_id, "status": "PROCESSING"}
+# @app.get("/triage/status")
+# async def get_triage_status(triage_id: int):
+#     # status = triageManager.get_triage_status(triage_id)
+#     return {"message": "Triage status retrieved successfully", "triage_id": triage_id, "status": "PROCESSING"}
 
-@app.get("/triage/suggestion")
-async def get_triage_suggestion(triage_id: int):
-    # suggestion = triageManager.get_triage_suggestion(triage_id)
-    suggestion = "Take medicine"
-    return {"message": "Triage suggestion retrieved successfully", "triage_id": triage_id, "suggestion": suggestion}
+# @app.get("/triage/suggestion")
+# async def get_triage_suggestion(triage_id: int):
+#     # suggestion = triageManager.get_triage_suggestion(triage_id)
+#     suggestion = "Take medicine"
+#     return {"message": "Triage suggestion retrieved successfully", "triage_id": triage_id, "suggestion": suggestion}
 
 
 
