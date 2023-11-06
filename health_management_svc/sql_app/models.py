@@ -25,7 +25,7 @@ class ERBooking(Base):
     slot_number = Column(Integer, nullable=False, unique=False)
     
     def __repr__(self):
-        return f'ERBooking(booking_time={self.booking_time}, status={self.status}, last_updated={self.last_updated}, estimated_time={self.estimated_time}, area={self.area}, hospital_name={self.hospital_name}, slot_number=%{self.slot_number})'
+        return f'ERBooking(patient_id={self.patient_id}, booking_time={self.booking_time}, status={self.status}, last_updated={self.last_updated}, estimated_time={self.estimated_time}, area={self.area}, hospital_name={self.hospital_name}, slot_number=%{self.slot_number})'
     
 class ERQueue(Base):
     __tablename__ = "erqueues"

@@ -78,65 +78,33 @@ async def get_triage_suggestion(triage_id: int):
     suggestion = "Take medicine"
     return {"message": "Triage suggestion retrieved successfully", "triage_id": triage_id, "suggestion": suggestion}
 
+
+
 @app.get("/er/booking", tags=["ERBooking"],response_model=schemas.ERBooking,status_code=201)
 async def get_er_booking(booking_id: int, db: Session = Depends(get_db)):
     db_booking = ERBookingRepo.fetch_by_booking_id(db, booking_id=booking_id)
     if not db_booking:
         raise HTTPException(status_code=400, detail="Booking not found!")
     
-    return {
-        "booking_id": booking_id,
-        "booking_time": db_booking.booking_time,
-        "status": db_booking.status,
-        "last_updated": db_booking.last_updated,
-        "estimated_time": db_booking.estimated_time,
-        "area": db_booking.area,
-        "hospital_name": db_booking.hospital_name,  
-        "slot_number": db_booking.slot_number
-    }
+    return db_booking
 
-@app.get("/er/bookings", tags=["ERBooking"],response_model=schemas.ERBooking,status_code=201)
+@app.get("/er/bookings", tags=["ERBooking"],response_model=List[schemas.ERBooking],status_code=201)
 async def get_all_er_bookings(hospital_name: Optional[str] = None, db: Session = Depends(get_db)):
     if hospital_name:
         db_bookings = ERBookingRepo.fetch_by_hospital_name(db, hospital_name)
     else:
         db_bookings = ERBookingRepo.fetch_all(db)
-    bookings = []
-    for db_booking in db_bookings:
-        booking = {
-            "booking_id": db_booking.booking_id,
-            "booking_time": db_booking.booking_time,
-            "status": db_booking.status,
-            "last_updated": db_booking.last_updated,
-            "estimated_time": db_booking.estimated_time,
-            "area": db_booking.area,
-            "hospital_name": db_booking.hospital_name,
-            "slot_number": db_booking.slot_number
-        }
-        bookings.append(booking)
-    return bookings
+    return db_bookings
 
-@app.get("/er/bookings/patient", tags=["ERBooking"],response_model=schemas.ERBooking,status_code=201)
+@app.get("/er/bookings/patient", tags=["ERBooking"],response_model=List[schemas.ERBooking],status_code=201)
 async def get_all_er_bookings(patient_id: int, db: Session = Depends(get_db)):
     db_bookings = ERBookingRepo.fetch_by_patient_id(db, patient_id)
-    bookings = []
-    for db_booking in db_bookings:
-        booking = {
-            "booking_id": db_booking.booking_id,
-            "booking_time": db_booking.booking_time,
-            "status": db_booking.status,
-            "last_updated": db_booking.last_updated,
-            "estimated_time": db_booking.estimated_time,
-            "area": db_booking.area,
-            "hospital_name": db_booking.hospital_name,
-            "slot_number": db_booking.slot_number
-        }
-        bookings.append(booking)
-    return bookings
+    if not db_bookings:
+        raise HTTPException(status_code=400, detail="No booking found for the patient!")
+    return db_bookings
 
 @app.get("/er/booking/status", tags=["ERBooking"],status_code=201)
 async def get_er_booking_status(booking_id: int, db: Session = Depends(get_db)):
-    # erService.get_booking_status(booking_id)
     db_booking = ERBookingRepo.fetch_by_booking_id(db, booking_id=booking_id)
     if not db_booking:
         raise HTTPException(status_code=400, detail="Booking not found!")
@@ -183,9 +151,19 @@ async def create_er_booking(patient_id: int, db: Session = Depends(get_db)):
     if db_booking:
         raise HTTPException(status_code=400, detail="Patient already has a booking!")
 
-    return await ERBookingRepo.create(db=db, booking=er_booking_request)
+    db_booking = await ERBookingRepo.create(db=db, booking=er_booking_request)
 
-@app.post("/er/booking/cancel", tags=["ERBooking"],response_model=schemas.ERBooking,status_code=201)
+    db_queue = ERQueueRepo.fetch_by_hospital_name(db, hospital_name=db_booking.hospital_name)
+    
+    #^ update queue
+    db_queue.current_capacity += 1
+    db_queue.estimated_waiting_time = str(int(db_queue.estimated_waiting_time) + int(db_queue.estimated_waiting_time)/db_queue.current_capacity)
+    
+    await ERQueueRepo.update(db=db, er_queue_data=db_queue)
+    
+    return db_booking
+
+@app.post("/er/booking/cancel", tags=["ERBooking"],status_code=201)
 async def cancel_er_booking(booking_id: int, db: Session = Depends(get_db)):
     db_booking = ERBookingRepo.fetch_by_booking_id(db, booking_id=booking_id)
     if not db_booking:

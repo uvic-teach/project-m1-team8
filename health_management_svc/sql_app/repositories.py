@@ -19,8 +19,8 @@ class ERBookingRepo:
         db.refresh(db_booking)
         return db_booking
     
-    def fetch_by_booking_id(db: Session,_booking_id):
-        return db.query(models.ERBooking).filter(models.ERBooking.booking_id == _booking_id).first()
+    def fetch_by_booking_id(db: Session,booking_id):
+        return db.query(models.ERBooking).filter(models.ERBooking.booking_id == booking_id).first()
  
     def fetch_by_patient_id(db: Session,patient_id):
         return db.query(models.ERBooking).filter(models.ERBooking.patient_id == patient_id).all()
@@ -32,7 +32,7 @@ class ERBookingRepo:
         return db.query(models.ERBooking).offset(skip).limit(limit).all()
  
     async def delete(db: Session,booking_id):
-        db_item= db.query(models.ERBooking).filter_by(id=booking_id).first()
+        db_item= db.query(models.ERBooking).filter_by(booking_id=booking_id).first()
         db.delete(db_item)
         db.commit()
         
@@ -55,8 +55,8 @@ class ERQueueRepo:
         db.refresh(db_er_queue)
         return db_er_queue
         
-    def fetch_by_id(db: Session,_queue_id:int):
-        return db.query(models.ERQueue).filter(models.ERQueue.queue_id == _queue_id).first()
+    def fetch_by_id(db: Session,queue_id:int):
+        return db.query(models.ERQueue).filter(models.ERQueue.queue_id == queue_id).first()
     
     def fetch_by_hospital_name(db: Session,hospital_name:str):
         return db.query(models.ERQueue).filter(models.ERQueue.hospital_name == hospital_name).first()
@@ -64,11 +64,12 @@ class ERQueueRepo:
     def fetch_all(db: Session, skip: int = 0, limit: int = 100):
         return db.query(models.ERQueue).offset(skip).limit(limit).all()
     
-    async def delete(db: Session,_id:int):
-        db_er_queue= db.query(models.ERQueue).filter_by(id=_id).first()
+    async def delete(db: Session,queue_id:int):
+        db_er_queue= db.query(models.ERQueue).filter_by(queue_id=queue_id).first()
         db.delete(db_er_queue)
         db.commit()
         
     async def update(db: Session,er_queue_data):
-        db.merge(er_queue_data)
+        updated_queue = db.merge(er_queue_data)
         db.commit()
+        return updated_queue
