@@ -3,13 +3,6 @@ from sqlalchemy.orm import relationship
 
 from db import Base
 
-        # self.med_id = med_id
-        # self.main_purpose = main_purpose
-        # self.side_effect = side_effect
-        # self.usage = usage
-        # self.is_required_prescription = is_required_prescription
-        # self.company = company
-        # self.ingredients = ingredients
 class Medicine(Base):
     __tablename__ = "medicine"
 

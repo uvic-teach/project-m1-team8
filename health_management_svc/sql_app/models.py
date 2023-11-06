@@ -16,12 +16,12 @@ class ERBooking(Base):
     __tablename__ = "erbookings"
     booking_id = Column(Integer, primary_key=True,index=True)
     patient_id = Column(Integer, nullable=False, unique=False)
-    booking_time = Column(DateTime(timezone=True), server_default=func.now(), nullable=False, unique=False)
+    booking_time = Column(DateTime(timezone=True), server_default=func.now())
     status = Column(String(80), nullable=False, unique=False)
-    last_updated = Column(DateTime(timezone=True), onupdate=func.now(), nullable=False, unique=False)
+    last_updated = Column(DateTime(timezone=True), server_default=func.now())
     estimated_time = Column(String(80), nullable=False, unique=False)
-    area = Column(String(80), nullable=False, unique=False)
-    hospital_name = Column(String(80), nullable=False, unique=False)
+    area = Column(String(200), nullable=False, unique=False)
+    hospital_name = Column(String(200), nullable=False, unique=False)
     slot_number = Column(Integer, nullable=False, unique=False)
     
     def __repr__(self):
@@ -32,7 +32,7 @@ class ERQueue(Base):
     queue_id = Column(Integer, primary_key=True,index=True)
     estimated_waiting_time = Column(String(80), nullable=False, unique=False)
     area = Column(String(80), nullable=False, unique=False)
-    hospital_name = Column(String(80), nullable=False, unique=False)
+    hospital_name = Column(String(80), nullable=False, unique=True, index=True)
     current_capacity = Column(Integer, nullable=False, unique=False)
     max_capacity = Column(Integer, nullable=False, unique=False)
 

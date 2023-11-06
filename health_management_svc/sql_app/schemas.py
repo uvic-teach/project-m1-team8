@@ -5,9 +5,7 @@ from datetime import datetime
 
 class ERBookingBase(BaseModel):
     patient_id: int
-    booking_time: datetime
     status: str
-    last_updated: datetime
     estimated_time: str
     area: str
     hospital_name: str

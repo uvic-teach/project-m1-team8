@@ -8,9 +8,7 @@ class ERBookingRepo:
     async def create(db: Session, booking: schemas.ERBookingCreate):
         db_booking = models.ERBooking(
             patient_id=booking.patient_id,
-            booking_time=booking.booking_time,
             status=booking.status,
-            last_updated=booking.last_updated,
             estimated_time=booking.estimated_time,
             area=booking.area,
             hospital_name=booking.hospital_name,
@@ -43,8 +41,6 @@ class ERBookingRepo:
         db.commit()
         return updated_item
         
-        
-    
 class ERQueueRepo:
     async def create(db: Session, queue: schemas.ERQueueCreate):
         db_er_queue = models.ERQueue(

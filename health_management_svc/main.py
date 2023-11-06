@@ -10,6 +10,9 @@ import uvicorn
 from typing import List,Optional
 from fastapi.encoders import jsonable_encoder
 
+
+import random
+
 app = FastAPI(
     title="Sample FastAPI Application",
     description="Sample Health Service Management Microservice",
@@ -22,7 +25,7 @@ def get_patient_location(patient_id: int):
     return "Victoria"
 
 def get_hospital_in_location(location: str):
-    return ["Royal Jubilee Hospital"]
+    return ["Royal Jubilee Hospital", "hospital2", "hospital3", "hospital4", "hospital5", "hospital6"]
 
 @app.exception_handler(Exception)
 def validation_exception_handler(request, err):
@@ -131,7 +134,7 @@ async def get_all_er_bookings(patient_id: int, db: Session = Depends(get_db)):
         bookings.append(booking)
     return bookings
 
-@app.get("/er/booking/status", tags=["ERBooking"],response_model=schemas.ERBooking,status_code=201)
+@app.get("/er/booking/status", tags=["ERBooking"],status_code=201)
 async def get_er_booking_status(booking_id: int, db: Session = Depends(get_db)):
     # erService.get_booking_status(booking_id)
     db_booking = ERBookingRepo.fetch_by_booking_id(db, booking_id=booking_id)
@@ -156,7 +159,8 @@ async def create_er_booking(patient_id: int, db: Session = Depends(get_db)):
     slot_number = None
 
     for hospital in hospital_list:
-        er_queue = check_er_load_by_hospital(hospital)
+        er_queue = ERQueueRepo.fetch_by_hospital_name(db, hospital)
+        if not er_queue: continue
         if er_queue.current_capacity < er_queue.max_capacity:
             if min_est_wait_time is None:
                 min_est_wait_time = er_queue.estimated_waiting_time
@@ -175,16 +179,16 @@ async def create_er_booking(patient_id: int, db: Session = Depends(get_db)):
         hospital_name=hospital_name,  
         slot_number=slot_number
     )
-    db_item = ERBookingRepo.fetch_by_patient_id(db, patient_id=er_booking_request.patient_id)
-    if db_item:
+    db_booking = ERBookingRepo.fetch_by_patient_id(db, patient_id=er_booking_request.patient_id)
+    if db_booking:
         raise HTTPException(status_code=400, detail="Patient already has a booking!")
 
-    return await ERBookingRepo.create(db=db, item=er_booking_request)
+    return await ERBookingRepo.create(db=db, booking=er_booking_request)
 
 @app.post("/er/booking/cancel", tags=["ERBooking"],response_model=schemas.ERBooking,status_code=201)
 async def cancel_er_booking(booking_id: int, db: Session = Depends(get_db)):
-    db_item = ERBookingRepo.fetch_by_booking_id(db, booking_id=booking_id)
-    if not db_item:
+    db_booking = ERBookingRepo.fetch_by_booking_id(db, booking_id=booking_id)
+    if not db_booking:
         raise HTTPException(status_code=400, detail="Booking not found!")
     await ERBookingRepo.delete(db=db, booking_id=booking_id)
     return {
@@ -192,10 +196,27 @@ async def cancel_er_booking(booking_id: int, db: Session = Depends(get_db)):
         "booking_id": booking_id
         }
     
-@app.get("/er/load", tags=["ERQueue"],response_model=schemas.ERQueue,status_code=201)
-async def check_er_load_by_hospital(hospital_id: int, db: Session = Depends(get_db)):
-    db_er_queue = ERQueueRepo.fetch_by_id(db, hospital_id)
+@app.get("/er/load", tags=["ERQueue"],status_code=201)
+async def check_er_load_by_hospital(hospital_name: str, db: Session = Depends(get_db)):
+    db_er_queue = ERQueueRepo.fetch_by_hospital_name(db, hospital_name)
     if not db_er_queue:
         raise HTTPException(status_code=400, detail="Hospital not found!")
     
     return {"message": f"Current ER Queue at {db_er_queue.hospital_name} ({db_er_queue.area}) is {db_er_queue.current_capacity}. The estimated wait time is {db_er_queue.estimated_waiting_time}."}
+
+
+#! FOR TESTING PURPOSES ONLY
+@app.post("/er/queue/create", tags=["ERQueue"],response_model=schemas.ERQueue,status_code=201)
+async def create_er_queue(hospital_name: str, db: Session = Depends(get_db)):
+    db_er_queue = ERQueueRepo.fetch_by_hospital_name(db, hospital_name)
+    if db_er_queue:
+        raise HTTPException(status_code=400, detail="Hospital's ER Queue already exist!")
+    current_capacity=random.randint(100, 300)
+    queue: schemas.ERQueueCreate = schemas.ERQueueCreate(
+                                        estimated_waiting_time=str(random.randint(1, 10)*current_capacity),
+                                        area="Victoria",
+                                        hospital_name=hospital_name,
+                                        current_capacity=current_capacity,
+                                        max_capacity=300
+                                    )
+    return await ERQueueRepo.create(db=db, queue=queue)
