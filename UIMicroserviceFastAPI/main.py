@@ -22,7 +22,7 @@ app.add_middleware(
    CORSMiddleware,
    allow_origins = origins,
    allow_credentials = True,
-   allow_methods=['*']
+   allow_methods=['*'],
    allow_heards=['*']
 )
 
@@ -82,7 +82,7 @@ async def homepage():
 
 @app.get("/notifications/", response_model=List[NotificationModel])
 async def get_notifications(db: db_dependancy, skip: int = 0, limit: int = 100):
-   notifications = db.query(models.Notifcation).offset(skip).limit(limit).all()
+   notifications = db.query(models.Notification).offset(skip).limit(limit).all()
    return notifications
     
 
@@ -90,7 +90,7 @@ async def get_notifications(db: db_dependancy, skip: int = 0, limit: int = 100):
 
 @app.post("/notifications/", response_model=NotificationModel)
 async def create_notification(notification: NotificationBase, db: db_dependancy):
-  db_notification = models.Notification(**notification.dict())
+  db_notification = models.Notification(**notification.model_dump())
   db.add(db_notification)
   db.commit()
   db.refresh(db_notification)
@@ -98,9 +98,12 @@ async def create_notification(notification: NotificationBase, db: db_dependancy)
     # NotificationService.create_notification(user_id, message) append to notification_list 
     # Send to user
 
+
+""""
 @app.get("/er/loadTime/{hospital_id}")
 async def check_er_load(hospital_id: int):
   return {"message": "Current wait time at Chilliwack General Hospital is 2 hours"}
+
 
 @app.get("/er/booking/{booking_id}")
 async def get_er_booking(booking_id: int):
@@ -139,7 +142,7 @@ async def cancel_er_booking(booking_id: int):
 
 @app.get("/triage/display/element/{triage_id}")
 async def get_triage_element(self, patient_id:str, triage_id:str ):
-   """
+   
     request the patients triage instances list from TriageManagement and 
     display it on the webpage
     Args:
@@ -149,7 +152,7 @@ async def get_triage_element(self, patient_id:str, triage_id:str ):
       element from the list of triage instances
     Returns:
       none
-    """
+    
    return{
           "message": "User Triage information successfully displayed",
           "patient_id": patient_id,
@@ -159,7 +162,7 @@ async def get_triage_element(self, patient_id:str, triage_id:str ):
    
 @app.get("/triage/display/list/{triage_id}")
 def get_triage_list(self, patient_id:str):
-    """
+    
     request the patients triage instances list from TriageManagement and 
     display it on the webpage
     Args:
@@ -169,7 +172,7 @@ def get_triage_list(self, patient_id:str):
       list of triage instances
     Returns:
       none
-    """
+    
     return{
             "message": "Patient triage instances list successfully displayed",
             "patient_id": patient_id,
@@ -202,4 +205,6 @@ async def request_account_validation(self, username:str, password: str):
    return{
         "message": "Log-in successfull.",
    }
+
+   """
   
