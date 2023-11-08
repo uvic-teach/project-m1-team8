@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import api from './api'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const App = () => {
 
@@ -41,64 +42,27 @@ const App = () => {
 
   return (
     <div>
-      <nav className = 'navBar navbar-dark bg-primary'>
-        <div className = 'container-fluid'>
-          <a className = 'navbar-brand' href ="#">
-            MisterEd App
-          </a>
-        </div>
+      <nav>
+        <ul>
+        <li><a href="/authentication">Authentication</a></li>
+          <li><a href="/notifications">Notifications</a></li>
+          <li><a href="/userinfo">UserInfo</a></li>
+          <li><a href="/">MainPage</a></li>
+        </ul>
       </nav>
-
-      <div className = 'container'>
-        <form onSubmit={handleFormSubmit}>
-
-          <div className = 'mb-3 mt-3'>
-            <label htmlFor='message' className='form-label'>
-              Message
-            </label>
-            <input text = 'text' className='form-control' id = 'message' name= 'message' onChange = {handleInputChange} value= {formData.amount}/>
-          </div>
-
-          <div className = 'mb-3'>
-            <label htmlFor='username' className='form-label'>
-              Username
-            </label>
-            <input text = 'text' className='form-control' id = 'username' name= 'username' onChange = {handleInputChange} value= {formData.amount}/>
-          </div>
-
-          <div className = 'mb-3'>
-            <label htmlFor='date' className='form-label'>
-              Date
-            </label>
-            <input text = 'text' className='form-control' id = 'date' name= 'date' onChange = {handleInputChange} value= {formData.amount}/>
-          </div>
-
-          <button type='submit' className='btn btn-primary'>
-            Submit
-          </button>
-
-          <table className='table table-striped table-bordered table-hover'>
-            <thead>
-              <tr>
-                <th>Message</th>
-                <th>Username</th>
-                <th>Date</th>
-              </tr>
-            </thead>
-            <tbody>
-              {notifications.map((notification) => (
-                <tr key={notification.id}>
-                  <td>{notification.message}</td>
-                  <td>{notification.username}</td>
-                  <td>{notification.date}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        
-
-        </form>
-        </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/notifications">
+            <Notifications/>
+          </Route>
+          <Route path="/userinfo">
+            <UserInfo />
+          </Route>
+          <Route path="/">
+            <MainPage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
 )
 }
