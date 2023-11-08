@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import api from './api'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 
 const App = () => {
 
@@ -13,7 +13,7 @@ const App = () => {
 
 
   const fetchNotifications = async () => {
-    const response = await api.get('/notifications/');
+    const response = await api.get('/Pages/Notifications.html');
     setNotifications(response.data)
   }
 
@@ -31,7 +31,7 @@ const App = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    await api.post('/notifications/', formData);
+    await api.post('/Pages/Notifications.html', formData);
     fetchNotifications();
     setFormData({
       message: '',
@@ -44,27 +44,28 @@ const App = () => {
     <div>
       <nav>
         <ul>
-        <li><a href="/authentication">Authentication</a></li>
-          <li><a href="/notifications">Notifications</a></li>
+        <li><a href="localhost:/authentication">Authentication</a></li>
+          <li><a href="/Notifications">Notifications</a></li>
           <li><a href="/userinfo">UserInfo</a></li>
           <li><a href="/">MainPage</a></li>
         </ul>
       </nav>
       <BrowserRouter>
-        <Switch>
-          <Route path="/notifications">
-            <Notifications/>
-          </Route>
+        <Routes>
+          <Route path="/Notifications" >
+            </Route>
+         
           <Route path="/userinfo">
-            <UserInfo />
+            <Route />
           </Route>
           <Route path="/">
-            <MainPage />
+            <Route />
           </Route>
-        </Switch>
+        </Routes>
       </BrowserRouter>
     </div>
 )
 }
 
 export default App;
+
