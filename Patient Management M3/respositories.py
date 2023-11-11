@@ -21,11 +21,11 @@ class UserHealthInfoRepo:
         db.refresh(db_patient)
         return db_patient
 
-    def fetch_patient_id(db: Session, _patient_id)
+    def fetch_patient_id(db: Session, _patient_id):
         return db.query(models.UserHealthInfo).filter(models.UserHealthInfo.patient_id == _patient_id).first()
 
     
-    def fetch_patient_name(db: Session, _patient_name)
+    def fetch_patient_name(db: Session, _patient_name):
         return db.query(models.UserHealthInfo).filter(models.UserHealthInfo.patient_name == _patient_name).first()
 
 
