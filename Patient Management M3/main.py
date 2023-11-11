@@ -66,18 +66,26 @@ async def delete_patientinfo(item_id: int,db: Session = Depends(get_db)):
     await UserHealthInfoRepo.delete(db,item_id)
     return "Item deleted successfully!"
 
-@app.put('/items/{item_id}', tags=["UserHealthInfo"],response_model=schemas.Item)
-async def update_item(item_id: int,item_request: schemas.Item, db: Session = Depends(get_db)):
+@app.put('/userhealthinfo/{patient_id}', tags=["UserHealthInfo"],response_model=schemas.UserHealthInfo)
+async def update_item(patient_id: int,patient_request: schemas.UserHealthInfo, db: Session = Depends(get_db)):
     """
     Update an Item stored in the database
     """
-    db_item = UserHealthInfoRepo.fetch_by_id(db, item_id)
-    if db_item:
-        update_item_encoded = jsonable_encoder(item_request)
-        db_item.name = update_item_encoded['name']
-        db_item.price = update_item_encoded['price']
-        db_item.description = update_item_encoded['description']
-        db_item.store_id = update_item_encoded['store_id']
-        return await UserHealthInfoRepo.update(db=db, item_data=db_item)
+    db_patient = UserHealthInfoRepo.fetch_by_id(db, patient_id)
+    if db_patient:
+        update_patient_encoded = jsonable_encoder(patient_request)
+        db_patient.patient_name = update_patient_encoded['patient_name']
+        db_patient.patient_id = update_patient_encoded['patient_id']
+        db_patient.height = update_patient_encoded ['height']
+        db_patient.weight = update_patient_encoded['weight']
+        db_patient.blood_type = update_patient_encoded['blood_type']
+        db_patient.blood_pressure = update_patient_encoded['blood_pressure']
+        db_patient.allergies = update_patient_encoded['allergies']
+        db_patient.complication = update_patient_encoded['complication']
+        return await UserHealthInfoRepo.update(db=db, patient_data=db_patient)
     else:
         raise HTTPException(status_code=400, detail="Item not found with the given ID")
+    
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=9000, reload=True)
