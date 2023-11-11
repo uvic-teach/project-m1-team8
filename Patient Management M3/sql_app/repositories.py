@@ -1,6 +1,7 @@
+from . import schemas
 from sqlalchemy.orm import Session
 
-from. import models, schemas
+from. import models
 
 class UserHealthInfoRepo:
 
@@ -33,7 +34,7 @@ class UserHealthInfoRepo:
         return db.query(models.UserHealthInfo).offset(skip).limit(limit).all()
 
     async def delete(db: Session, patient_id):
-        db_patient= db.query(models.UserHealthInfo).filter_by(patient_id=patient_id_id).first()
+        db_patient= db.query(models.UserHealthInfo).filter_by(patient_id=patient_id).first()
         db.delete(db_patient)
         db.commit()
 

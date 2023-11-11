@@ -4,7 +4,7 @@ from sqlalchemy.orm import relationship
 from db import Base
 
 class UserHealthInfo(Base):
-    _tablename_ = "items"
+    __tablename__ = "userhealthinfos"
 
     patient_name = Column(String(80), nullable=False, unique=True, index=True)
     patient_id = Column(Integer, primary_key=True, index=True)

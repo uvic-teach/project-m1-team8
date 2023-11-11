@@ -21,19 +21,19 @@ def validation_exception_handler(request, err):
     base_error_message = f"Failed to execute: {request.method}: {request.url}"
     return JSONResponse(status_code=400, content={"message": f"{base_error_message}. Detail: {err}"})
 
-@app.post('/userhealthinfo', tags=["UserHealthInfo"],response_model=schemas.Item,status_code=201)
-async def create_userhealthinfo(item_request: schemas.ItemCreate, db: Session = Depends(get_db)):
+@app.post('/userhealthinfo', tags=["UserHealthInfo"],response_model=schemas.UserHealthInfo,status_code=201)
+async def create_userhealthinfo(item_request: schemas.UserHealthInfoCreate, db: Session = Depends(get_db)):
     """
     Create an Item and store it in the database
     """
     
-    db_item = UserHealthInfoRepo.fetch_by_name(db, name=item_request.name)
+    db_item = UserHealthInfoRepo.fetch_patient_name(db, _patient_name=item_request.patient_name)
     if db_item:
         raise HTTPException(status_code=400, detail="Item already exists!")
 
-    return await UserHealthInfoRepo.create(db=db, item=item_request)
+    return await UserHealthInfoRepo.create(db=db, user=item_request)
 
-@app.get('/userhealthinfo', tags=["UserHealthInfo"],response_model=List[schemas.Item])
+@app.get('/userhealthinfo', tags=["UserHealthInfo"],response_model=List[schemas.UserHealthInfo],status_code=201)
 def get_all_userhealthinfo(name: Optional[str] = None,db: Session = Depends(get_db)):
 
     if name:
@@ -45,7 +45,7 @@ def get_all_userhealthinfo(name: Optional[str] = None,db: Session = Depends(get_
         return UserHealthInfoRepo.fetch_all_patient_info(db)
 
 
-@app.get('/userhealthinfo/{patient_id}', tags=["UserHealthInfo"],response_model=schemas.Item)
+@app.get('/userhealthinfo/{patient_id}', tags=["UserHealthInfo"],response_model=schemas.UserHealthInfo)
 def get_userhealthinfo(patient_id: int,db: Session = Depends(get_db)):
     """
     Get the Item with the given ID provided by User stored in database
