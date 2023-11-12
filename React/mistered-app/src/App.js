@@ -1,9 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import api from './api'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+//import React, {useState, useEffect} from 'react'
+//import api from './api'
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import MainPage from "./Pages/MainPage";
+import UserInfo from "./Pages/UserInfo";
+import AuthenticationPage from "./Pages/Authentication";
 
 const App = () => {
 
+/*
   const[notifications, setNotifications] = useState([]);
   const[formData, setFormData] = useState({
     message: '',
@@ -39,32 +43,38 @@ const App = () => {
       date: ''
     });
   }
-
+*/
   return (
     <div>
       <nav>
         <ul>
-        <li><a href="/authentication">Authentication</a></li>
-          <li><a href="/notifications">Notifications</a></li>
-          <li><a href="/userinfo">UserInfo</a></li>
+        <li><a href="/authentication/">Login/Register</a></li>
+          <li><a href="/notifications/">Notifications</a></li>
+          <li><a href="/userinfo/">UserInfo</a></li>
           <li><a href="/">MainPage</a></li>
         </ul>
       </nav>
+
       <BrowserRouter>
-        <Switch>
-          <Route path="/notifications">
-            <Notifications/>
+        <Routes>
+        <Route path="/authentication/" element={<AuthenticationPage/>}>
+            </Route>
+         
+          <Route path="/userinfo/" element={<UserInfo/>}>
+            <Route />
           </Route>
-          <Route path="/userinfo">
-            <UserInfo />
+          <Route path="/" element={<MainPage/>}>
           </Route>
-          <Route path="/">
-            <MainPage />
-          </Route>
-        </Switch>
+        </Routes>
       </BrowserRouter>
+      
     </div>
 )
 }
+/*
 
+          <Route path="/notifications/" >
+            </Route>
+*/
 export default App;
+
