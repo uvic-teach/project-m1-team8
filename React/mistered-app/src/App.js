@@ -1,9 +1,13 @@
-import React, {useState, useEffect} from 'react'
-import api from './api'
+//import React, {useState, useEffect} from 'react'
+//import api from './api'
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import MainPage from "./Pages/MainPage";
+import UserInfo from "./Pages/UserInfo";
+import AuthenticationPage from "./Pages/Authentication";
 
 const App = () => {
 
+/*
   const[notifications, setNotifications] = useState([]);
   const[formData, setFormData] = useState({
     message: '',
@@ -13,7 +17,7 @@ const App = () => {
 
 
   const fetchNotifications = async () => {
-    const response = await api.get('/Pages/Notifications.html');
+    const response = await api.get('/notifications/');
     setNotifications(response.data)
   }
 
@@ -31,7 +35,7 @@ const App = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    await api.post('/Pages/Notifications.html', formData);
+    await api.post('/notifications/', formData);
     fetchNotifications();
     setFormData({
       message: '',
@@ -39,33 +43,38 @@ const App = () => {
       date: ''
     });
   }
-
+*/
   return (
     <div>
       <nav>
         <ul>
-        <li><a href="localhost:/authentication">Authentication</a></li>
-          <li><a href="/Notifications">Notifications</a></li>
-          <li><a href="/userinfo">UserInfo</a></li>
+        <li><a href="/authentication/">Login/Register</a></li>
+          <li><a href="/notifications/">Notifications</a></li>
+          <li><a href="/userinfo/">UserInfo</a></li>
           <li><a href="/">MainPage</a></li>
         </ul>
       </nav>
+
       <BrowserRouter>
         <Routes>
-          <Route path="/Notifications" >
+        <Route path="/authentication/" element={<AuthenticationPage/>}>
             </Route>
          
-          <Route path="/userinfo">
+          <Route path="/userinfo/" element={<UserInfo/>}>
             <Route />
           </Route>
-          <Route path="/">
-            <Route />
+          <Route path="/" element={<MainPage/>}>
           </Route>
         </Routes>
       </BrowserRouter>
+      
     </div>
 )
 }
+/*
 
+          <Route path="/notifications/" >
+            </Route>
+*/
 export default App;
 
