@@ -17,8 +17,17 @@ class UserHealthInfoBase(BaseModel):
 class UserHealthInfoCreate(UserHealthInfoBase):
     pass
 
-class UserHealthInfo(UserHealthInfoBase):
-    id: int
+class BasicHealthInfoBase(BaseModel):
+    height: float
+    weight: float
+    blood_type: str
+    blood_pressure: float
+    allergies: str
+    complications: str
+
+
+class UserHealthInfo(BasicHealthInfoBase):
+
 
     class Config:
         orm_mode = True
