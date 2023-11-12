@@ -21,7 +21,7 @@ def validation_exception_handler(request, err):
     base_error_message = f"Failed to execute: {request.method}: {request.url}"
     return JSONResponse(status_code=400, content={"message": f"{base_error_message}. Detail: {err}"})
 
-@app.post('/userhealthinfo', tags=["UserHealthInfo"],response_model=schemas.UserHealthInfo,status_code=201)
+@app.post('/userhealthinfo', tags=["UserHealthInfo"],status_code=201)
 async def create_userhealthinfo(item_request: schemas.UserHealthInfoCreate, db: Session = Depends(get_db)):
     """
     Create an Item and store it in the database
@@ -33,8 +33,8 @@ async def create_userhealthinfo(item_request: schemas.UserHealthInfoCreate, db: 
 
     return await UserHealthInfoRepo.create(db=db, user=item_request)
 
-@app.get('/userhealthinfo', tags=["UserHealthInfo"],response_model=List[schemas.UserHealthInfo],status_code=201)
-def get_all_userhealthinfo(name: Optional[str] = None,db: Session = Depends(get_db)):
+@app.get('/userhealthinfo', tags=["UserHealthInfo"],status_code=201)
+async def get_all_userhealthinfo(name: Optional[str] = None,db: Session = Depends(get_db)):
 
     if name:
         items =[]
@@ -45,8 +45,8 @@ def get_all_userhealthinfo(name: Optional[str] = None,db: Session = Depends(get_
         return UserHealthInfoRepo.fetch_all_patient_info(db)
 
 
-@app.get('/userhealthinfo/{patient_id}', tags=["UserHealthInfo"],response_model=schemas.UserHealthInfo)
-def get_userhealthinfo(patient_id: int,db: Session = Depends(get_db)):
+@app.get('/userhealthinfo/{patient_id}', tags=["UserHealthInfo"])
+async def get_userhealthinfo(patient_id: int,db: Session = Depends(get_db)):
     """
     Get the Item with the given ID provided by User stored in database
     """
@@ -66,22 +66,20 @@ async def delete_patientinfo(item_id: int,db: Session = Depends(get_db)):
     await UserHealthInfoRepo.delete(db,item_id)
     return "Item deleted successfully!"
 
-@app.put('/userhealthinfo/{patient_id}', tags=["UserHealthInfo"],response_model=schemas.UserHealthInfo)
-async def update_item(patient_id: int,patient_request: schemas.UserHealthInfo, db: Session = Depends(get_db)):
+@app.put('/userhealthinfo/{patient_id}', tags=["UserHealthInfo"])
+async def update_item(patient_id: int, patient_request: schemas.UserHealthInfo, db: Session = Depends(get_db)):
     """
     Update an Item stored in the database
     """
-    db_patient = UserHealthInfoRepo.fetch_by_id(db, patient_id)
+    db_patient = UserHealthInfoRepo.fetch_patient_id(db,patient_id)
     if db_patient:
         update_patient_encoded = jsonable_encoder(patient_request)
-        db_patient.patient_name = update_patient_encoded['patient_name']
-        db_patient.patient_id = update_patient_encoded['patient_id']
         db_patient.height = update_patient_encoded ['height']
         db_patient.weight = update_patient_encoded['weight']
         db_patient.blood_type = update_patient_encoded['blood_type']
         db_patient.blood_pressure = update_patient_encoded['blood_pressure']
         db_patient.allergies = update_patient_encoded['allergies']
-        db_patient.complication = update_patient_encoded['complication']
+        db_patient.complication = update_patient_encoded['complications']
         return await UserHealthInfoRepo.update(db=db, patient_data=db_patient)
     else:
         raise HTTPException(status_code=400, detail="Item not found with the given ID")
