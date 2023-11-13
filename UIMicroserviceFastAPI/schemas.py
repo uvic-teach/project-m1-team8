@@ -1,18 +1,10 @@
 from pydantic import BaseModel
 import datetime
 
-
-
 class UserCreate(BaseModel):
     username: str
     email: str
     password: str
-
-class booking(BaseModel):
-    booking_id: str
-    username: str
-    hospital_name: str
-
 
 class requestdetails(BaseModel):
     email:str
@@ -33,3 +25,38 @@ class TokenCreate(BaseModel):
     refresh_token:str
     status:bool
     created_date:datetime.datetime
+
+class NotificationsBase(BaseModel):
+    user_id: int 
+    message: str 
+    time_sent: datetime.datetime
+
+class BookingsBase(BaseModel):
+    user_id: int 
+    message: str 
+    wait_time: str
+
+class UserBase(BaseModel):
+    id: int 
+    username: str
+    password: str 
+    email: str 
+
+class NotificationCreate(NotificationsBase):
+    pass
+
+class BookingCreate(BookingsBase):
+    pass
+
+class NotificationModel(NotificationsBase):
+   notification_id: int
+
+   class Config:
+        from_attributes =  True
+
+class BookingsModel(BookingsBase):
+   booking_id: int
+
+   class Config:
+        from_attributes =  True
+

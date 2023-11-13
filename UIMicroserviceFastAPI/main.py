@@ -9,6 +9,7 @@ import datetime
 import models
 from models import User, Notification, TokenTable, Bookings
 import schemas
+from schemas import NotificationsBase, BookingsBase
 import os
 import jwt
 from fastapi.middleware.cors import CORSMiddleware
@@ -26,7 +27,11 @@ JWT_REFRESH_SECRET_KEY = "13ugfdfgh@#$%^@&jkl45678902"
 #from Services import ERService, Authentication, NotificationService, TriageDataGetter
 #from components import notification, Booking, AccountInfo, UserHealthInfo
 
-app = FastAPI()
+app = FastAPI(
+    #title="Mister ED User Interface Microservice",
+    #description="Basic health service app interface",
+    #version="0.6"
+)
 
 origins = [
    'http://localhost:3000'
@@ -55,39 +60,6 @@ def token_required(func):
         
     return wrapper
 
-currentTime = datetime.datetime.now()
-
-
-class NotificationsBase(BaseModel):
-    class Config:
-        arbitrary_types_allowed = True
-
-    notification_id: int = Field(example=121)
-    patient_id: int = Field(example=12313)
-    message: str = Field(example="meow")
-    time_sent: DateTime = Field(example= None) 
-
-class BookingsBase(BaseModel):
-    class Config:
-        arbitrary_types_allowed = True
-    booking_id: int = Field(example=123456789)
-    patient_id: int = Field(example=101010010)
-    message: str = Field(example="Booking time")
-    wait_time: DateTime = Field(example=None) 
-    
-class NotificationModel(NotificationsBase):
-   id: int
-
-   class Config:
-      orm_mode =  True
-      arbitrary_types_allowed = True
-
-class BookingsModel(BookingsBase):
-   id: int
-
-   class Config:
-      orm_mode =  True
-      arbitrary_types_allowed = True
 
 def get_db():
   db = SessionLocal()
@@ -108,30 +80,29 @@ db_dependancy = Annotated[Session, Depends(get_db)]
 
 models.Base.metadata.create_all(bind=engine)
 
-class UserHealthInfo(BaseModel):
-    patient_id: str = Field(example="12345")
-    patient_age: int = Field(example = 20)
-    height: float = Field(example=175.3)
-    weight: float = Field(example=68.5)
-    blood_type: str = Field(example="A+")
-    blood_pressure: float = Field(example=120.8)
 
 @app.get("/")
 async def homepage():
     return "MisterED User Interface"
 
-@app.get("/notifications/", response_model=List[NotificationModel])
-async def get_notifications(db: db_dependancy, skip: int = 0, limit: int = 100):
-   notifications = db.query(models.Notification).offset(skip).limit(limit).all()
-   return notifications
-    
-@app.post("/notifications/", response_model=NotificationModel)
-async def create_notification(notification: NotificationsBase, db: db_dependancy):
+@app.get("/notifications/", response_model=schemas.NotificationModel)
+async def get_notifications(dependencies=Depends(JWTBearer()), db: Session = Depends(get_session)):
+  token=dependencies
+  payload = jwt.decode(token, JWT_SECRET_KEY, ALGORITHM)
+  user_id = payload['sub']
+  notifications = db.query(models.Notification).filter(models.Notification.user_id == user_id).all()
+  return {
+  "message": "Notification sent successfully",
+  "notifications": notifications
+  }
+
+@app.post("/notifications/", response_model=schemas.NotificationModel)
+async def create_notification(notification: NotificationsBase, db: Session = Depends(get_session)):
   db_notification = models.Notification(**notification.model_dump())
   db.add(db_notification)
   db.commit()
   db.refresh(db_notification)
-  return db_notification
+  return {"message": "Notification sent successfully"}
 
 # AUTHENTICATION API CALLS
 
@@ -187,7 +158,7 @@ def login(request: schemas.requestdetails, db: Session = Depends(get_session)):
     db.refresh(token_db)
     return {
         "access_token": access,
-        "refresh_token": refresh,
+        "refresh_token": refresh
     }
 
 @app.post('/authentication/logout')
@@ -211,7 +182,7 @@ def logout(dependencies=Depends(JWTBearer()), db: Session = Depends(get_session)
         db.add(existing_token)
         db.commit()
         db.refresh(existing_token)
-    return {"message":"Logout Successfully"} 
+    return {"message":"Loggged out Successfully"} 
 
 ############################ ER API CALLS
 
@@ -227,16 +198,20 @@ async def get_er_booking(booking_id: int):
   }
 
 @app.post("/er/booking/request")
-async def create_er_request(booking: BookingsBase, db: db_dependancy):
+async def create_er_request(booking: BookingsBase, db: Session = Depends(get_session), response_model=schemas.BookingsModel):
   db_bookings = models.Bookings(**booking.model_dump())
   db.add(db_bookings)
   db.commit()
   db.refresh(db_bookings)
-  return db_bookings
+  return {
+  "message": "booking created successfully",
+  "booking": db_bookings
+  }
+
 
 @app.post("/er/booking/cancel")
-async def cancel_er_booking(booking_id: int, booking: BookingsBase, db: db_dependancy):
-  db_bookings = models.Bookings(**booking.model_dump())
+async def cancel_er_booking(booking_id: int, db: Session = Depends(get_session), response_model=schemas.BookingsBase):
+  db_bookings = db.query(models.Bookings).filter(models.Bookings.booking_id == booking_id).first()
   if db_bookings is None:
     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="the booking does not exist")
   db.delete(db_bookings)
@@ -251,17 +226,7 @@ async def cancel_er_booking(booking_id: int, booking: BookingsBase, db: db_depen
 
 @app.get("/triage/display/element/{triage_id}")
 async def get_triage_element(self, patient_id:str, triage_id:str ):
-   '''
-    request the patients triage instances list from TriageManagement and 
-    display it on the webpage
-    Args:
-      patient_id(str): ID of patient to check
-    Changes to page:
-      load triage history page with a table containing the one selected
-      element from the list of triage instances
-    Returns:
-      none
-    '''
+
     
    return{
           "message": "User Triage information successfully displayed",
@@ -272,17 +237,6 @@ async def get_triage_element(self, patient_id:str, triage_id:str ):
    
 @app.get("/triage/display/list/{triage_id}")
 def get_triage_list(self, patient_id:str):
-    '''
-    request the patients triage instances list from TriageManagement and 
-    display it on the webpage
-    Args:
-      patient_id(str): ID of patient to check
-    Changes to page:
-      load triage history page a table containing the full 
-      list of triage instances
-    Returns:
-      none
-    '''
     return{
             "message": "Patient triage instances list successfully displayed",
             "patient_id": patient_id

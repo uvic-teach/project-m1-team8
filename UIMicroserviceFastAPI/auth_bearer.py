@@ -18,6 +18,8 @@ def decodeJWT(jwtoken: str):
         return payload
     except InvalidTokenError:
         return None
+    
+
 
 
 class JWTBearer(HTTPBearer):
