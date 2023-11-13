@@ -142,7 +142,7 @@ Prevent Faults | Does the system use a predictive model to monitor the state of 
 
 #### Availability tactics
 
-##### *Detect Faults* 
+#### *Detect Faults* 
 * **Rollback**
    - Microservice keeps a log of the status of the previous State it was in before a change has occurred. When the microservice is faced with a failure, it rolls back to this previous state.
    - 
@@ -151,7 +151,7 @@ Prevent Faults | Does the system use a predictive model to monitor the state of 
 
 
 ### Microservice #2: Patient Management
-##### *Detect Faults* 
+#### *Detect Faults* 
 * **Ping/echo mechanism**
 * **Monitor**: Microservice monitors connections between modules and databases, reporting any occurrence of network congestion or unstable connections.
 #### **How to test availability tactics**: 
@@ -161,7 +161,7 @@ Prevent Faults | Does the system use a predictive model to monitor the state of 
 ### Microservice #3: Health Service Management
 
 #### Availability tactics
-##### *Detect Faults*:
+#### *Detect Faults*:
 * **Monitor**: Employ continuous monitoring mechanisms to assess the overall health of the system, including resource utilization, response times, and error rates.
 * **Heartbeat, timestamp**: Implement heartbeat and timestamp mechanisms to regularly check the liveliness of components and detect potential issues, allowing for timely responses.
 * **Voting**: Deploy replicated components to enhance fault tolerance. Replicas can handle increased loads and provide redundancy in case of failures.
