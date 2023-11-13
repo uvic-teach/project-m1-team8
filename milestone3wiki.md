@@ -229,8 +229,7 @@ The state diagram represents the "Patient Management" process using the Mister E
 <br>
 
 #### **Description**:
-First, the system has to be authenticated before being able to request triage and move to the triage request created state. After that, a triage record will be created, depends on the status of the triage record (whether it's completed or still in progress), the system will be in "triage record being calculated" or "triage complete" states. When the triage result is available, based on the result, the system will go to the suitable branch and retrieve the necessary info. If the triage result suggests the patient visiting the ER, the system will go to the ER booking initialized, then ER booking confirm. While the slot number is greater than 0, the patient is staying in the queue until the slot number = 0. If the patient doesn't visit the ER during a period of time, their ER booking will be canceled and they have to re-book the ER again.
-<br>
+First, the system has to be authenticated before being able to request triage and move to the triage request created state. After that, a triage record will be created, depends on the status of the triage record (whether it's completed or still in progress), the system will transit to "triage record being calculated" or "triage complete" states. When the triage result is available, based on the result, the system will go to the suitable branch and retrieve the necessary info. If the triage result suggests the patient visiting the ER, the system will go to the ER booking initialized state, then ER booking confirm state. While the slot number is greater than 0, the patient remains in queue in the queue until the slot number = 0. If the patient doesn't visit the ER during a period of time, their ER booking will be canceled and they have to re-book the ER again.
 
 ## Activity Models: 
 
