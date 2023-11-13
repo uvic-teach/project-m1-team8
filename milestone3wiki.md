@@ -193,7 +193,9 @@ Prevent Faults | Does the system use a predictive model to monitor the state of 
 
 ### Microservice #2: Patient Management
 
-**API gateway design pattern**: The Patient Management microservice is designed following the API gateway design pattern, ensuring a structured and efficient architecture. It comprises various modules, each with a specific role in processing API requests originating from the UI side. These modules are crucial in retrieving relevant information to fulfill user requests, pulling data from diverse databases. They access information related to user health and user account details, among other services. It is worth noting that the architecture allows for flexibility and robustness, as some modules are adeptly connected to more than one database. This connectivity ensures a seamless flow of information and enhances the system's ability to provide comprehensive and accurate responses to user queries.
+**Repository pattern**: One design pattern our microservice adopts is the repository pattern, wherein different modules interact with distinct databases, providing a clear separation of concerns. For instance, one module handling a user’s Triage Record might access a separate database, while another module dealing with user account health information accesses its respective database. Such practices allow the microservice to achieve a high level of modularity and maintainability. This clear separation is beneficial for testing and mocking database interactions.
+
+**Adapter pattern**: Another design pattern that can be applied to the system is the Adapter pattern. This is exemplified by the AccountInformationManagement module that accesses the User's Health Info database and the Account Information database. Although a distinction should be maintained between User's Health Info and Account Information, they are nonetheless related. By using the Adapter pattern in this case, the system can verify the existence of duplicate accounts or update user health information using a shared ID.
 <br>
 
 ### Microservice #3: Health Service Management
