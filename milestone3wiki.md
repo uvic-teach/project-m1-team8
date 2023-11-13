@@ -216,7 +216,7 @@ The Triage state allows the user to request a virtual triage and fill out the co
 
 ### Microservice #2: Patient Management
 
-![image](https://github.com/uvic-teach/project-m1-team8/assets/145606952/939d1f24-3fb0-4b22-9243-e1a36417329d)
+![Patient_Management_State_Diagram drawio](https://github.com/uvic-teach/project-m1-team8/assets/145606952/802ec6dd-3574-4f15-a381-91c8578c6454)
 <br>
 
 #### **Description**:
