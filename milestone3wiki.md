@@ -6,28 +6,26 @@
 
 Accomplishments made in Milestone 3: 
 - Backend code for  Authentication, Notifications. 
-- Frontend code for the Main page, changing to login/register page, and changing to user info page. 
+- Frontend code for the Main page, changing to login/register page, and changing to user info page.
 
 Goals for Milestone 4: 
 - Complete remaining Backend Code from Sprint #1. 
-- Create Backend code for communicating with the triage engine and checking ED Load. 
-- add frontend functionality to backend code. 
-- Improve the aesthetics of the pages. 
-<br>
+- Create Backend code for communicating with the triage engine and checking ED Load.
+- add frontend functionality to backend code.
+- Improve the aesthetics of the pages.
 
 ### Microservice #2: Patient Management
 
-During Milestone 3, we successfully achieved the implementation of the userHealthInfo database, which was subsequently deployed. This database plays a crucial role in storing, updating, and managing user’s health information in our microservice, contributing to the overall functionality and data integrity of our system. We also completed the docker implementation for our microservice which enabled our course instructor, and TAs to test out our databases functionalities at any time. 
+During Milestone 3, we successfully achieved the implementation of the userHealthInfo database, which was subsequently deployed. This database plays a crucial role in storing, updating, and managing user’s health information in our microservice, contributing to the overall functionality and data integrity of our system. We also completed the docker implementation for our microservice which enabled our course instructor, and TAs to test out our databases functionalities at any time.
 
-As we transition to Milestone 4, our primary objectives include implementing and deploying the two remaining databases: triageRecord and userAccountInfo. Where triageRecord would hold all of the user’s triage logs with the results of each triage, and the userAccountInfo would hold all the user’s account information such as login credentials, and contact information. Building on the lessons learned from Milestone 3, we aim to streamline the development process and enhance the overall system robustness. 
+As we transition to Milestone 4, our primary objectives include implementing and deploying the two remaining databases: triageRecord and userAccountInfo. Where triageRecord would hold all of the user’s triage logs with the results of each triage, and the userAccountInfo would hold all the user’s account information such as login credentials, and contact information. Building on the lessons learned from Milestone 3, we aim to streamline the development process and enhance the overall system robustness.
 
 Simultaneously, our architectural tactic involves implementing a fault detection mechanism using ping/echo to identify component or connection failures and address potential network congestion issues. To achieve this, we are incorporating connection control between modules and databases, ensuring reliability and security in the interactions between various system components and services. We acknowledge that Milestone 4 may present new challenges, since we would be merging our microservice implementation with the other microservices that our group members are working on. This may cause minor merge conflict, but we are confident in our skills that we can tackle any oncoming issues successfully end of Milestone 4.
-<br>
 
 ### Microservice #3: Health Service Management
 
-### Work done:
-#### *Setup template FastAPI + SlqAlchemy*
+#### Work done:
+**Setup template FastAPI + SlqAlchemy**
 * Estimated Time: 8 hours
 * Status: Resolved
 * Description: 
@@ -35,7 +33,7 @@ Simultaneously, our architectural tactic involves implementing a fault detection
 * Testing: 
    - Test the setup by running the FastAPI application and confirming successful startup.
 
-#### *Setup model and schema for ER Queue capacity checking and booking system*
+**Setup model and schema for ER Queue capacity checking and booking system**
 * Estimated Time: 8 hours
 * Status: Resolved
 * Description: 
@@ -43,17 +41,17 @@ Simultaneously, our architectural tactic involves implementing a fault detection
 * Testing: 
    - Test the integration of the models and schemas within the FastAPI application.
 
-### Work for milestone 4
-#### *Setup models and schemas for Health Workers*
+#### Work for milestone 4
+**Setup models and schemas for Health Workers**
 * Estimated Time: 3 hours
 * Status: Open
-* Description: 
+* Description:
    - The objective of this ticket is to establish the data models and schemas necessary to manage information related to health workers (nurses, clinician, etc.) within the system. This includes defining the structure of the database tables for health workers, creating schemas for data validation and serialization, and integrating models and schemas in FastAPI. The defined model and schema will serve as the foundation for further development of the System.
 * Testing: 
    - Test the integration of the models and schemas within the FastAPI application.
    - Implement unit tests to ensure the correctness of the health worker model and schema definitions.
 
-#### *Setup models and schemas for Medicine*
+**Setup models and schemas for Medicine**
 * Estimated Time: 2 hours
 * Status: In Progress
 * Description: 
@@ -62,7 +60,7 @@ Simultaneously, our architectural tactic involves implementing a fault detection
    - Test the integration of the models and schemas within the FastAPI application.
    - Implement unit tests to ensure the correctness of the health worker model and schema definitions.
 
-#### *Setup models and schemas for Health Suggestions*
+**Setup models and schemas for Health Suggestions**
 * Estimated Time: 7 hours
 * Status: In Progress
 * Description: 
@@ -71,7 +69,7 @@ Simultaneously, our architectural tactic involves implementing a fault detection
    - Test the integration of the models and schemas within the FastAPI application.
    - Implement unit tests to ensure the correctness of the health worker model and schema definitions.
 
-#### *Setup models and schemas for Triage Record and Result*
+**Setup models and schemas for Triage Record and Result**
 * Estimated Time: 5 hours
 * Status: Open
 * Description: 
@@ -80,7 +78,7 @@ Simultaneously, our architectural tactic involves implementing a fault detection
    - Test the integration of the models and schemas within the FastAPI application.
    - Implement unit tests to ensure the correctness of the health worker model and schema definitions.
 
-#### *Containerize the system*
+**Containerize the system**
 * Estimated Time: 5 hours
 * Status: In Progress
 * Description: 
@@ -92,7 +90,7 @@ Simultaneously, our architectural tactic involves implementing a fault detection
    -  Verify that the system functions correctly within the Docker containers.
 - Test access to the application through the specified ports.
 
-#### *Deploy system on GCP*
+**Deploy system on GCP**
 * Estimated Time: 15 hours
 *  hours
 * Status: In Progress
@@ -102,7 +100,7 @@ Simultaneously, our architectural tactic involves implementing a fault detection
    -  Verify that the system functions correctly.
    - Test access to the application through the specified ports.
 
-*Integrate Health Service Management Microservice with Other Services And UI in the System*
+**Integrate Health Service Management Microservice with Other Services And UI in the System**
 * Estimated Time: 15 hours
 *  hours
 * Status: Open
@@ -112,15 +110,8 @@ Simultaneously, our architectural tactic involves implementing a fault detection
 * Testing:
    - Unit test: Develop comprehensive unit tests for the integration logic to verify that the microservice functions correctly in isolation.
    - Integration test: Conduct integration testing to validate the end-to-end functionality of the microservice when interacting with the target service. Emphasize scenarios such as successful communication, error scenarios, and edge cases.
-<br>
 
-## Architectural Tactics: 
-
-<br>
-(1) <br>
-<html>
-<body>
-<!--StartFragment-->
+## Architectural Tactics:
 
 Tactics Group | Tactics Question | Support?(Y/N) | Risk | Design Decisions and Location | Rationale and Assumptions
 -- | -- | -- | -- | -- | --
@@ -147,29 +138,30 @@ Prevent Faults | Can the system remove components from service, temporarily plac
 Prevent Faults | Does the system employ transactions—bundling state updates so that asynchronous messages exchanged between distributed components are atomic, consistent, isolated, and durable? | Y | High | Design a transactional model that defines the boundaries and scope of a transaction. Transactions are sets of operations that need to be executed atomically. In addition, for distributed systems, we consider using a two-phase commit protocol. Inthe first phase, participants agree to commit, and in the second phase, the actual commit or rollback is performed.Implement transaction logging to record the state changes made during a transaction. This log ensures that even in the event of a failure, the system can recover and maintain consistency. | Since the system is health-related, it is required to be high-availability service and need to manage several data bases. Using distributed locking mechanisms prevents conflicts between concurrent transactions in a distributed environment; and implementing acknowledgment mechanisms between distributed components ensures that all parties involved are aware of the transaction's progress.
 Prevent Faults | Does the system use a predictive model to monitor the state of health of a component to ensure that the system is operating within nominal parameters?When conditions are detected that are predictive of likely future faults, the model initiates corrective action. | Y | Low | Implement continuous monitoring of the system using the trained predictive model. The model analyzes real-time or near-real-time data to assess the current state of health of system components. | Predictive health monitoring allows for the proactive identification of potential issues before they escalate into full-fledged faults. This proactive approach helps prevent service disruptions.
 
-<!--EndFragment-->
-</body>
-</html>
-<br>
-
 ### Microservice #1: UI
 
-(2) Rollback <br>
-(3) Microservice keeps a log of the status of the previous State it was in before a change has occurred. When the microservice is faced with a failure, it rolls back to this previous state. <br>
-(4) We should be able to test this attribute by having a test function to access the values of the last previous stable state. If these values are accurate to what is intended, then we can assume our tactic is working as intended.
-<br>
+#### Availability tactics
+
+##### *Detect Faults* 
+* **Rollback**
+   - Microservice keeps a log of the status of the previous State it was in before a change has occurred. When the microservice is faced with a failure, it rolls back to this previous state.
+   - 
+#### **How to test availability tactics**: 
+- We should be able to test this attribute by having a test function to access the values of the last previous stable state. If these values are accurate to what is intended, then we can assume our tactic is working as intended.
+
 
 ### Microservice #2: Patient Management
-
-(2) Ping/echo mechanism <br>
-(3) Microservice monitors connections between modules and databases, reporting any occurrence of network congestion or unstable connections. <br>
-(4) Testing can be done by setting a baseline to define the normal expectations of connection between modules and database. We can add failure simulations to see the mechanism work as expected. <br>
+##### *Detect Faults* 
+* **Ping/echo mechanism**
+* **Monitor**: Microservice monitors connections between modules and databases, reporting any occurrence of network congestion or unstable connections.
+#### **How to test availability tactics**: 
+- Testing can be done by setting a baseline to define the normal expectations of connection between modules and database. We can add failure simulations to see the mechanism work as expected. <br>
 
 
 ### Microservice #3: Health Service Management
 
-### Availability tactics
-#### *Detect Faults*:
+#### Availability tactics
+##### *Detect Faults*:
 * **Monitor**: Employ continuous monitoring mechanisms to assess the overall health of the system, including resource utilization, response times, and error rates.
 * **Heartbeat, timestamp**: Implement heartbeat and timestamp mechanisms to regularly check the liveliness of components and detect potential issues, allowing for timely responses.
 * **Voting**: Deploy replicated components to enhance fault tolerance. Replicas can handle increased loads and provide redundancy in case of failures.
@@ -193,31 +185,30 @@ Prevent Faults | Does the system use a predictive model to monitor the state of 
 * **Shadow Deployment Testing**: Validate updates in shadow mode by deploying changes to a subset of users or components and monitoring the impact before completing a full deployment.
 <br>
 
-## Design Patterns: 
+## Design Patterns:
 
 ### Microservice #1: UI
 
-The UI Microservice implements the “State” pattern. This pattern allows an object to have specific functions according to the current State it is in. The object can switch between states through certain events or flags triggered by the system. In our microservice, this state is manifested through the different “States” the UI page can have. For example, the Account/Personal UI State has behaviors related to the managing and accessing the Account/Personal Information of the current user. The transitions between our states are usually activated by the user pressing a button, but many require conditional triggers to be able to transition.
-<br>
+**“State” pattern**: The UI Microservice implements the “State” pattern. This pattern allows an object to have specific functions according to the current State it is in. The object can switch between states through certain events or flags triggered by the system. In our microservice, this state is manifested through the different “States” the UI page can have. For example, the Account/Personal UI State has behaviors related to the managing and accessing the Account/Personal Information of the current user. The transitions between our states are usually activated by the user pressing a button, but many require conditional triggers to be able to transition.
+
 ### Microservice #2: Patient Management
 
-The Patient Management microservice is designed following the API gateway design pattern, ensuring a structured and efficient architecture. It comprises various modules, each with a specific role in processing API requests originating from the UI side. These modules are crucial in retrieving relevant information to fulfill user requests, pulling data from diverse databases. They access information related to user health and user account details, among other services. It is worth noting that the architecture allows for flexibility and robustness, as some modules are adeptly connected to more than one database. This connectivity ensures a seamless flow of information and enhances the system's ability to provide comprehensive and accurate responses to user queries.
+**API gateway design pattern**: The Patient Management microservice is designed following the API gateway design pattern, ensuring a structured and efficient architecture. It comprises various modules, each with a specific role in processing API requests originating from the UI side. These modules are crucial in retrieving relevant information to fulfill user requests, pulling data from diverse databases. They access information related to user health and user account details, among other services. It is worth noting that the architecture allows for flexibility and robustness, as some modules are adeptly connected to more than one database. This connectivity ensures a seamless flow of information and enhances the system's ability to provide comprehensive and accurate responses to user queries.
 <br>
 
 ### Microservice #3: Health Service Management
 
-Design Pattern: Abstract Factory Pattern to Implement the Suggestion Class
-Each health recommendation involves creating a suggestion, details, and interaction. By using an abstract factory, we encapsulate the logic of creating these related objects, making it easier to manage and modify the creation process in the future. The pattern also ensures that the created objects adhere to a consistent interface. This can be beneficial when dealing with various health recommendations, as it provides a clear and standardized way to interact with suggestions, details, and interactions. Abstract Factory promotes flexibility and extensibility. If we need to add new types of health recommendations or change the way existing recommendations are created, you can introduce new concrete factories without modifying the existing client code. This makes it easier to extend the system without causing ripple effects. Moreover, the pattern helps in separating the concerns of creating objects from the client code that uses these objects. This separation can improve the maintainability of our codebase by isolating the construction logic and reducing dependencies between different parts of the system. Lastly, by using an Abstract Factory, the code becomes more readable and maintainable. The intention of creating related objects is clear, and the client code is shielded from the complexities of object creation.
+**Abstract Factory Pattern to Implement the Suggestion Class**: Each health recommendation involves creating a suggestion, details, and interaction. By using an abstract factory, we encapsulate the logic of creating these related objects, making it easier to manage and modify the creation process in the future. The pattern also ensures that the created objects adhere to a consistent interface. This can be beneficial when dealing with various health recommendations, as it provides a clear and standardized way to interact with suggestions, details, and interactions. Abstract Factory promotes flexibility and extensibility. If we need to add new types of health recommendations or change the way existing recommendations are created, you can introduce new concrete factories without modifying the existing client code. This makes it easier to extend the system without causing ripple effects. Moreover, the pattern helps in separating the concerns of creating objects from the client code that uses these objects. This separation can improve the maintainability of our codebase by isolating the construction logic and reducing dependencies between different parts of the system. Lastly, by using an Abstract Factory, the code becomes more readable and maintainable. The intention of creating related objects is clear, and the client code is shielded from the complexities of object creation.
 <br>
 
-## State Models: 
+## State Models:
 
 ### Microservice #1: UI
 
 ![image](https://github.com/uvic-teach/project-m1-team8/assets/145606952/a5843c0c-4c3e-43f6-9b68-3a30f1362cc9)
 <br>
 
-Description: <br>
+#### **Description**: <br>
 This State Machine Model describes the stateful behavior of the User Interface of the Mister Ed system. When a user first loads the system, they are in the Authentication state and must either log in successfully to continue to the main page or click “Sign up” or “Forgot password” to initiate a User Credential Form state which will return to Authentication after successful completion of the form. Once a user logs in successfully, the Main Page state allows them to click a button to traverse to one of the Notification, Personal/Health Info, or Triage UI States. The Notification state allows the user to view their current notifications. The Personal/Health Info state allows the user to Display and Manage User credentials and Health Info in the same manner as the Sign Up/Forgot password Form.
 
 The Triage state allows the user to request a virtual triage and fill out the corresponding form, or traverse to the triage related UI States of Triage Result, ER Booking, and Check ED Load Status. The ER Booking state allows the user to create a booking if they have a suggestion flag to create one from their triage result, and if they have a booking they can display their booking info or cancel their booking. The Triage Result state allows the user to view their triage result if their result is ready. The Check ED Load state allows the user to check the current ED Load at nearby hospitals to see if a virtual triage is even necessary. This state is unique as it does not require a user to be authenticated to be accessed, so this state also links to the authentication state if a non-authenticated user wishes to use the rest of the system.
@@ -228,7 +219,7 @@ The Triage state allows the user to request a virtual triage and fill out the co
 ![image](https://github.com/uvic-teach/project-m1-team8/assets/145606952/939d1f24-3fb0-4b22-9243-e1a36417329d)
 <br>
 
-Description: <br>
+#### **Description**:
 The state diagram represents the "Patient Management" process using the Mister ED System. Initially, the user interacts with the system by either requesting to log in or clicking on "Create an Account." In the account creation pathway, the system directs the user to a registration website where they input their credentials to establish a new account. Upon successful registration, the Mister ED System sends a confirmation email. The user completes the registration by confirming the email. In the login pathway, upon the user's request to log in, the system checks the user's credentials. If they are valid, the login is successful; if not, the account is marked as invalid. Post-login, the user can request to access personal health information or their triage record. The system acknowledges these requests by receiving them and then subsequently shows the requested data, be it personal health records or triage record history, stored within the system.
 <br>
 
@@ -237,7 +228,7 @@ The state diagram represents the "Patient Management" process using the Mister E
 ![image](https://github.com/uvic-teach/project-m1-team8/assets/145606952/154683b9-6df3-47ba-b7b2-9f694a0ab94f)
 <br>
 
-Description: <br>
+#### **Description**:
 First, the system has to be authenticated before being able to request triage and move to the triage request created state. After that, a triage record will be created, depends on the status of the triage record (whether it's completed or still in progress), the system will be in "triage record being calculated" or "triage complete" states. When the triage result is available, based on the result, the system will go to the suitable branch and retrieve the necessary info. If the triage result suggests the patient visiting the ER, the system will go to the ER booking initialized, then ER booking confirm. While the slot number is greater than 0, the patient is staying in the queue until the slot number = 0. If the patient doesn't visit the ER during a period of time, their ER booking will be canceled and they have to re-book the ER again.
 <br>
 
@@ -245,7 +236,7 @@ First, the system has to be authenticated before being able to request triage an
 
 ![activity_model](https://github.com/uvic-teach/project-m1-team8/assets/99488911/3362cefb-a440-4415-b190-930881acb615)
 
-Description: <br>
+#### **Description**:
 We start at the login page, where we can either continue to login or choose to register. If we choose to register, the account must be unique and not already exist. When we login, the credentials are checked and either the user is logged in or they are sent back to login with an error message. Once logged in, we display the account page. From that page, we can either check ED load or request triage. 
 
 
@@ -259,9 +250,9 @@ If the ER is not needed, the user can ask for information on their recommended a
 # Team Contribution
 | Team Member                  | Task                                                                                                                                                                     |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Hang Duong                   | - Health Service Management Microservice. <br>  - State Diagram and Diagram. <br> - Design Pattern Description. <br>    - Coded for the Microservice. <br> - Architectural Tactic description. <br> |
+| Hang Duong                   | - Implemented Health Service Management Microservice. <br>  - State Diagram and Diagram. <br> - Design Pattern Description. <br> - Architectural Tactic questionaire list and description. <br> - Reviewed, editted and gave feedback on Wiki Page. |
 | Dhuruvan Anavaratha Krishnan | - Patient Management Microservice. <br> - State Diagram and Description. <br> - Architectural Tactic description. <br>  - Constructed Design Pattern Description. <br> - Reviewed the codes for the microservice. <br> - Created and worked on the Wiki page. <br>                                                                              |
 |  Minh Nguyen                 | - Patient Management Microservice. <br> - Activity Diagram. <br> - Architectural Tactic Description. <br> - Wrote the codes for the microservice. <br> - Setting up Docker. <br>                                                                                                 |
 | Miles Rose                   | - Front Page UI Microservice. <br> - Back-end coding.<br> - Setup FastAPI, and React. <br> - State Diagram and Description. <br> - Design Pattern Description. <br> - Architectural Tactic Description. <br>                                                                                      |
-| Oliver Ware                  | - Front Page UI Microservice. <br> - Edited/Fixed React. <br> - Created the basic Webpage. <br> - Activity Diagram and Description. <br> - Design Pattern Description. <br> - Architectural Tactic Description. <br> - Reviewed the Wiki page. <br>                                                                                   |
+| Oliver Ware                  | - Front Page UI Microservice. <br> - Edited/Fixed React. <br> - Created the basic Webpage. <br> - Activity Diagram and Description. <br> - Design Pattern Description. <br> - Architectural Tactic Description. <br> - Reviewed the Wiki page. <br>|
 
