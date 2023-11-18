@@ -1,10 +1,11 @@
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.responses import JSONResponse
-from sql_app import models
+
+from sql_app.models import ERModels
 from db import get_db, engine
-import sql_app.models as models
-import sql_app.schemas as schemas
-from sql_app.repositories import ERBookingRepo, ERQueueRepo
+import sql_app.models.ERModels as models
+import sql_app.schemas.ERSchemas as schemas
+from sql_app.repositories.ERRepo import ERBookingRepo, ERQueueRepo
 from sqlalchemy.orm import Session
 import uvicorn
 from typing import List,Optional
@@ -125,9 +126,10 @@ async def create_er_booking(patient_id: int, db: Session = Depends(get_db)):
     min_est_wait_time = None
     hospital_name = None
     slot_number = None
-
+    print(hospital_list)
     for hospital in hospital_list:
         er_queue = ERQueueRepo.fetch_by_hospital_name(db, hospital)
+        print(er_queue)
         if not er_queue: continue
         if er_queue.current_capacity < er_queue.max_capacity:
             if min_est_wait_time is None:
@@ -141,7 +143,7 @@ async def create_er_booking(patient_id: int, db: Session = Depends(get_db)):
 
     er_booking_request: schemas.ERBookingCreate = schemas.ERBookingCreate(
         patient_id=patient_id,
-        status="waiting",
+        status="WAITING",
         estimated_time=min_est_wait_time,
         area=area,
         hospital_name=hospital_name,  
