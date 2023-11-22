@@ -24,16 +24,16 @@ class TokenCreate(BaseModel):
     access_token:str
     refresh_token:str
     status:bool
-    created_date:datetime.datetime
+    created_date: str
 
 class NotificationsBase(BaseModel):
     user_id: int 
     message: str 
-    time_sent: datetime.datetime
+    time_sent: str
 
 class BookingsBase(BaseModel):
     user_id: int 
-    message: str 
+    location: str 
     wait_time: str
 
 class UserBase(BaseModel):
@@ -42,21 +42,24 @@ class UserBase(BaseModel):
     password: str 
     email: str 
 
-class NotificationCreate(NotificationsBase):
-    pass
-
-class BookingCreate(BookingsBase):
-    pass
-
 class NotificationModel(NotificationsBase):
    notification_id: int
 
    class Config:
         from_attributes =  True
+        arbitrary_types_allowed=True
 
 class BookingsModel(BookingsBase):
    booking_id: int
 
    class Config:
         from_attributes =  True
+        arbitrary_types_allowed=True
+        schema_extra = {
+            "example": {
+                "user_id": "1234",
+                "wait_time": "5 hours",
+                "location": "Chilliwack General Hospital"
+            }
+        }
 
