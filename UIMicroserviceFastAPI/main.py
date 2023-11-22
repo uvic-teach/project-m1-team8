@@ -92,12 +92,11 @@ async def get_notifications(dependencies=Depends(JWTBearer()), db: Session = Dep
   user_id = payload['sub']
   notifications = db.query(models.Notification).filter(models.Notification.user_id == user_id).all()
   return {
-  "message": "Notification sent successfully",
-  "notifications": notifications
+  "message": "Notification sent successfully"
   }
 
-@app.post("/notifications/", response_model=schemas.NotificationModel)
-async def create_notification(notification: NotificationsBase, db: Session = Depends(get_session)):
+@app.post("/notifications/")
+async def create_notification(notification: NotificationsBase, db: db_dependancy):
   db_notification = models.Notification(**notification.model_dump())
   db.add(db_notification)
   db.commit()
@@ -138,7 +137,7 @@ async def change_password(request: schemas.changepassword, db: Session = Depends
     return {"message": "Password changed successfully"}
    
 @app.get("/authentication/login")
-def login(request: schemas.requestdetails, db: Session = Depends(get_session)):
+async def login(request: schemas.requestdetails, db: Session = Depends(get_session)):
     user = db.query(User).filter(User.email == request.email).first()
     if user is None:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Incorrect email")
@@ -162,7 +161,7 @@ def login(request: schemas.requestdetails, db: Session = Depends(get_session)):
     }
 
 @app.post('/authentication/logout')
-def logout(dependencies=Depends(JWTBearer()), db: Session = Depends(get_session)):
+async def logout(dependencies=Depends(JWTBearer()), db: Session = Depends(get_session)):
     token=dependencies
     payload = jwt.decode(token, JWT_SECRET_KEY, ALGORITHM)
     user_id = payload['sub']
@@ -204,13 +203,12 @@ async def create_er_request(booking: BookingsBase, db: Session = Depends(get_ses
   db.commit()
   db.refresh(db_bookings)
   return {
-  "message": "booking created successfully",
-  "booking": db_bookings
+  "message": "booking created successfully"
   }
 
 
 @app.post("/er/booking/cancel")
-async def cancel_er_booking(booking_id: int, db: Session = Depends(get_session), response_model=schemas.BookingsBase):
+async def cancel_er_booking(booking_id: int, db: Session = Depends(get_session), response_model=schemas.BookingsModel):
   db_bookings = db.query(models.Bookings).filter(models.Bookings.booking_id == booking_id).first()
   if db_bookings is None:
     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="the booking does not exist")
@@ -225,7 +223,7 @@ async def cancel_er_booking(booking_id: int, db: Session = Depends(get_session),
 ### TRIAGE API CALLS
 
 @app.get("/triage/display/element/{triage_id}")
-async def get_triage_element(self, patient_id:str, triage_id:str ):
+async def get_triage_element(patient_id:str, triage_id:str ):
 
     
    return{
@@ -236,7 +234,7 @@ async def get_triage_element(self, patient_id:str, triage_id:str ):
    
    
 @app.get("/triage/display/list/{triage_id}")
-def get_triage_list(self, patient_id:str):
+async def get_triage_list(patient_id:str):
     return{
             "message": "Patient triage instances list successfully displayed",
             "patient_id": patient_id

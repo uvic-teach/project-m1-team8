@@ -14,6 +14,7 @@ class TokenSchema(BaseModel):
     access_token: str
     refresh_token: str
 
+
 class changepassword(BaseModel):
     email:str
     old_password:str
@@ -24,7 +25,7 @@ class TokenCreate(BaseModel):
     access_token:str
     refresh_token:str
     status:bool
-    created_date: str
+    created_date: datetime.datetime
 
 class NotificationsBase(BaseModel):
     user_id: int 
@@ -62,4 +63,3 @@ class BookingsModel(BookingsBase):
                 "location": "Chilliwack General Hospital"
             }
         }
-
