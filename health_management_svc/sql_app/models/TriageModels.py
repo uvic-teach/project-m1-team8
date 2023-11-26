@@ -17,7 +17,7 @@ class Triage(Base):
     triage_id = Column(Integer, primary_key=True,index=True)
     patient_id = Column(Integer, nullable=False, unique=False)
     perform_date = Column(DateTime(timezone=True), server_default=func.now())
-    status = Column(Enum(TriageStatus), nullable=False, unique=False)
+    status = Column(String(100), nullable=False, unique=False)
     last_updated = Column(DateTime(timezone=True), server_default=func.now())
     triage_answers = relationship("triage_answers",primaryjoin="triages.triage_id == triage_answers.triage_id",cascade="all, delete-orphan")
 
