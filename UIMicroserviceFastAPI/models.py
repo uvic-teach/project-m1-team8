@@ -1,15 +1,16 @@
 from database import Base
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, DateTime, Boolean
 import datetime
+from sqlalchemy.sql import func
 
 class Notification(Base):
     __tablename__ = 'notifications'
 
-    notification_id = Column(Integer, primary_key =True, index=True)
-    user_id = Column(Integer, nullable=False)
-    message = Column(String(500), nullable=False)
-    time_sent = Column(DateTime(timezone=True), default=datetime.datetime.now())
+    notification_id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    user_id = Column(Integer)
+    message = Column(String(500))
+    time_sent = Column(DateTime(timezone=True), default=func.now())
+
 
 class Bookings(Base):
     __tablename__ = 'bookings'
@@ -18,6 +19,7 @@ class Bookings(Base):
     user_id = Column(Integer, nullable=False)
     hospital_name = Column(String(100), nullable=False)
     wait_time = Column(DateTime(timezone=True),default=datetime.datetime.now())
+
     
 class User(Base):
     __tablename__ = 'users'

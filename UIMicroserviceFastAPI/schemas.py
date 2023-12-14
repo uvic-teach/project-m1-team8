@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 import datetime
+from typing import Optional
 
 class UserCreate(BaseModel):
     username: str
@@ -30,7 +31,7 @@ class TokenCreate(BaseModel):
 class NotificationsBase(BaseModel):
     user_id: int 
     message: str 
-    time_sent: str
+    time_sent: datetime.datetime
 
 class BookingsBase(BaseModel):
     user_id: int 
@@ -43,12 +44,17 @@ class UserBase(BaseModel):
     password: str 
     email: str 
 
+
+
+class NotificationCreate(NotificationsBase):
+    pass
+
+
 class NotificationModel(NotificationsBase):
    notification_id: int
 
    class Config:
         from_attributes =  True
-        arbitrary_types_allowed=True
 
 class BookingsModel(BookingsBase):
    booking_id: int
