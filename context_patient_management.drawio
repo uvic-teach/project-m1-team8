@@ -1,9 +1,62 @@
-<mxfile host="app.diagrams.net" modified="2023-12-15T03:49:38.071Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="22.1.9" etag="qhSoFVUkdZ42DyVFK21D" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-15T03:59:55.996Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="Kt4yyxnLO3EooGnBwoFR" version="22.1.9" type="github">
   <diagram name="Page-1" id="Zx1vdHbxY4lg7JVO-YoT">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-1" value="Patient Management System" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="510" y="230" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-2" value="User Interface" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-3" value="Health Service Management System&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-4" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="ZlsGcwJRJncO1P9VtW-B-2" target="ZlsGcwJRJncO1P9VtW-B-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="350" as="sourcePoint" />
+            <mxPoint x="600" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="190" y="190" />
+              <mxPoint x="522" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-5" value="User Account Creation and Validation" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="ZlsGcwJRJncO1P9VtW-B-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-8" value="" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" target="ZlsGcwJRJncO1P9VtW-B-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="310" as="sourcePoint" />
+            <mxPoint x="400" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="340" />
+              <mxPoint x="190" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-9" value="Confirm Account Creation and Vallidation" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="ZlsGcwJRJncO1P9VtW-B-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-10" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ZlsGcwJRJncO1P9VtW-B-1" target="ZlsGcwJRJncO1P9VtW-B-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="350" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-11" value="&amp;nbsp;Display User Account and Health Information" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="ZlsGcwJRJncO1P9VtW-B-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-12" value="" style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ZlsGcwJRJncO1P9VtW-B-3" target="ZlsGcwJRJncO1P9VtW-B-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="500" y="350" as="sourcePoint" />
+            <mxPoint x="600" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZlsGcwJRJncO1P9VtW-B-13" value="&amp;nbsp;Retrieve and Update Triage Record" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="ZlsGcwJRJncO1P9VtW-B-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
