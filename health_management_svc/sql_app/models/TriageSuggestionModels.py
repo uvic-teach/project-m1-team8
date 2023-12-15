@@ -8,3 +8,5 @@ class TriageSuggestionBase(BaseModel):
     def getSuggestion(self, triage_id):
         """Get Suggestion for a triage"""
         
+    
+        
