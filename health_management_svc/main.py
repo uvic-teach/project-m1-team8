@@ -78,8 +78,6 @@ def validation_exception_handler(request, err):
 #     suggestion = "Take medicine"
 #     return {"message": "Triage suggestion retrieved successfully", "triage_id": triage_id, "suggestion": suggestion}
 
-
-
 @app.get("/er/booking", tags=["ERBooking"],response_model=schemas.ERBooking,status_code=201)
 async def get_er_booking(booking_id: int, db: Session = Depends(get_db)):
     db_booking = ERBookingRepo.fetch_by_booking_id(db, booking_id=booking_id)

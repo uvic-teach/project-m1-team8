@@ -1,0 +1,4 @@
+image:
+  repository: hduong202/health_management_svc-api
+  tag: latest
+  pullPolicy: Always # Should be IfNotPresent when using tag number and Always if latest
