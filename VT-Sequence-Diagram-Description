@@ -1,0 +1,8 @@
+In the Virtual Triage sequence, the process initiates with the user logging into the Mister ED System. Upon login, the user triggers 
+the virtual triage. The system responds by retrieving questions from the Triage Module for the user, then evaluating the severity of 
+their medical condition based on the answers provided by the user. Based on the user's responses, the system determines the appropriate 
+course of action, directing the user to either visit the Emergency Room (ER), a nearby clinic, or a pharmacy for over-the-counter medicine. 
+Alternatively, the user can opt for a remote consultation via the nurse hotline. Throughout this process, the system ensures a seamless 
+flow of interactions, confirming the user's choice and providing additional instructions when necessary. At the end of the triage, the 
+result on what action the user should follow would be displayed on the user’s screen, and the patient database to keep a log of the triages, 
+and the results.

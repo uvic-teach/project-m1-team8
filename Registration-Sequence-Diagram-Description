@@ -1,0 +1,8 @@
+For the Mister ED System, this sequence diagram outlines the streamlined process of user registration. Initiated by the patient/user, 
+the sequence commences when they click the "Registration" button on the welcome/home page. Upon this action, the system redirects the 
+user to a dedicated registration page where they input their desired login credentials. The system rigorously validates these credentials 
+with the patient database, ensuring the uniqueness and compliance with system requirements. If successful, the system creates a new account 
+for the user and sends the user a verification email to validate the user’s new account. After the verifies the email, the registration 
+process is complete. The alternate outcome of this scenario that might occur is if the user attempts to re-register with existing credentials.
+If the user tries to re-register with existing credentials then the system would send the “Account already Exists” message to the user, so that
+the user could enter different credentials to create their account. 
