@@ -24,7 +24,6 @@
 - Local database is setup
 - Docker image is built and pushed to DockerHub
 - Helm Chart to deploy the service to GCP
-- 
 ### 3. User Interface Service
 #### 3.1 Objective
 - Fully implement the prototype of Frontend
