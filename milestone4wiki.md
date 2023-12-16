@@ -2,8 +2,7 @@
 
 ## Software Architecture Documentation (SAD)
 
-[SAD file.pdf](https://github.com/uvic-teach/project-m1-team8/files/13691393/SAD.file.pdf)
-
+[SAD file.pdf](https://github.com/uvic-teach/project-m1-team8/files/13691430/SAD.file.pdf)
 
 ## Goal and implementation
 ### 1. Patient Management Service
@@ -27,6 +26,7 @@
 - Local database is setup
 - Docker image is built and pushed to DockerHub
 - Helm Chart to deploy the service to GCP
+
 ### 3. User Interface Service
 #### 3.1 Objective
 - Fully implement the prototype of Frontend
