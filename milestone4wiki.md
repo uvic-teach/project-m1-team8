@@ -28,7 +28,7 @@
 ## Team Contribution
 | Team Member                  | Task                                                                                                                                                                     |
 |------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dhuruvan Krishnan Anavaratha | |
+| Dhuruvan Krishnan Anavaratha | - SAD: Behaviour and Constraints for Module, Interface and Context Diagram for Allocation View, for Patient Management Service, and Behaviour for C&C diagram.|
 | Hang Duong                   | - Health Management Service (codebase, cloud deployment). </br> - SAD: Problem definition, Module and Allocation View for Health Management Service, Context Diagram for C&C diagram.|
 |  Minh Nguyen                 | |
 | Miles Rose                   | - User Interfacce Service (Backend Development). </br> - SAD: Solution Background, Module and Allocation View for User Interface Service, and the View Description, Elements, and Relations and Context Diagram for C&C view.|
