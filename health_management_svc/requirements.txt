@@ -1,0 +1,6 @@
+fastapi==0.103.1
+loguru==0.7.2
+python-multipart==0.0.6
+sqlalchemy==1.4.25
+uvicorn[standard]==0.23.2
+websockets==11.0.3
