@@ -14,7 +14,16 @@
 - Triage module is WIP
 - Local database is setup
 - Docker image is built and pushed to DockerHub
-- Helm Chart to deploy the service to GCP.
+- Helm Chart to deploy the service to GCP
+- 
+### 3. User Interface Service
+#### 3.1 Objective
+- Fully implement the prototype of Frontend
+- Fully implement the prototype of Backend
+- Explore deployment possibilities
+#### 3.2 Result
+- Backend prototype is implemented
+- Deployment possibilities explored but not implemented
 
 ## Team Contribution
 | Team Member                  | Task                                                                                                                                                                     |
@@ -22,6 +31,6 @@
 | Dhuruvan Krishnan Anavaratha | |
 | Hang Duong                   | - Health Management Service (codebase, cloud deployment). </br> - SAD: Problem definition, Module and Allocation View for Health Management Service, Context Diagram for C&C diagram.|
 |  Minh Nguyen                 | |
-| Miles Rose                   | |
+| Miles Rose                   | - User Interfacce Service (Backend Development). </br> - SAD: Solution Background, Module and Allocation View for User Interface Service, and the View Description, Elements, and Relations and Context Diagram for C&C view.|
 | Oliver Ware                  | |
                                                        
