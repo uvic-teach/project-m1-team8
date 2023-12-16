@@ -1,6 +1,7 @@
 # MisterEd
 
 ## Software Architecture Documentation (SAD)
+[SAD file (1).pdf](https://github.com/uvic-teach/project-m1-team8/files/13691391/SAD.file.1.pdf)
 
 ## Goal and implementation
 ### 1. Patient Management Service
