@@ -1,0 +1,162 @@
+<mxfile host="app.diagrams.net" modified="2023-11-29T20:15:27.381Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="Lak6u6BfK4s-lz8DXhCI" version="22.1.5" type="github">
+  <diagram name="Page-1" id="0YqnZ8WPdQcCQH9Wsp3D">
+    <mxGraphModel dx="1644" dy="358" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-1" value="Mister Ed System" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="310" y="100" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-2" value="Hospital ER" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-3" value="Pharmacy" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-4" value="Patient" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-10" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-5" value="Clinic" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-6" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.021;entryY=0.736;entryDx=0;entryDy=0;entryPerimeter=0;curved=1;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-4" target="xxPF-Kd9LQn4NS0Y0-Oq-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="160" as="sourcePoint" />
+            <mxPoint x="440" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-28" value="Check ED Load" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-6">
+          <mxGeometry x="-0.1553" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-8" value="" style="endArrow=classic;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-4" target="xxPF-Kd9LQn4NS0Y0-Oq-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="160" as="sourcePoint" />
+            <mxPoint x="440" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-9" value="Request Triage" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-8">
+          <mxGeometry x="-0.2649" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-10" value="" style="endArrow=classic;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-1" target="xxPF-Kd9LQn4NS0Y0-Oq-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="160" as="sourcePoint" />
+            <mxPoint x="440" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="230" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-11" value="Triage Reccomendation" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-10">
+          <mxGeometry x="0.0914" y="-14" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-12" value="" style="endArrow=classic;html=1;curved=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-1" target="xxPF-Kd9LQn4NS0Y0-Oq-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="220" as="sourcePoint" />
+            <mxPoint x="440" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-13" value="ER Load Status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-12">
+          <mxGeometry x="0.3462" y="-32" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-14" value="" style="endArrow=classic;html=1;curved=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-1" target="xxPF-Kd9LQn4NS0Y0-Oq-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="190" as="sourcePoint" />
+            <mxPoint x="440" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="330" y="30" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-15" value="Request ER Information" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-14">
+          <mxGeometry x="-0.4354" y="-8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-16" value="" style="endArrow=classic;html=1;curved=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-2" target="xxPF-Kd9LQn4NS0Y0-Oq-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="190" as="sourcePoint" />
+            <mxPoint x="420" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-17" value="ER Information" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-16">
+          <mxGeometry x="-0.2232" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-18" value="" style="endArrow=classic;html=1;curved=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-1" target="xxPF-Kd9LQn4NS0Y0-Oq-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="190" as="sourcePoint" />
+            <mxPoint x="410" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-19" value="Request Pharmacy+Medicine Info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-18">
+          <mxGeometry x="-0.2379" y="-19" relative="1" as="geometry">
+            <mxPoint x="43" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-20" value="" style="endArrow=classic;html=1;curved=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-1" target="xxPF-Kd9LQn4NS0Y0-Oq-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="230" as="sourcePoint" />
+            <mxPoint x="470" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-21" value="Request Clinic Info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-20">
+          <mxGeometry x="-0.1583" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-22" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;curved=1;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-5" target="xxPF-Kd9LQn4NS0Y0-Oq-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="230" as="sourcePoint" />
+            <mxPoint x="470" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="540" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-23" value="Provide Clinic Info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-22">
+          <mxGeometry x="0.0875" y="7" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-24" value="" style="endArrow=classic;html=1;entryX=0.964;entryY=0.293;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.867;exitDx=0;exitDy=0;exitPerimeter=0;curved=1;" edge="1" parent="1" source="xxPF-Kd9LQn4NS0Y0-Oq-3" target="xxPF-Kd9LQn4NS0Y0-Oq-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="230" as="sourcePoint" />
+            <mxPoint x="470" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="570" y="141" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xxPF-Kd9LQn4NS0Y0-Oq-25" value="Provide Pharmacy+Medicine Info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xxPF-Kd9LQn4NS0Y0-Oq-24">
+          <mxGeometry x="0.1417" y="-12" relative="1" as="geometry">
+            <mxPoint x="3" y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
