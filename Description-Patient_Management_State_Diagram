@@ -1,0 +1,11 @@
+Description of the State Diagram
+
+The state diagram represents the "Patient Management" process using the Mister ED System. Initially, the 
+user interacts with the system by either requesting to log in or clicking on "Create an Account." In the 
+account creation pathway, the system directs the user to a registration website where they input their credentials 
+to establish a new account. Upon successful registration, the Mister ED System sends a confirmation email. The 
+user completes the registration by confirming the email. In the login pathway, upon the user's request to log in, 
+the system checks the user's credentials. If they are valid, the login is successful; if not, the account is marked 
+as invalid. Post-login, the user can request to access personal health information or their triage record. The system 
+acknowledges these requests by receiving them and then subsequently shows the requested data, be it personal health 
+records or triage record history, stored within the system.
